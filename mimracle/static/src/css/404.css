@@ -1,0 +1,36 @@
+@charset "UTF-8";
+/** 主色调*/
+/** 绿色 主色*/
+/** 绿色 主色*/
+/** 绿色 辅色*/
+/** 绿色 辅色**/
+/** 绿色 辅色*/
+/** 红色 辅色**/
+/** 橙色 辅色*/
+/** 橙色 辅色**/
+/****************************************************************************/
+/** 标题文字颜色*/
+/** 楼层文字颜色*/
+/** 文字辅色*/
+/** 标注文字*/
+/**线框 边框**/
+/** 分割线 描边*/
+/** 背景颜色*/
+/******specific color by xm******/
+/* $de:#dedede; */
+/**********************改版颜色*********/
+.dh-notfound__page {
+  height: 600px;
+  width: 100%;
+  background: #E7E7E7;
+  text-align: center; }
+  .dh-notfound__page img {
+    margin-top: 50px; }
+
+.dh-notfound__btn {
+  width: 100%;
+  background: #E7E7E7;
+  text-align: center;
+  margin-top: 70px; }
+  .dh-notfound__btn .return-btn {
+    margin-left: 60px; }

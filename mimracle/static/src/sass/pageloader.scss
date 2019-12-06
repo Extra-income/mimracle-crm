@@ -1,0 +1,119 @@
+/***********************************************************
+*** CUSTOMIZE THE LOADING SCREEN BACKGROUND + ICON COLORS
+************************************************************/
+/* loading screen background color */
+#bonfire-pageloader {
+    background-color:#9a9084;
+}
+
+
+/***********************************************************
+*** THE NITTY-GRITTY
+************************************************************/
+/* the pageloader */
+#bonfire-pageloader {
+    position:absolute;
+    z-index:99999999999999;
+    width:100%;
+    height:250%;
+    left:0;
+    right:0;
+    top:0;
+    bottom:0;
+    margin-top:-50px;
+}
+.bonfire-pageloader-fade {
+    opacity:0 !important;
+    
+    -webkit-transition: all .75s ease;
+    -moz-transition: all .75s ease;
+    -o-transition: all .75s ease;
+    -ms-transition: all .75s ease;
+    transition: all .75s ease;
+}
+.bonfire-pageloader-hide {
+    display:none;
+}
+
+/* the loading icon */
+.bonfire-pageloader-icon {
+    width:100px;
+    height:100px;
+    position:absolute;
+    margin:0 0 0 0;
+    opacity:1;
+    top:0;
+}
+.bonfire-pageloader-icon-hide {
+    opacity:0 !important;
+    
+    -webkit-transition: all .25s ease;
+    -moz-transition: all .25s ease;
+    -o-transition: all .25s ease;
+    -ms-transition: all .25s ease;
+    transition: all .25s ease;
+}
+
+@-webkit-keyframes spin { 100% { -webkit-transform: rotate(-360deg); } }
+@-moz-keyframes spin { 100% { -moz-transform: rotate(-360deg); } }
+@keyframes spin { 100% { -webkit-transform: rotate(-360deg); transform:rotate(-360deg); } }
+
+/* lets give the page body that subtle slide-in animation */
+html {
+    height:100%;
+    
+    -webkit-backface-visibility: hidden;
+    
+    -webkit-transform-origin:top;
+    -moz-transform-origin:top;
+    -ms-transform-origin:top;
+    -o-transform-origin:top;
+    transform-origin:top;
+    
+    -webkit-transition: all .75s ease;
+    -moz-transition: all .75s ease;
+    -o-transition: all .75s ease;
+    -ms-transition: all .75s ease;
+    transition: all .75s ease;
+}
+.bonfire-html-onload {  
+    -webkit-transform: translateY(-50px);
+    -moz-transform: translateY(-50px);
+    -ms-transform: translateY(-50px);
+    -o-transform: translateY(-50px);
+    transform: translateY(-50px);
+
+    -webkit-transition: all 0s ease;
+    -moz-transition: all 0s ease;
+    -o-transition: all 0s ease;
+    -ms-transition: all 0s ease;
+    transition: all 0s ease;
+}
+#object{
+    width: 80px;
+    height: 80px;
+    background-color: #FFF;
+    -webkit-animation: animate 1s infinite ease-in-out;
+    animation: animate 1s infinite ease-in-out;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 60px;
+}
+@-webkit-keyframes animate {
+  0% { -webkit-transform: perspective(160px); }
+  50% { -webkit-transform: perspective(160px) rotateY(-180deg); }
+  100% { -webkit-transform: perspective(160px) rotateY(-180deg) rotateX(-180deg); }
+}
+
+@keyframes animate {
+  0% { 
+    transform: perspective(160px) rotateX(0deg) rotateY(0deg);
+    -webkit-transform: perspective(160px) rotateX(0deg) rotateY(0deg); 
+  } 50% { 
+    transform: perspective(160px) rotateX(-180deg) rotateY(0deg);
+    -webkit-transform: perspective(160px) rotateX(-180deg) rotateY(0deg) ;
+  } 100% { 
+    transform: perspective(160px) rotateX(-180deg) rotateY(-180deg);
+    -webkit-transform: perspective(160px) rotateX(-180deg) rotateY(-180deg);
+  }
+}

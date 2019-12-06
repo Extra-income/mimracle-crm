@@ -1,0 +1,18 @@
+
+<link rel="stylesheet" href="/static/src/css/paging.css">
+<div class="box" id="box">
+    <button type="button" id="firstPage" class="turnPage first-page">首页</button>
+    <button class="turnPage" id="prePage">上一页</button>
+    <div class="pageWrap" style="width:300px">
+        <ul id="pageSelect" style="transition: all 600ms; transform: translateX(-480px);">
+            {{each articles.count }}
+            <li>{{$index}}</li>
+            {{/each}}
+        </ul>
+    </div>
+    <button class="turnPage" id="nextPage">下一页</button>
+    <button type="button" id="lastPage" class="last-page">尾页</button>
+    <input type="text" placeholder="1" class="jump-text" id="jumpText">
+    <button type="button" class="jump-button" id="jumpBtn">跳转</button>
+    <p class="total-pages">共&nbsp;30&nbsp;页</p>
+    <p class="total-count">合计301条数据</p></div>

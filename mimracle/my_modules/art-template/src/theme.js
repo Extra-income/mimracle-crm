@@ -1,0 +1,1 @@
+/** * 主题设置 * */template.theme = function(theme){    if(typeof theme == "undefined"){        return themes["theme"];    }    theme || (theme = "default");    themes["theme"] = theme;};var themes = template.themes = {    theme:"default"};

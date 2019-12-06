@@ -1,0 +1,75 @@
+@charset "utf-8";
+/* 禁用iPhone中Safari的字号自动调整 */
+html {
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+}
+/* 去除iPhone中默认的input样式 */
+input[type="submit"],
+input[type="reset"],
+input[type="button"],
+input[type="text"],select,textarea,button{/*-webkit-appearance:none;*/resize: none; outline: none; background-color:transparent;}
+
+/* 取消链接高亮  */
+body,div,ul,li,ol,h1,h2,h3,h4,h5,h6,input,textarea,select,p,dl,dt,dd,a,img,button,form,table,th,tr,td,tbody,article, 
+aside, details,figcaption,figure,footer,header,hgroup, menu,nav,section{ -webkit-tap-highlight-color:rgba(0, 0, 0, 0); }
+/* 设置HTML5元素为块 */
+article, aside, details,figcaption,figure,footer,header,hgroup, menu,nav,section {
+display: block;
+}
+/* 图片自适应 */
+img {
+height: auto;
+width:auto\9; /* ie8 */
+-ms-interpolation-mode:bicubic;/*为了照顾ie图片缩放失真*/
+}
+/* 初始化 */
+body,div,ul,li,ol,h1,h2,h3,h4,h5,h6,input,textarea,select,p,dl,dt,dd,a,img,button,form,table,th,tr,td,tbody,article, 
+aside, details,figcaption,figure,footer,header,hgroup, menu,nav,section{margin:0; padding:0; border:none;}
+body{font: normal 14px "Microsoft Yahei",Tahoma,"Lucida Grande",Verdana,STXihei,hei;background-color:#fff; color:#000000;}
+em,i{font-style:normal;}
+strong{font-weight: normal;}
+a{text-decoration:none; color:#fff; font-family: Microsoft YaHei,'宋体',Tahoma,Arial,sans-serif;}
+a:hover{color:#00AF8D; text-decoration:none;}
+ul,ol,li{list-style:none;}
+h1, h2, h3, h4, h5, h6{ font-size:100%; font-family: Microsoft YaHei;}
+img{border: none; vertical-align: middle;}
+
+/*清楚浮动*/
+.clearfix:after,.clearfix:before{ content:""; display:table;}
+.clearfix:after{ clear:both;}
+.clearfix{*zoom:1;}
+
+.fl{float: left;}
+.fr{float: right;}
+.maincolor{color:#00AF8D;}
+
+select::-ms-expand {
+display: none;
+}
+
+.wrap{width: 86%;margin: 0 auto; max-width: 1650px;}
+@media screen and (max-width:1024px) {
+.wrap{width: 94%;}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

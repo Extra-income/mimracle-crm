@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+        <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, width=device-width"/>
+        <!-- 适应移动端start -->
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+        <meta name="format-detection" content="telphone=no, email=no" />
+        <meta name="renderer" content="webkit">
+        <meta name="screen-orientation" content="portrait">
+        <meta name="x5-orientation" content="portrait">
+        <meta name="full-screen" content="yes">
+        <meta name="x5-fullscreen" content="true">
+        <meta name="browsermode" content="application">
+        <meta name="x5-page-mode" content="app">
+        <meta name="msapplication-tap-highlight" content="no">
+        <!-- 适应移动端end -->
+
+        <title>{{title}}</title>
+
+        <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+        <meta name="keywords" content="{{keywords}}">
+        <meta name="description" content="{{description}}">
+
+        {{if meta}}
+        {{each meta}}
+        <meta name="{{$value.name}}" content="{{$value.content}}">
+        {{/each}}
+        {{/if}}
+
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="renderer" content="webkit">
+
+        <!-- 网站小图标 -->
+        <link rel="shortcut icon" href="{{cssDomain}}/favicon.ico" type="image/x-icon">
+        <link rel="stylesheet" type="text/css" href="/static/src/wap/style/global.css" />
+        <link href="/static/src/wap/style/mobiscroll.css" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" type="text/css" href="/static/src/wap/style/owl.carousel.min.css" />
+        <link rel="stylesheet" type="text/css" href="/static/src/wap/style/index.css" />
+
+        <!--<link rel="stylesheet" type="text/css" href="{{cssDomain}}/static/dist/css/dh-mall.css?_v_=762ba8eae3a910193f449b80f53d5f29">-->
+        {{if css}}
+        <link rel="stylesheet" type="text/css" href="{{cssDomain}}/static/dist/css/{{css}}.css?_v_=1">
+        {{/if}}
+        <link rel="stylesheet" type="text/css" href="{{cssDomain}}/static/dist/css/pages.css?_v_=c87e531e96d9f951987b20503c54238d">
+        <!--[if lt IE 9]>
+            <link rel="stylesheet" type="text/css" href="/static/dist/css/dh-mall.ie8.css?_v_=f9930ec10549c6f653105e56bb61e3c8">
+        <![endif]-->
+        {{if resource}}
+        {{each resource}}
+        {{if $value.type == 2}}
+            <link rel="stylesheet" href="{{jsDomain}}/static/dist{{$value.path}}?_v_=1479235626296">
+        {{/if}}
+        {{/each}}
+        {{/if}}
+        <!-- 百度数据统计 -->
+        <script>
+            var _hmt = _hmt || [];
+            var urlOfDomain = "{{urlDomain}}";
+        </script>
+        <script type="text/javascript" src="//hm.baidu.com/hm.js?9070631639df60324c638bd2dba9ab36"></script>
+
+        <script type="text/javascript" src="{{jsDomain}}/static/src/js/lib/jquery-1.11.0.min.js"></script>
+        <!--[if lt IE 9]>
+            <script src="{{jsDomain}}/static/src/js/lib/html5shiv.js"></script>
+            <script src="{{jsDomain}}/static/src/js/lib/respond.min.js"></script>
+            <script src="{{jsDomain}}/static/src/js/lib/ieBetter-1.0.3.min.js"></script>
+
+        <![endif]-->
+
+        <!--[if lt IE 10]>
+            <script src="{{jsDomain}}/static/src/js/lib/jquery.placeholder.min.js"></script>
+        <![endif]-->
+
+        <!--<script type="text/javascript" src="//api.map.baidu.com/api?v=2.0&ak=IhA9qkrfltVCiGzzGniGd6TN2Q2VxqK1"></script>-->
+        <!--<script type="text/javascript" src="{{jsDomain}}/static/src/js/lib/dh-mall.js?_v_=74b6660e9b1576e88f40d2c24da19524"></script>-->
+        {{each resource}}
+        {{if $value.type == 1}}
+        <script type="text/javascript" src="{{jsDomain}}/static/src{{$value.path}}?_v_=1479235626296"></script>
+        {{/if}}
+        {{/each}}
+
+
+        <script type="text/javascript" src="/static/src/wap/js/owl.carousel.min.js"></script>
+        <script type="text/javascript" src="/static/src/wap/js/index.js"></script>
+
+    </head>
+<body>
+<div>
+    __{content}__
+    <div clas="popup"></div>
+</div>
+
+</body>
+    <!-- 公共文件+入口文件的定义 -->
+
+    <script type="text/javascript" src="{{jsDomain}}/static/src/js/lib/global.js?_v_=bd1a1e032fa5e897ad61c07905d9311a" data-entry="{{jsEntry}}" data-env="{{env}}"></script>
+    <!--<script type="text/javascript" src="{{jsDomain}}/static/dist/js/modules/modules.min.js?_v_=235a74151ef714afe4851c780c07d588"></script>-->
+    <!--<script type="text/javascript" src="//qzonestyle.gtimg.cn/qzone/openapi/qc_loader.js" data-appid="101370948" data-redirecturi="{{redirecturi}}" {{if callback}} data-callback="true" {{/if}} charset="utf-8"></script>-->
+
+ </html>

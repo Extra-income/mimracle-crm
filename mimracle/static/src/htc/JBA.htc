@@ -1,0 +1,44 @@
+<!--
+test: CSS3 rendering for IE
+Version 1.0beta1
+-->
+
+<PUBLIC:COMPONENT lightWeight="true">
+    <PUBLIC:ATTACH EVENT="oncontentready" FOR="element" ONEVENT="init()" />
+    <script>
+        function init(){
+            if(navigator.appName != "Microsoft Internet Explorer" || navigator.appVersion.match(/8./i)!="8."){return;}
+            inject('before', this.element);
+            inject('after', this.element);
+            this.element.runtimeStyle.behavior = null;
+        }
+
+        var patterns = {
+            text: /^['"]?(.+?)["']?$/,
+            url: /^url\(["']?(.+?)['"]?\)$/
+        };
+
+        function clean(content) {
+            if(content && content.length) {
+                var text = content.match(patterns.text)[1],
+                        url = text.match(patterns.url);
+                return url ? '<img src="' + url[1] + '" />': text;
+            }
+        }
+
+        function inject(prop, elem, content) {
+            if(prop != 'after') prop = 'before';
+            if(content = clean(elem.currentStyle[prop])) {
+                var o = elem;
+                while(o=o.previousSibling,o.nodeType!=1);
+                if(o.checked){
+                    $(o).addClass("checked");
+                }
+                var span = elem.document.createElement('span');
+                $(elem)[prop == 'before' ? 'prepend' : 'append'](
+                        $(elem.document.createElement('span')).addClass(prop).html(content)
+                );
+            }
+        }
+    </script>
+</PUBLIC:COMPONENT>
