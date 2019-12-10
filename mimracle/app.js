@@ -11,16 +11,16 @@ var template = global.template;
 var indexController = require('./routes/indexController');
 
 var app = express();
-app.set("template",template);
+app.set("template", template);
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 //app.set('view engine', 'jade');
 
 template.config('base', '');
 template.config('extname', '.html');
-template.config('cache',false);
-template.config('compress',true);
-template.layout(true,true);
+template.config('cache', false);
+template.config('compress', true);
+template.layout(true, true);
 app.engine('html', template.__express);
 app.set('view engine', 'html');
 
@@ -30,7 +30,7 @@ app.set('view engine', 'html');
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
-app.use('/static',express.static(path.join(__dirname, 'static')));
+app.use('/static', express.static(path.join(__dirname, 'static')));
 //用express的静态资源管理，路径不变，依旧从/static访问，nginx不再代理转发
 app.use(global.interceptor());
 
