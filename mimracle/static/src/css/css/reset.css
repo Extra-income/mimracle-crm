@@ -1,0 +1,43 @@
+body,ul,li,dl,dt,dd,p,ol,h1,h2,h3,h4,h5,h6,form,img,table,fieldset,legend,header,nav,footer,menu,section,aside,article,canvas,figure,figcaption{margin:0; padding:0;}
+ul,li,ol{list-style:none;}
+body,button,input,select,textarea{font-size:12px;font-family:arial,'Hiragino Sans GB','Microsoft Yahei','微软雅黑','宋体',\5b8b\4f53,Tahoma,Arial,Helvetica,STHeiti}
+a{text-decoration:none;color: #3a3a31}
+a:hover{color:#90080E;text-decoration:underline;font-weight: bold;}
+
+.clear{clear: both;}
+.range{
+	width: 100%;
+	height: 10px;
+	clear: both;
+}
+.left{
+	float: left;
+}
+.right{
+	float: right;
+}
+.clear{
+	clear: both;
+}
+.bigrange{
+	height: 20px;
+}
+.cj-gg{
+	width: 100%;
+	height: 250px;
+}
+.cj-gg img{
+	width: 100%;
+	height: 250px;
+}
+.nav-list a{
+	display: inline-block;
+	padding-bottom:5px;
+	text-decoration:none;
+	color: #fff;
+}
+.nav-list a:hover{
+	font-size: 16px;
+	font-weight: bold;
+	color: #000;
+}
