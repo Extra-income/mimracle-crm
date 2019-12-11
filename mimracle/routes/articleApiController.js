@@ -67,17 +67,13 @@ router.get("/api/article/detail", function(req, res, next) {
             articleObj.content = apiResult.data.articles.content;
             articleObj.category_id = apiResult.data.articles.cateid;
 
-            //undone: 菜单(地址导航)未对接
-            // apiResult.data.forEach(element => {
-            //     result.data.push({
-            //         category_id: element.cateid,
-            //         name: element.name,
-            //         icon: element.icon
-            //     });
-            // });
+            let pathObj = {};
+            pathObj.current = convertCategory(apiResult.data.mycate.cate.now_cate);
+            pathObj.parent = convertCategory(apiResult.data.mycate.cate.parent_cate);
 
             result.data = {
-                article: articleObj
+                article: articleObj,
+                category: pathObj
             };
         } else {
             result = mimracleHelper.getFailResult(apiResult.code, apiResult.msg);
@@ -153,6 +149,16 @@ function convertArticle(dto) {
         edit_time: dto.edit_time
     };
     return o;
+}
+
+function convertCategory(dto) {
+    let r = {
+        category_id: dto.cateid,
+        name: dto.name,
+        icon: dto.icon,
+        parent_id: dto.prid
+    };
+    return r;
 }
 
 module.exports = router;
