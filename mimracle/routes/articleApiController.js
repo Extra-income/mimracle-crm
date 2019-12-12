@@ -70,6 +70,14 @@ router.get("/api/article/detail", function(req, res, next) {
             let pathObj = {};
             pathObj.current = convertCategory(apiResult.data.mycate.cate.now_cate);
             pathObj.parent = convertCategory(apiResult.data.mycate.cate.parent_cate);
+            pathObj.list = [];
+            if (apiResult.data.mycate.cate.list != null &&
+                apiResult.data.mycate.cate.list.son != null &&
+                apiResult.data.mycate.cate.list.son.length > 0) {
+                apiResult.data.mycate.cate.list.son.forEach(element => {
+                    pathObj.list.push(convertCategory(element));
+                });
+            }
 
             result.data = {
                 article: articleObj,
