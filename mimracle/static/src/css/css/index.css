@@ -1,0 +1,302 @@
+/*头部样式*/
+.header{
+	width:100%;
+	background: #90080E; 
+}
+
+.nav{
+	width: 1200px;
+	margin:0 auto;
+	overflow:hidden;
+}
+.icon{
+	width: 96px;
+	height: 60px;
+	margin-right: 14px;
+}
+.icon img{
+	height: 60px;
+}
+.nav-list {
+	width: 1065px;
+	height: 60px;
+	overflow:hidden;
+}
+.nav-list li{
+	float: left;
+	padding:0px 13px;
+	line-height: 60px;
+	height: 60px;
+	font-size: 16px;
+	font-weight: normal;
+}
+.more-nav-show{
+	width: 25px;
+	height: 25px;
+    background: url(../img/iconNav.png) no-repeat;
+    background-position-x: -20px;
+    cursor: pointer;
+    float: right;
+    margin:17.5px 0;
+}
+.nav-show{
+	 background-position: 4px;
+}
+.moreNav{
+	width: 100%;
+	background:#f9f9f9;
+}
+.moreNav .icon{
+	margin-right: 0;
+}
+.moreNav a{
+	color: #af825e;
+}
+.content{
+	width: 1200px;
+	margin:0 auto;
+}
+.advertisement{
+	height: 120px;
+	margin:10px auto;
+}
+.advertisement img{
+	display: block;
+	margin:0 auto;
+	height: 120px;
+}
+.first-con{
+	width: 100%;
+	height: 406px;
+	overflow:hidden;
+}
+.first-left{
+	width: 55%;
+	float: left;
+	height: 406px;
+	background: red;
+}
+.first-right{
+	width: 43%;
+	float: left;
+	margin-left: 2%;
+	height: 406px;
+}
+
+.new-list{
+	width: 100%;
+	height: 96px;
+	margin-bottom: 19px;
+}
+.new-list li{
+	width: 100%;
+	height: 32px;
+	line-height: 32px;
+	overflow:hidden
+}
+.new-item{
+	font-size: 16px;
+}
+.first-item{
+	font-weight: bold;
+	font-size: 24px;
+}
+.first-right-gg{
+	width: 100%;
+	height: 60px;
+}
+.first-right-gg img{
+	width: 100%;
+	height: 100%;
+}
+.recommend{
+	width: 100%;
+	height: 112px;
+}
+.recommend-title{
+	width: 5%;
+	height: 112px;
+	background: #90080e;
+}
+.recommend-title div{
+	width: 100%;
+	height: 28px;
+	text-align: center;
+	line-height: 25px;
+	color: #fff;
+}
+.recommend-con{
+	width: 95%;
+	height: 112px;
+}
+.recommend-item{
+	width: 19%;
+	margin-left: 1%;
+}
+.recommend-item img{
+	width: 100%;
+	height: 112px;
+}
+.two-new{
+	width: 100%;
+	height: 550px;
+}
+.two-new-left,.two-new-center,.two-new-right{
+	width: 33.33%;
+	height: 100%;
+	float: left;
+}
+.two-new-center{
+	border-left: 1px solid #e6e6e6;
+}
+.new-fast{
+	width: 100%;
+	height: 50%;
+	padding-right: 25px;
+	border-bottom: 1px solid #e6e6e6;
+}
+.indexTitle{
+	width: 100%;
+	height: 40px;
+	line-height: 40px;
+}
+.indexstrong{
+	height: 42px;
+}
+.indexstrong strong{
+ border-bottom:2px solid #ccc; 
+}
+.indexTitle strong {
+    font-size: 22px;
+    color: #90080E;
+    float: left;
+    font-family: 'fzzhjn';
+    font-weight: normal;
+}
+.indexTitle a{
+	color: #a7a7a5;
+	font-size: 14px;
+	margin-left: 15px;
+}
+.new-fast-list,.new-fast-list li{
+	list-style:disc inside;
+}
+.new-item-fast{
+	width: 100%;
+	overflow:hidden;
+	height: 38px;
+	line-height: 38px;
+	font-size: 16px;
+}
+.new-fast-list li{
+	width: 100%;
+	overflow:hidden;
+}
+.new-new-international{
+	padding-right: 25px;
+}
+.two-new-center{
+	padding: 0 20px;
+}
+.look-img-new{
+	width: 100%;
+	height: 338px;
+}
+.img-new-item{
+	width: 49%;
+	height: 149px;
+	overflow:hidden;
+	font-size: 14px;
+}
+.img-new-item img{
+	width: 100%;
+	height: 120px;
+}
+.img-new-item .img-new-title{
+	width: 100%;
+	height: 29px;
+	overflow:hidden;
+	line-height: 29px;
+}
+.zt-gg{
+	width: 100%;
+	height: 96px;
+}
+.zt-gg img{
+	width: 100%;
+	height: 96px;
+}
+.bk-box{
+	width: 100%;
+	height: 530px;
+}
+.indexBTitle {
+    height: 74px;
+    line-height: 72px;
+    position: relative;
+}
+.indexBTitle strong {
+    font-size: 34px;
+    color: #90080E;
+    float: left;
+    font-family: 'fzzhjn';
+    font-weight: normal;
+    border-bottom: 2px solid #ccc;
+}
+.indexBTitle a {
+    color: #ad815e;
+    font-size: 14px;
+    padding-left: 9px;
+    margin-left: 9px;
+    float: left;
+}
+.leftThr {
+    width: 30%;
+    float: left;
+    padding-top: 12px;
+}
+.leftThrFocus {
+	width: 100%;
+    height: 264px;
+}
+.leftThrPic{
+	width: 100%;
+	height: 200px;
+	margin-top: 20px;
+}
+.centerThr {
+	width: 34%;
+	float: left;
+	margin:0 3%;
+}
+.type-li-none{
+	list-style: none !important;
+	font-weight: bold;
+	font-size: 20px;
+}
+.rightThr{
+	width: 30%;
+	float: left;
+}
+.ty-gg img{
+	height: 208px;
+}
+
+/* 页脚样式 */
+.footer{
+	width:100%;
+	background: #90080E; 
+}
+.footer .footer-list{
+	margin: 0 auto;
+	
+}
+.footer .footer-list li{
+	float: left;
+	padding:0px 13px;
+	line-height: 60px;
+	height: 60px;
+	font-size: 16px;
+	font-weight: normal;
+	color: #fff;
+}
