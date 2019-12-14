@@ -19,18 +19,18 @@
         <!-- 网站小图标 -->
         <link rel="shortcut icon" href="{{cssDomain}}/favicon.ico" type="image/x-icon">
 
-        <!--<link rel="stylesheet" type="text/css" href="{{cssDomain}}/static/dist/css/dh-mall.css?_v_=762ba8eae3a910193f449b80f53d5f29">-->
+        <!--<link rel="stylesheet" type="text/css" href="{{cssDomain}}/static/src/css/dh-mall.css?_v_=762ba8eae3a910193f449b80f53d5f29">-->
         {{if css}}
-        <link rel="stylesheet" type="text/css" href="{{cssDomain}}/static/dist/css/{{css}}.css?_v_=1">
+        <link rel="stylesheet" type="text/css" href="{{cssDomain}}/static/src/css/{{css}}.css?_v_=1">
         {{/if}}
-        <!-- <link rel="stylesheet" type="text/css" href="{{cssDomain}}/static/dist/css/pages.css?_v_=c87e531e96d9f951987b20503c54238d"> -->
+        <!-- <link rel="stylesheet" type="text/css" href="{{cssDomain}}/static/src/css/pages.css?_v_=c87e531e96d9f951987b20503c54238d"> -->
         <!--[if lt IE 9]>
-            <link rel="stylesheet" type="text/css" href="/static/dist/css/dh-mall.ie8.css?_v_=f9930ec10549c6f653105e56bb61e3c8">
+            <link rel="stylesheet" type="text/css" href="/static/src/css/dh-mall.ie8.css?_v_=f9930ec10549c6f653105e56bb61e3c8">
         <![endif]-->
         {{if resource}}
         {{each resource}}
         {{if $value.type == 2}}
-            <link rel="stylesheet" href="{{jsDomain}}/static/dist{{$value.path}}?_v_=1479235626296">
+            <link rel="stylesheet" href="{{jsDomain}}/static/src{{$value.path}}?_v_=1479235626296">
         {{/if}}
         {{/each}}
         {{/if}}
@@ -68,5 +68,7 @@
     <!-- 公共文件+入口文件的定义 -->
 
     <script type="text/javascript" src="{{jsDomain}}/static/src/js/lib/global.js?_v_=bd1a1e032fa5e897ad61c07905d9311a" data-entry="{{jsEntry}}" data-env="{{env}}"></script>
-
+    <script>
+    console.log('{{title}}','{{data}}')
+    </script>
  </html>

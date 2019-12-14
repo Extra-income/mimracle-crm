@@ -28,7 +28,12 @@ var server = http.createServer(app);
 server.listen(port);
 server.on('error', onError);
 server.on('listening', onListening);
-
+// global.config({
+//   id:"dev",
+//   pc_domain:"http://localhost:3000",
+//   cssDomain:'http://localhost:3000',
+//   jsDomain:'http://localhost:3000'
+// });
 /**
  * Normalize a port into a number, string, or false.
  */

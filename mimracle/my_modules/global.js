@@ -10,7 +10,12 @@ var view = require("./view");
 var global = {
     template: template,
     request: request,
-    _config: {},
+    _config: {
+        id:"dev",
+        pc_domain:"http://localhost:3000",
+        cssDomain:'http://localhost:3000',
+        jsDomain:'http://localhost:3000'
+    },
     _exclude: [
         "/404.html",
         "/producttype/ID_1000.html"
@@ -235,12 +240,13 @@ var global = {
     formatData: function(title, data, req, resource) {
         var self = this;
 
-        data.title = "林氏木业-" + title;
+        data.title = "" + title;
 
         data.data = resource.data;
         // if(data.data.ads){
         //     view.formatAdsContent(data.data.ads,self);
         // }
+        // console.log(resource)
 
         data.env = self.config().id;
         data.cssDomain = self.config().cssDomain;

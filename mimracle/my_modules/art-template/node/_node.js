@@ -61,7 +61,7 @@ module.exports = function (template) {
 
 	// express support
 	template.__express = function (file, options, fn) {
-
+		// console.log(file,'file')
 	    if (typeof options === 'function') {
 	        fn = options;
 	        options = {};

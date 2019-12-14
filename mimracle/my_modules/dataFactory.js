@@ -92,18 +92,18 @@ var dataFactory = {
                 towards(null, {modelKey:modelKey,key: deal.key,dataType:deal.dataType, result: mock});
             }
         }, function(err, result) {
-
+            console.log('result',result)
             for(var ii = 0; ii < result.length; ii++) {
                 if(result[ii].dataType.toLowerCase() == "json"){
-                    if(!result[ii].result.success){
-                        result[ii].result.message && $.logger.debug('dataFactory.js get message:' + result[ii].result.message);
+                    if(!result[ii].result.succeed){
+                        result[ii].result.msg && $.logger.debug('dataFactory.js get msg:' + result[ii].result.msg);
                     }
-                    var object = result[ii].result && result[ii].result.object;
-                    if($.type(result[ii].result.code) == "undefined" && !object){
-                        object = result[ii].result && result[ii].result;
+                    var data = result[ii].result && result[ii].result.data;
+                    if($.type(result[ii].result.code) == "undefined" && !data){
+                        data = result[ii].result && result[ii].result;
                     }
 
-                    data[result[ii].key] = M.translate(result[ii].modelKey,object) || object;
+                    // data[result[ii].key] = M.translate(result[ii].modelKey,object) || object;
                 }else{
                     data[result[ii].key] = result[ii].result;
                 }
@@ -113,9 +113,9 @@ var dataFactory = {
 
             ////////////////////////////////////////
             // 图片的改成https、http自适应
-            var tmp = JSON.stringify(data);
-            tmp = tmp.replace(/http:\/\/ossfile.linshimuye.com/g, '//ossfile.linshimuye.com');
-            data = JSON.parse(tmp.replace(/http:\/\/pic.linshimuye.com/g, '//pic.linshimuye.com'));
+            // var tmp = JSON.stringify(data);
+            // tmp = tmp.replace(/http:\/\/ossfile.linshimuye.com/g, '//ossfile.linshimuye.com');
+            // data = JSON.parse(tmp.replace(/http:\/\/pic.linshimuye.com/g, '//pic.linshimuye.com'));
             ////////////////////////////////////////
 
             self.trycatch(callback,null,{data:data});
