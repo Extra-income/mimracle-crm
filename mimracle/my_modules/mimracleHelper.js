@@ -41,7 +41,7 @@ _fn.prototype.toMimracleResult = function(apiResult) {
     let result = {};
     result.code = apiResult.code;
     result.msg = apiResult.msg;
-    result.succeed = apiResult.succeed || false;
+    result.succeed = result.code == 200;
     return result;
 }
 

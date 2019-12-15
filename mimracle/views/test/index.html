@@ -31,34 +31,40 @@
 
                 <!-- 轮播图片 -->
                 <div class="carousel-inner first-banner">
-                    <div class="carousel-item active">
+                    {{each adversts.heads as item i}}
+                    {{if i < 4}}
+                    <div class="carousel-item {{if i == 0}} active {{/if}}">
+                        <img src="{{item.img}}" alt="">
+                        <div class="carousel-caption">
+                            <h3>{{item.title}} {{item.article_id}}</h3>                              
+                        </div>
+                    </div>
+                    {{/if}}                   
+                    {{/each}}
+                    <!-- <div class="carousel-item active">
                         <img src="/static/src/img/xN1mQKL9t1nUhs9UZaTCLb-n.jpg" alt="">
                         <div class="carousel-caption">
                             <h3>美国驻欧盟大使称曾施压乌克兰 特朗普手写声明回应</h3>
-                            <!--  <p>美国驻欧盟大使称曾施压乌克兰 特朗普手写声明回应</p> -->
                         </div>
                     </div>
                     <div class="carousel-item">
                         <img src="/static/src/img/2NTYNNn4UFODqIybZ2Uc9eq8.jpg" alt="">
                         <div class="carousel-caption">
                             <h3>墨西哥举办阅兵式 骑兵“失足”连人带马栽倒在地</h3>
-                            <!-- <p>描述文字!</p> -->
                         </div>
                     </div>
                     <div class="carousel-item">
                         <img src="/static/src/img/VaHbzV0YYyLC7lZ_5zevmkbJ.jpg" alt="">
                         <div class="carousel-caption">
                             <h3>老挝与泰国边境地区发生6.1级地震 民众聚集户外避难</h3>
-                            <!-- <p>描述文字!</p> -->
                         </div>
                     </div>
                     <div class="carousel-item">
                         <img src="/static/src/img/JuOl43UgV1d9NxDgAgtTqsXl.jpg" alt="">
                         <div class="carousel-caption">
                             <h3>反恐演习中方展示先进无人车 俄官兵连声称赞</h3>
-                            <!--  <p>描述文字!</p> -->
                         </div>
-                    </div>
+                    </div> -->
                 </div>
 
                 <!-- 左右切换按钮 -->
@@ -117,21 +123,11 @@
                 </div>
             </div>
             <div class="recommend-con left">
+            {{each adversts.recomends}}
                 <div class="recommend-item left">
-                    <a href="" title=""><img src="/static/src/img/PjZZXbyJ2HFmV-GqB10X3ctb.jpg" alt=""></a>
+                    <a href="{{$value.article_id}}" title="{{$value.title}}"><img src="{{$value.img}}" alt=""></a>
                 </div>
-                <div class="recommend-item left">
-                    <a href="" title=""><img src="/static/src/img/PjZZXbyJ2HFmV-GqB10X3ctb.jpg" alt=""></a>
-                </div>
-                <div class="recommend-item left">
-                    <a href="" title=""><img src="/static/src/img/PjZZXbyJ2HFmV-GqB10X3ctb.jpg" alt=""></a>
-                </div>
-                <div class="recommend-item left">
-                    <a href="" title=""><img src="/static/src/img/PjZZXbyJ2HFmV-GqB10X3ctb.jpg" alt=""></a>
-                </div>
-                <div class="recommend-item left">
-                    <a href="" title=""><img src="/static/src/img/PjZZXbyJ2HFmV-GqB10X3ctb.jpg" alt=""></a>
-                </div>
+            {{/each}}
             </div>
         </div>
         <div class="range"></div>

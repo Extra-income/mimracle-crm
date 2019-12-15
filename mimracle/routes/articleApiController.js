@@ -68,16 +68,16 @@ router.get("/api/article/detail", function(req, res, next) {
             articleObj.category_id = apiResult.data.articles.cateid;
 
             let pathObj = {};
-            pathObj.current = convertCategory(apiResult.data.mycate.cate.now_cate);
-            pathObj.parent = convertCategory(apiResult.data.mycate.cate.parent_cate);
-            pathObj.list = [];
-            if (apiResult.data.mycate.cate.list != null &&
-                apiResult.data.mycate.cate.list.son != null &&
-                apiResult.data.mycate.cate.list.son.length > 0) {
-                apiResult.data.mycate.cate.list.son.forEach(element => {
-                    pathObj.list.push(convertCategory(element));
-                });
-            }
+            // pathObj.current = convertCategory(apiResult.data.mycate.cate.now_cate);
+            // pathObj.parent = convertCategory(apiResult.data.mycate.cate.parent_cate);
+            // pathObj.list = [];
+            // if (apiResult.data.mycate.cate.list != null &&
+            //     apiResult.data.mycate.cate.list.son != null &&
+            //     apiResult.data.mycate.cate.list.son.length > 0) {
+            //     apiResult.data.mycate.cate.list.son.forEach(element => {
+            //         pathObj.list.push(convertCategory(element));
+            //     });
+            // }
 
             result.data = {
                 article: articleObj,
@@ -154,7 +154,8 @@ function convertArticle(dto) {
         keyword: dto.keyword,
         from: dto.isfrom,
         img: dto.icon,
-        edit_time: dto.edit_time
+        edit_time: new Date(dto.edit_time * 1000),
+        url: "/article/" + dto.articleid
     };
     return o;
 }

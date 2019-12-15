@@ -12,7 +12,7 @@
         </ul>
         <div class="more-nav-show clear" show="false"></div>
     </div>
-    <div class="moreNav" style="display: none">
+    <div class="moreNav j-sub-menu" style="display: none">
         <div class="nav">
             <div class="icon"></div>
             <ul class="nav-list">
@@ -55,8 +55,37 @@
 <script type="text/javascript">
     $(function() {
 
-        var memus = $(".j-memu").find("a");
+        var memus = $(".j-memu").find("a").hover(function () {
+            let $a = $(this);
+            let id = $a.attr("data-id");
+            
+            $.ajax({
+                url: "/api/category/sub-cagetories",
+                type: "GET",
+                data: {
+                    category_id: id,
+                    api_key: "guangdongqiji"
+                },
+                dataType: "JSON",
+                success: function(d) {
+                    if (d.code == 200 && d.succeed) {
+                        let $text = "";
+                        for (let i = 0,len = d.data.list.length; i < len; i++) {
+                            let item = d.data.list[i];
+                            $text += "<li><a href=\"\" title=\""+ item.name +"\">"+ item.name +"</a></li>";
+                        }                       
+                        $(".j-sub-menu  ul").html($text);
 
+                        $(".j-sub-menu").show();
+                    } else {
+                        console.log(d);
+                    }
+                }
+            });
+
+        }, function () {
+            $(".j-sub-menu").hide();
+        });
 
     });
 </script>
