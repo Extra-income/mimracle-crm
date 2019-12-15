@@ -1,10 +1,9 @@
 <div class="footer">
     <div class="nav">
         <ul class="footer-list">
-            <li>网站介绍</li>
-            <li>版权说明</li>
-            <li>联系我们</li>
-            <li>网站地图</li>
+            {{each customSetting as item}}
+            <li id="{{item.page_id}}">{{item.title}}</li>
+            {{/each}}
         </ul>
         <div class="more-nav-show clear" show="false"></div>
     </div>

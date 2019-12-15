@@ -5,11 +5,10 @@
                 <img src="/static/src/img/new_logo.png" alt="">
             </a>
         </div>
-        <ul class="nav-list">
-            {{each data}}
-            <li><a href="./prcate.html" title="链接说明">国际</a></li>
+        <ul class="nav-list j-memu">
+            {{each memus as memu i}}
+            <li><a data-id="{{memu.category_id}}" href="./prcate.html" title="链接说明">{{memu.name}}</a></li>
             {{/each}}
-
         </ul>
         <div class="more-nav-show clear" show="false"></div>
     </div>
@@ -52,3 +51,12 @@
 <!-- <link href="/static/src/css/pageloader.css" rel="stylesheet" type="text/css" media="all" id="pageloader-css" /> -->
 <!-- <link rel="stylesheet" type="text/css" href="/static/src/css/owl.carousel.min.css" /> -->
 <!-- <link rel="stylesheet" type="text/css" href="/static/src/css/index.css" /> -->
+
+<script type="text/javascript">
+    $(function() {
+
+        var memus = $(".j-memu").find("a");
+
+
+    });
+</script>
