@@ -13,7 +13,7 @@ var indexController = require('./routes/indexController');
 var app = express();
 app.set("template",template);
 // view engine setup
-app.set('views', path.join(__dirname, 'views'));
+// app.set('views', path.join(__dirname, 'views'));
 //app.set('view engine', 'jade');
 
 template.config('base', '');

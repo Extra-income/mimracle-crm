@@ -7,6 +7,7 @@ var fs = require("fs");
 var path = require("path");
 var dataFactory = require("./dataFactory");
 var view = require("./view");
+const router = require('../routes');
 var global = {
     template:template,
     request:request,
@@ -134,20 +135,10 @@ var global = {
         }
     },
     loadRoutes:function(app){
-        //加载 routes 目录下的所有router
-        var routerPath = path.join(__dirname,"../routes/");
-        var files = fs.readdirSync(routerPath);
-
-        for(var i=0;i<files.length;i++){
-            var file = files[i];
-            if(file.indexOf(".") == 0){
-                continue;
-            }
-
-            var router = require(routerPath+file);
-            $.logger.debug("加载路由:"+routerPath+file);
-            app.use("",router);
-        }
+        // //加载 routes 目录下的所有router
+        Object.keys(router).map(function (v, i) {
+            app.use('/', router[v]);
+        });
     },
     query:function(req,name,def){
         return req.query[name]?req.query[name]:def;

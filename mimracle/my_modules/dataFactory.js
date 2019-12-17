@@ -1,24 +1,25 @@
 
-var request = require('./request'),
-    async = require('async'),
-    $ = require("./util"),
-    M = require("../model/m"),
-    fs = require("fs"),
-    path = require("path"),
-    logger = $.logger;
+const request = require('./request');
+const async = require('async');
+const $ = require("./util");
+const M = require("../model/m");
+const fs = require("fs");
+const path = require("path");
+require('../model');
+const logger = $.logger;
 
 
 //加载 model 目录下的所有Model
-var modelPath = path.join(__dirname,"../model/");
-var files = fs.readdirSync(modelPath);
-$.each(files,function(){
-    if(this.indexOf(".") == 0 || this == "m.js"){
-        return true;
-    }
-    logger.debug("加载Model:"+modelPath+this);
-    require(modelPath+this)(M);
+// var modelPath = path.join(__dirname,"../model/");
+// var files = fs.readdirSync(modelPath);
+// $.each(files,function(){
+//     if(this.indexOf(".") == 0 || this == "m.js"){
+//         return true;
+//     }
+//     logger.debug("加载Model:"+modelPath+this);
+//     require(modelPath+this)(M);
 
-});
+// });
 
 //数据工厂
 
