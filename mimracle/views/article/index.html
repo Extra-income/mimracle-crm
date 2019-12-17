@@ -1,82 +1,81 @@
-
-{{include '../base/baseHeader'}}
+ {{include '../base/baseHeader'}}
 
 <div class="content">
-	<div class="rangeBig"></div>
-	<div class="t-container">
-		<div class="t-container-title"><h2>{{articleDetail.article.title}}</h2></div>
-		<div class="t-container-metadata">
-			<div class="metadata-info">
-				<p>
-					<span class="source">来源：<span>{{articleDetail.article.from}}</span><em></em></span>
-					<span class="author"><span>{{articleDetail.article.edit_time}}</span><em></em></span>
-				</p>
-				<!-- <p class="time"></p> -->
-			</div>
-		</div>
-	</div>
-	<div class="article-plane">
-		<div class="article">
-				{{articleDetail.article.content}}
-		</div>
-		<div class="ord-article">
-			<!-- 今日热点 -->
-			<div class="tody-hot">
-				<div class="indexTitle">
-					<strong>今日热点</strong>
-				</div>
-				<ul class="article-item">
-					{{each adversts.hots}}
-					<li><a href="{{$value.url}}">{{$value.title}}</a></li>
-					{{/each}}
-				</ul>
-			</div>
-			<!-- 热门图片 -->
-			<div class="img-hot">
-				<div class="indexTitle paddimgIndex">
-					<strong>热门图文</strong>
-				</div>
-				{{each adversts.imgs}}
-				<a href="{{$value.url}}" class="hotImg">
-					<img src="{{$value.img}}" alt="">
-					<div>{{$value.title}}</div>
-				</a>
-				{{/each}}				
-				<div class="clear"></div>
-			</div>
-			<!-- 精彩推荐 -->
-			<div class="tody-hot" style="margin-top: 10px;">
-				<div class="indexTitle">
-					<strong>精彩推荐</strong>
-				</div>
-				<ul class="wonderful-con">
-						{{each adversts.imgs}}
-						<li>
-								<a href="{{$value.url}}">
-									<div class="wonderful-img">
-										<img src="{{$value.img}}" alt="">
-									</div>
-								</a>
-									<div class="wonderful-title-from">
-										<a href="">
-										<div class="wonderful-title">
-												{{$value.title}}
-										</div>
-										</a>
-										<div class="wonderful-from">
-											<span class="from">{{$value.from}}</span>
-											<span class="time">{{$value.edit_time}}</span>
-										</div>
-									</div>
-							</li>
-						{{/each}}
-				</ul>
-			</div>
-		</div>
-		<!-- <div class="clear"></div> -->
-	</div>
-	
-</div>
-<link rel="stylesheet" type="text/css" href="/static/src/css/css/article.css">
+    <div class="rangeBig"></div>
+    <div class="t-container">
+        <div class="t-container-title">
+            <h2>{{articleDetail.article.title}}</h2>
+        </div>
+        <div class="t-container-metadata">
+            <div class="metadata-info">
+                <p>
+                    <span class="source">来源：<span>{{articleDetail.article.from}}</span><em></em></span>
+                    <span class="author"><span>{{articleDetail.article.edit_time}}</span><em></em></span>
+                </p>
+                <!-- <p class="time"></p> -->
+            </div>
+        </div>
+    </div>
+    <div class="article-plane">
+        <div class="article">
+            {{#articleDetail.article.content}}
+        </div>
+        <div class="ord-article">
+            <!-- 今日热点 -->
+            <div class="tody-hot">
+                <div class="indexTitle">
+                    <strong>今日热点</strong>
+                </div>
+                <ul class="article-item">
+                    {{each adversts.hots}}
+                    <li><a href="{{$value.url}}">{{$value.title}}</a></li>
+                    {{/each}}
+                </ul>
+            </div>
+            <!-- 热门图片 -->
+            <div class="img-hot">
+                <div class="indexTitle paddimgIndex">
+                    <strong>热门图文</strong>
+                </div>
+                {{each adversts.imgs}}
+                <a href="{{$value.url}}" class="hotImg">
+                    <img src="{{$value.img}}" alt="">
+                    <div>{{$value.title}}</div>
+                </a>
+                {{/each}}
+                <div class="clear"></div>
+            </div>
+            <!-- 精彩推荐 -->
+            <div class="tody-hot" style="margin-top: 10px;">
+                <div class="indexTitle">
+                    <strong>精彩推荐</strong>
+                </div>
+                <ul class="wonderful-con">
+                    {{each adversts.imgs}}
+                    <li>
+                        <a href="{{$value.url}}">
+                            <div class="wonderful-img">
+                                <img src="{{$value.img}}" alt="">
+                            </div>
+                        </a>
+                        <div class="wonderful-title-from">
+                            <a href="">
+                                <div class="wonderful-title">
+                                    {{$value.title}}
+                                </div>
+                            </a>
+                            <div class="wonderful-from">
+                                <span class="from">{{$value.from}}</span>
+                                <span class="time">{{$value.edit_time}}</span>
+                            </div>
+                        </div>
+                    </li>
+                    {{/each}}
+                </ul>
+            </div>
+        </div>
+        <!-- <div class="clear"></div> -->
+    </div>
 
-{{include '../base/baseFooter'}}
+</div>
+<link rel="stylesheet" type="text/css" href="/static/src/css/css/article.css"> {{include '../base/baseFooter'}}

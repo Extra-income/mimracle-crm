@@ -4,12 +4,14 @@ const global = require('../my_modules/global');
 
 router.get('/test.html', function(req, res, next) {
 
+    let api_key = req.headers["micracle-crm"];
+
     let getTopCategories = new Promise((resolve, reject) => {
         var api = {
             getTopCategories: {
                 url: '/api/category/top-cagetories',
                 data: {
-                    api_key: 'guangdongqiji',
+                    api_key: api_key,
                     category_id: '47',
                     page_size: '1'
                 }
@@ -28,7 +30,7 @@ router.get('/test.html', function(req, res, next) {
             getTopCategories: {
                 url: '/api/article/sepcial-list',
                 data: {
-                    api_key: 'guangdongqiji'
+                    api_key: api_key
                 }
             }
         };
@@ -45,7 +47,7 @@ router.get('/test.html', function(req, res, next) {
             getTopCategories: {
                 url: '/api/custom/company-setting',
                 data: {
-                    api_key: 'guangdongqiji'
+                    api_key: api_key
                 }
             }
         };
