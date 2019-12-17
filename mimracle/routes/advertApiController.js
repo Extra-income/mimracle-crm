@@ -7,14 +7,16 @@ let mimracleHelper = require('../my_modules/mimracleHelper');
 
 // 获取广告
 router.get("/api/advert/list", function(req, res, next) {
-    if (typeof req.query["type"] == "undefined") {
-        res.json(mimracleHelper.getFailResult(200, "广告类型是必填项"));
-        return;
+    let postData = {};
+    if (typeof req.query["type"] != "undefined") {
+        // res.json(mimracleHelper.getFailResult(200, "广告类型是必填项"));
+        // return;
+        let advertTypes = mimracleHelper.getAdvertTypes();
+        let type = advertTypes[req.query["type"]];
+        post.type = type;
     }
 
-    let advertTypes = mimracleHelper.getAdvertTypes();
-    let type = advertTypes[req.query["type"]];
-    let postData = { type: type };
+    //let postData = { type: type };
 
     let opt = mimracleHelper.buildOpt("/api/Apilist/advert", postData, req);
     if (opt == null) {
