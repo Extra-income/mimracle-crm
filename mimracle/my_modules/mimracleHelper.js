@@ -18,11 +18,11 @@ _fn.prototype.getConfig = function(key) {
 }
 
 /**
- * 创建opt
+ * 创建option
  */
 _fn.prototype.buildOpt = function(url, data, req) {
     let self = this;
-    let apiConfig = this.getConfig(req.query["api_key"]);
+    let apiConfig = self.getConfig(req.query["api_key"]);
     if (apiConfig == null) return null;
 
     let opt = {
@@ -104,6 +104,20 @@ _fn.prototype.getCatetoryKey = function(code) {
         if (element.code == code) key = element.key;
     });
     return key;
+}
+
+/**
+ * 生成栏目链接
+ */
+_fn.prototype.getCatetoryPageUrl = function(category_id) {
+    return "/cagetory/" + category_id;
+}
+
+/**
+ * 生成文章链接
+ */
+_fn.prototype.getArticlePageUrl = function(article_id) {
+    return "/article/" + article_id;
 }
 
 let mimracleHelper = new _fn();
