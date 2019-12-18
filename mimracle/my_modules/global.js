@@ -11,10 +11,10 @@ var global = {
     template: template,
     request: request,
     _config: {
-        id:"dev",
-        pc_domain:"http://localhost:3000",
-        cssDomain:'http://localhost:3000',
-        jsDomain:'http://localhost:3000'
+        id: "dev",
+        pc_domain: "http://localhost:3000",
+        cssDomain: 'http://localhost:3000',
+        jsDomain: 'http://localhost:3000'
     },
     _exclude: [
         "/404.html",
@@ -139,20 +139,34 @@ var global = {
         }
     },
     loadRoutes: function(app) {
+        let self = this;
         //加载 routes 目录下的所有router
         var routerPath = path.join(__dirname, "../routes/");
         var files = fs.readdirSync(routerPath);
-
+        var dirs = [];
         for (var i = 0; i < files.length; i++) {
             var file = files[i];
-            if (file.indexOf(".") == 0) {
+            if (file.indexOf(".") < 1) {
+                let subDirPath = path.join(__dirname, "../routes/" + file + "/");
+                dirs.push(subDirPath);
                 continue;
             }
 
-            var router = require(routerPath + file);
-            $.logger.debug("加载路由:" + routerPath + file);
-            app.use("", router);
+            self.__loadRoute(app, routerPath + file);
         }
+        dirs.forEach(dir => {
+            let subFiles = fs.readdirSync(dir);
+            subFiles.forEach(f => {
+                if (f.indexOf(".") > 1) {
+                    self.__loadRoute(app, dir + f);
+                }
+            });
+        });
+    },
+    __loadRoute: function(app, path) {
+        var router = require(path);
+        $.logger.debug("加载路由:" + path);
+        app.use("", router);
     },
     query: function(req, name, def) {
         return req.query[name] ? req.query[name] : def;
