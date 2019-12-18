@@ -10,15 +10,10 @@ let mimracleHelper = require('../../my_modules/mimracleHelper');
  */
 router.get("/api/article/list", function(req, res, next) {
     let postData = {
-        cate_key: req.query["category_key"]
+        cate_key: req.query["category_key"],
+        row: req.query["page_size"] || 10,
+        page: req.query["page_no"] || 1
     };
-    if (typeof req.query["page_size"] != "undefined") {
-        postData.row = req.query["page_size"];
-    }
-    if (typeof req.query["page_no"] != "undefined") {
-        postData.page = req.query["page_no"];
-    }
-
     let opt = mimracleHelper.buildOpt("/api/Apilist/cates_article", postData, req);
     if (opt == null) {
         res.json(mimracleHelper.notExistsApiKeyResult());
@@ -153,7 +148,9 @@ router.get("/api/article/sepcial-list", function(req, res, next) {
  */
 router.get("/api/article/search", function(req, res, next) {
     let postData = {
-        keyword: req.query["keyword"]
+        keyword: req.query["keyword"],
+        row: req.query["page_size"] || 10,
+        page: req.query["page_no"] || 1
     };
 
     let opt = mimracleHelper.buildOpt("/api/Apilist/search", postData, req);
