@@ -92,7 +92,6 @@ var dataFactory = {
                 towards(null, {modelKey:modelKey,key: deal.key,dataType:deal.dataType, result: mock});
             }
         }, function(err, result) {
-            console.log('result',result)
             for(var ii = 0; ii < result.length; ii++) {
                 if(result[ii].dataType.toLowerCase() == "json"){
                     if(!result[ii].result.succeed){
