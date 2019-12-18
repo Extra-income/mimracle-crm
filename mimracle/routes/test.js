@@ -92,9 +92,13 @@ router.get('/test.html', function(req, res, next) {
     let getNewForInternational = getArticlesByCategory(req, api_key, "international", 10, 1);
     // 获取科技文章
     let getNewForTechnology = getArticlesByCategory(req, api_key, "technology", 10, 1);
+    // 获取财经文章
+    let getNewForEconomics = getArticlesByCategory(req, api_key, "economics", 10, 1);
+    // 获取时尚文章
+    let getNewForFashion = getArticlesByCategory(req, api_key, "fashion", 10, 1);
 
     Promise.all([getTopCategories, getAdversts, getCustomSetting, getHomeAdversts, getNewsForFast, getNewsForInland, getNewForSocial,
-        getNewForInternational, getNewForTechnology
+        getNewForInternational, getNewForTechnology, getNewForEconomics, getNewForFashion
     ]).then((result) => {
         let d = {
             memus: result[0],
@@ -105,7 +109,9 @@ router.get('/test.html', function(req, res, next) {
             inland: result[5], //国内文章
             social: result[6], //社会
             international: result[7], //国际
-            technology: result[8] //科技
+            technology: result[8], //科技
+            economics: result[9], //财经
+            fashion: result[10] //时尚
         };
         console.log(d);
         res.render("test/index.html", d);
