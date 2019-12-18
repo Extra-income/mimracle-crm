@@ -81,4 +81,40 @@ router.get("/api/category/sub-cagetories", function(req, res, next) {
     });
 });
 
+// 获取菜单栏
+router.get("/api/category/menu", function(req, res, next) {
+    let opt = mimracleHelper.buildOpt("/api/Apilist/nav", {}, req);
+    if (opt == null) {
+        res.json(mimracleHelper.notExistsApiKeyResult());
+        return;
+    }
+
+    request.post(opt, (err, response, body) => {
+        let apiResult = JSON.parse(body);
+        let result = mimracleHelper.toMimracleResult(apiResult);
+
+        if (apiResult.code == 200 && apiResult.data != null) {
+            result.data = [];
+            apiResult.data.forEach(element => {
+                let item = {
+                    category_id: element.cateid,
+                    name: element.name,
+                    children: []
+                };
+                element.son.forEach(s => {
+                    item.children.push({
+                        category_id: s.cateid,
+                        name: s.name
+                    });
+                });
+                result.data.push(item);
+            });
+        } else {
+            result = mimracleHelper.getFailResult(apiResult.code, apiResult.msg);
+        }
+
+        res.json(result);
+    });
+});
+
 module.exports = router;

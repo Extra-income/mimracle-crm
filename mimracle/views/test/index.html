@@ -83,6 +83,13 @@
     <div class="first-right">
         <!-- 右侧顶部新闻列表 -->
         <div>
+            <!-- {{each fastNew}} {{if $index % 3 == 0}}
+            <ul class="new-list"></ul>
+            {{/if}}
+            <li class="new-item {{if $index % 3 == 0}} first-item {{/if}}"><a href="{{$value.url}}" title="{{$index}}{{$value.title}}">{{$value.title}}}}</a></li>
+            {{if $index % 3 == 0}}
+            </ul>
+            {{/if}} {{/each}} -->
             <ul class="new-list">
                 <li class="new-item first-item"><a href="./article.html" title="链接说明">十九大以来，习近平对这件事多次作出深刻阐释</a></li>
                 <li class="new-item"><a href="" title="链接说明">【央视快评】在新时代播种新希望</a></li>
@@ -136,20 +143,16 @@
     <div class="range"></div>
     <div class="two-new">
         <div class="two-new-left">
-            <!-- 新闻快线 -->
+            <!-- 国内 -->
             <div class="new-fast">
                 <div class="indexTitle">
-                    <strong>新闻快线</strong>
+                    <strong>国内</strong>
                     <a href="//opinion.huanqiu.com" target="_blank">更多</a>
                 </div>
                 <ul class="new-fast-list">
-                    <li class="new-item-fast"><a href="" title="链接说明">十九大以来，习近平对这件事多次作出深刻阐释</a></li>
-                    <li class="new-item-fast"><a href="" title="链接说明">【央视快评】在新时代播种新希望</a></li>
-                    <li class="new-item-fast"><a href="" title="链接说明">总书记关切开放事｜开放，让迢迢边关拥有稳稳幸福</a></li>
-                    <li class="new-item-fast"><a href="" title="链接说明">总书记关切开放事｜开放，让迢迢边关拥有稳稳幸福</a></li>
-                    <li class="new-item-fast"><a href="" title="链接说明">总书记关切开放事｜开放，让迢迢边关拥有稳稳幸福</a></li>
-                    <li class="new-item-fast"><a href="" title="链接说明">总书记关切开放事｜开放，让迢迢边关拥有稳稳幸福</a></li>
-
+                    {{each inland}} {{if $index
+                    < 6}} <li class="new-item-fast"><a href="{{$value.url}}" title="链接说明">{{$value.title}}</a></li>
+                        {{/if}} {{/each}}
                 </ul>
             </div>
             <!-- 国际时讯 -->
@@ -165,7 +168,6 @@
                     <li class="new-item-fast"><a href="" title="链接说明">总书记关切开放事｜开放，让迢迢边关拥有稳稳幸福</a></li>
                     <li class="new-item-fast"><a href="" title="链接说明">总书记关切开放事｜开放，让迢迢边关拥有稳稳幸福</a></li>
                     <li class="new-item-fast"><a href="" title="链接说明">总书记关切开放事｜开放，让迢迢边关拥有稳稳幸福</a></li>
-
                 </ul>
             </div>
         </div>

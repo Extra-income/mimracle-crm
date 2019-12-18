@@ -91,6 +91,21 @@ _fn.prototype.getAdvertTypes = function() {
     return advertTypeDict;
 }
 
+/**
+ * 根据编码到配置文件获取key
+ */
+_fn.prototype.getCatetoryKey = function(code) {
+    let config = JSON.parse(fs.readFileSync('./category.json').toString());
+
+    if (config == null || config.length == 0) return null;
+
+    let key;
+    config.forEach(element => {
+        if (element.code == code) key = element.key;
+    });
+    return key;
+}
+
 let mimracleHelper = new _fn();
 
 module.exports = mimracleHelper;

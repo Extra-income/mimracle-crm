@@ -10,7 +10,7 @@ let mimracleHelper = require('../my_modules/mimracleHelper');
  */
 router.get("/api/article/list", function(req, res, next) {
     let postData = {
-        cateid: req.query["category_id"]
+        cate_key: req.query["category_key"]
     };
     if (typeof req.query["page_size"] != "undefined") {
         postData.row = req.query["page_size"];

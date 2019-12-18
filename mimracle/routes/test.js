@@ -1,6 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const global = require('../my_modules/global');
+const mimracleHelper = require('../my_modules/mimracleHelper');
 
 router.get('/test.html', function(req, res, next) {
 
@@ -11,9 +12,7 @@ router.get('/test.html', function(req, res, next) {
             getTopCategories: {
                 url: '/api/category/top-cagetories',
                 data: {
-                    api_key: api_key,
-                    category_id: '47',
-                    page_size: '1'
+                    api_key: api_key
                 }
             }
         };
@@ -27,7 +26,7 @@ router.get('/test.html', function(req, res, next) {
 
     let getAdversts = new Promise((resolve, reject) => {
         var api = {
-            getTopCategories: {
+            getSepcialList: {
                 url: '/api/article/sepcial-list',
                 data: {
                     api_key: api_key
@@ -44,8 +43,8 @@ router.get('/test.html', function(req, res, next) {
 
     let getCustomSetting = new Promise((resolve, reject) => {
         var api = {
-            getTopCategories: {
-                url: '/api/custom/company-setting',
+            getCustomSetting: {
+                url: "/api/custom/company-setting",
                 data: {
                     api_key: api_key
                 }
@@ -83,12 +82,30 @@ router.get('/test.html', function(req, res, next) {
         });
     });
 
-    Promise.all([getTopCategories, getAdversts, getCustomSetting, getHomeAdversts]).then((result) => {
+    // 获取新闻(快讯)
+    let getNewsForFast = getArticlesByCategory(req, api_key, "new", 9, 1);
+    // 获取国内文章
+    let getNewsForInland = getArticlesByCategory(req, api_key, "inland", 6, 1);
+    // 获取社会文章
+    let getNewForSocial = getArticlesByCategory(req, api_key, "social", 10, 1);
+    // 获取国际文章
+    let getNewForInternational = getArticlesByCategory(req, api_key, "international", 10, 1);
+    // 获取科技文章
+    let getNewForTechnology = getArticlesByCategory(req, api_key, "technology", 10, 1);
+
+    Promise.all([getTopCategories, getAdversts, getCustomSetting, getHomeAdversts, getNewsForFast, getNewsForInland, getNewForSocial,
+        getNewForInternational, getNewForTechnology
+    ]).then((result) => {
         let d = {
             memus: result[0],
             adversts: result[1],
             customSetting: result[2],
-            homeAdverst: result[3]
+            homeAdverst: result[3],
+            fastNew: result[4], // 新闻(快讯)
+            inland: result[5], //国内文章
+            social: result[6], //社会
+            international: result[7], //国际
+            technology: result[8] //科技
         };
         console.log(d);
         res.render("test/index.html", d);
@@ -97,5 +114,27 @@ router.get('/test.html', function(req, res, next) {
     });
 });
 
+let getArticlesByCategory = function(req, api_key, category_code, page_size, page_no) {
+    return new Promise((resolve, reject) => {
+        let code = category_code;
+        var api = {
+            getHomeAdversts: {
+                url: '/api/article/list',
+                data: {
+                    api_key: api_key,
+                    category_key: mimracleHelper.getCatetoryKey(code),
+                    page_size: page_size || 8,
+                    page_no: page_no || 1
+                }
+            }
+        };
+
+        global.data(req, api, function(err, resource) {
+            var data = {};
+            global.formatData("获取" + category_code + "新闻", data, req, resource);
+            resolve(data.data);
+        });
+    });
+}
 
 module.exports = router;
