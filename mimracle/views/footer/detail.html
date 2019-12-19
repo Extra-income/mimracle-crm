@@ -1,0 +1,52 @@
+{{include '../base/baseHeader'}}
+<link rel="stylesheet" type="text/css" href="/static/src/css/css/article.css">
+
+<div class="content">
+  <!-- 主体 -->
+  <div class="wrap">
+    <div class="logoAreaMain">
+      <!--<div class="logo"><a href="//www.huanqiu.com" title="环球网，世界很精彩">环球网</a></div>-->
+      <div class="rank">
+        <span class="map">{{pagedetail.title}}</span>
+      </div>
+    </div>
+    <div>
+      {{#pagedetail.content}}
+    </div>
+  </div>
+</div>
+{{include '../base/baseFooter'}}
+
+<script type="text/javascript">
+</script>
+
+<style>
+  .wrap {
+    width: 100%;
+    overflow: hidden;
+    box-shadow: inset 0px 30px 130px #fff;
+  }
+
+  .logoAreaMain {
+    display: block;
+    width: 970px;
+    height: 85px;
+    position: relative;
+  }
+
+  .logoAreaMain .rank {
+    display: block;
+    height: 56px;
+    line-height: 56px;
+    overflow: hidden;
+    position: absolute;
+    top: 17px;
+  }
+
+  .logoAreaMain .rank span.map {
+    font-size: 30px;
+    color: #91110f;
+    border-left: 1px solid #91110f;
+    padding-left: 10px;
+  }
+</style>
