@@ -89,7 +89,6 @@ module.exports = function(template) {
 
         if (template.layout && template.layout() && (!options.data || !options.data["Http-X-Pjax"])) {
             var layoutfile = path.join(options.settings.views, theme, template.layout("layoutfile"));
-            console.log("====================layoutfile", layoutfile);
             options.filename = layoutfile;
             var html_layout = template.renderFile(layoutfile, options);
             options.filename = file;
