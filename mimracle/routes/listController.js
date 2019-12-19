@@ -1,26 +1,75 @@
 const express = require('express');
 const router = express.Router();
 const global = require('../my_modules/global');
+let mimracleHelper = require('../my_modules/mimracleHelper');
+const $ = require("../my_modules/util");
 
-router.get('/list.html', function(req,res,next){
-  // var api = {
-  //     test: {
-  //         url: '/os/ads/getPageInfo.do',
-  //         data: {
-  //           page_code: 'OSGongXiangMeiKe'
-  //         }
-  //     }
-  // };
+router.get('/list/:category_code', function (req, res, next) {
+  let api_key = req.headers["micracle-crm"];
+  let category_key = mimracleHelper.getCatetoryKey(req.params.category_code);
+  let page_size = req.query["page_size"] || 10;
+  let page_no = req.query["page_no"] || 1;
 
-  // global.data(req,api,function(err,resource){
-  //     var data = {
-  //         jsEntry:"VM/yishibanke/yishibanke"
-  //     };
-  //     global.formatData("一时半刻 - 林氏木业官方网站 - 用精置，活出兴致",data,req,resource);
+  // 获取栏目下文章
+  let getArticleList = new Promise((resolve, reject) => {
+    var api = {
+      getArticleList: {
+        url: '/api/article/list',
+        data: {
+          api_key: api_key,
+          category_key: category_key,
+          page_size: page_size,
+          page_no: page_no
+        }
+      }
+    };
 
-      
-  // });
-  res.render("list/index.html");
+    global.data(req, api, function(err, resource) {
+      var data = {};
+      global.formatData("获取专栏文章", data, req, resource);
+      resolve(data.data);
+    });
+  });
+
+  let getHotArticleList = new Promise((resolve, reject) => {
+    var api = {
+      getHotArticleList: {
+        url: '/api/article/sepcial-list',
+        data: {
+          api_key: api_key,
+        }
+      }
+    };
+
+    global.data(req, api, function(err, resource) {
+      var data = {};
+      global.formatData("获取特别文章列表", data, req, resource);
+      resolve(data.data);
+    });
+  });
+
+  let getCustomSetting = new Promise((resolve, reject) => {
+    var api = {
+        getTopCategories: {
+            url: '/api/custom/company-setting',
+            data: {
+                api_key: api_key
+            }
+        }
+    };
+
+    global.data(req, api, function(err, resource) {
+        var data = {};
+        global.formatData("获取底部设置", data, req, resource);
+        resolve(data.data);
+    });
+});
+
+  Promise.all([getArticleList, getHotArticleList, getCustomSetting]).then((reslove) => {
+    res.render("list/index.html", { articleList: reslove[0], adverstsList: reslove[1], customSetting: reslove[2],});
+  }).catch((error) => {
+    $.logger.error(error);
+  });
 });
 
 

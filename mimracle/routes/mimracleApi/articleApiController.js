@@ -73,8 +73,6 @@ router.get("/api/article/detail", function(req, res, next) {
                 });
             }
 
-            console.log("path", pathObj);
-
             result.data = {
                 article: articleObj,
                 category: pathObj
