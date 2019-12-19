@@ -2,7 +2,7 @@
     <div class="nav">
         <ul class="footer-list">
             {{each customSetting as item}}
-            <li id="{{item.page_id}}">{{item.title}}</li>
+            <li id="{{item.page_id}}"><a href="/footer/detail/{{item.page_id}}">{{item.title}}</a></li>
             {{/each}}
         </ul>
         <div class="more-nav-show clear" show="false"></div>
