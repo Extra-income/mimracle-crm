@@ -1,7 +1,7 @@
 let express = require('express');
 let router = express.Router();
 let request = require('request');
-let mimracleHelper = require('../my_modules/mimracleHelper');
+let mimracleHelper = require('../../my_modules/mimracleHelper');
 
 router.get("/api/footer/pages/detail", function (req, res, next) {
     let postData = {
