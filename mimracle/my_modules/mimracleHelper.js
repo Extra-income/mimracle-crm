@@ -22,7 +22,8 @@ _fn.prototype.getConfig = function(key) {
  */
 _fn.prototype.buildOpt = function(url, data, req) {
     let self = this;
-    let apiConfig = self.getConfig(req.query["api_key"]);
+
+    let apiConfig = self.getConfig(req.query["api_key"] || req.headers["micracle-crm"]);
     if (apiConfig == null) return null;
 
     let opt = {

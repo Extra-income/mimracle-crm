@@ -55,12 +55,12 @@
 <script type="text/javascript">
     $(function() {
 
-        var memus = $(".j-memu").find("a").hover(function () {
+        var memus = $(".j-memu").find("a").hover(function() {
             let $a = $(this);
             let id = $a.attr("data-id");
-            
+
             $.ajax({
-                url: "/api/category/sub-cagetories",
+                url: "/api/category/sub-categories",
                 type: "GET",
                 data: {
                     category_id: id,
@@ -70,10 +70,10 @@
                 success: function(d) {
                     if (d.code == 200 && d.succeed) {
                         let $text = "";
-                        for (let i = 0,len = d.data.list.length; i < len; i++) {
+                        for (let i = 0, len = d.data.list.length; i < len; i++) {
                             let item = d.data.list[i];
-                            $text += "<li><a href=\"\" title=\""+ item.name +"\">"+ item.name +"</a></li>";
-                        }                       
+                            $text += "<li><a href=\"\" title=\"" + item.name + "\">" + item.name + "</a></li>";
+                        }
                         $(".j-sub-menu  ul").html($text);
 
                         $(".j-sub-menu").show();
@@ -83,7 +83,7 @@
                 }
             });
 
-        }, function () {
+        }, function() {
             $(".j-sub-menu").hide();
         });
 

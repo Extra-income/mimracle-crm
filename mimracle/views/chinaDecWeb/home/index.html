@@ -557,7 +557,7 @@
                 <strong>财观察</strong>
                 <a href="//finance.huanqiu.com/observation" target="_blank">更多</a>
             </div>
-            <ul class="new-fast-list">
+            <ul class="new-fast-list j-ul-money-observe">
                 <li class="new-item-fast"><a href="" title="链接说明">十九大以来，习近平对这件事多次作出深刻阐释</a></li>
                 <li class="new-item-fast"><a href="" title="链接说明">【央视快评】在新时代播种新希望</a></li>
                 <li class="new-item-fast"><a href="" title="链接说明">【央视快评】在新时代播种新希望</a></li>
@@ -967,3 +967,31 @@
 </div>
 
 {{include '../share/footer'}}
+
+<script src="/views/chinaDecWeb/home/tpl/index.tpl" type="text/html"></script>
+
+<script src="/static/src/js/lib/template.js" type="text/javascript"></script>
+
+<!-- <script type="text/html" id="newsTpl">
+    {{each data}}
+    <li class="new-item-fast"><a href="{{$value.url}}" title="{{$value.title}}">{{$value.title}}</a></li>
+    {{/each}}
+</script> -->
+
+<script type="text/javascript">
+    $(function() {
+
+        $.ajax({
+            url: "/api/money-observe/article?category_key=money-observe&page_size=10&page_no=1",
+            type: "GET",
+            dataType: "JSON",
+            success: function(d) {
+                console.log(d);
+                debugger;
+                var $moneyObserve = $(".j-ul-money-observe");
+                var html = template("newsTpl", d.data);
+                $moneyObserve.html(html);
+            }
+        });
+    });
+</script>

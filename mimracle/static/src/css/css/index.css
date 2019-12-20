@@ -300,3 +300,52 @@
 	font-weight: normal;
 	color: #fff;
 }
+
+.right-panel{
+	width: 690px;
+	height: 25px;
+	float: left;
+	margin-top: 10px;
+	margin-left: 10px;
+	position: relative;
+}
+.right-panel #search-input{
+	width: 690px;
+	padding-left: 10px;
+	height: 25px;
+	display: inline-block;
+	float: left;
+	outline: none;
+}
+.right-panel .input-panel{
+	position: relative;
+    overflow: hidden;
+    right: -690px;
+    width: 0px;
+}
+.right-panel .search-btn{
+	width: 25px;
+	margin-left: 10px;
+	height: 25px;
+	background: url(/static/src/img/icon.png) no-repeat;
+	background-position: -37px -9px;
+	display: inline-block;
+	/* float: left; */
+	position: absolute;
+	right:-30px;
+	top: 3px;
+	cursor: pointer;
+}
+.right-panel .dump-btn{
+	width: 25px;
+	margin-left: 10px;
+	height: 25px;
+	background: url(/static/src/img/dump.jpg) no-repeat;
+	/* background-position: -37px -9px; */
+	display: inline-block;
+	/* float: left; */
+	position: absolute;
+	right:0px;
+	top: 3px;
+	cursor: pointer;
+}

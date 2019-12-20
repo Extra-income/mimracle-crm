@@ -27,7 +27,7 @@ router.get('/footer/detail/:page_id', function(req, res, next) {
     let getTopCategories = new Promise((resolve, reject) => {
         var api = {
             getTopCategories: {
-                url: '/api/category/top-cagetories',
+                url: '/api/category/top-categories',
                 data: {
                     api_key: api_key,
                     category_id: '47',
@@ -42,7 +42,7 @@ router.get('/footer/detail/:page_id', function(req, res, next) {
             resolve(data.data);
         });
     });
-    
+
     let getCustomSetting = new Promise((resolve, reject) => {
         var api = {
             getTopCategories: {
@@ -61,7 +61,7 @@ router.get('/footer/detail/:page_id', function(req, res, next) {
     });
 
     Promise.all([getFooterDetail, getTopCategories, getCustomSetting]).then((reslove) => {
-        res.render("footer/detail.html", { pagedetail: reslove[0], memus: reslove[1], customSetting: reslove[2],});
+        res.render("footer/detail.html", { pagedetail: reslove[0], memus: reslove[1], customSetting: reslove[2], });
     }).catch((error) => {
         $.logger.error(error);
     })

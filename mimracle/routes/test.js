@@ -11,7 +11,7 @@ router.get('/test.html', function(req, res, next) {
     let getTopCategories = new Promise((resolve, reject) => {
         var api = {
             getTopCategories: {
-                url: '/api/category/top-cagetories',
+                url: '/api/category/top-categories',
                 data: {
                     api_key: api_key
                 }

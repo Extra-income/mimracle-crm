@@ -15,6 +15,7 @@ router.get("/api/article/list", function(req, res, next) {
         page: req.query["page_no"] || 1
     };
     let opt = mimracleHelper.buildOpt("/api/Apilist/cates_article", postData, req);
+    console.log("opt", opt);
     if (opt == null) {
         res.json(mimracleHelper.notExistsApiKeyResult());
         return;
@@ -176,6 +177,39 @@ router.get("/api/article/search", function(req, res, next) {
         } else {
             result = mimracleHelper.getFailResult(apiResult.code, apiResult.msg);
         }
+        res.json(result);
+    });
+});
+
+/**
+ * 根据栏目编码获取文章列表
+ */
+router.get("/api/:category_code/article", function(req, res, next) {
+    let postData = {
+        cate_key: mimracleHelper.getCatetoryKey(req.params.category_code),
+        row: req.query["page_size"] || 10,
+        page: req.query["page_no"] || 1
+    };
+    let opt = mimracleHelper.buildOpt("/api/Apilist/cates_article", postData, req);
+    console.log("opt", opt);
+    if (opt == null) {
+        res.json(mimracleHelper.notExistsApiKeyResult());
+        return;
+    }
+
+    request.post(opt, (err, response, body) => {
+        let apiResult = JSON.parse(body);
+        let result = mimracleHelper.toMimracleResult(apiResult);
+
+        if (apiResult.code == 200 && apiResult.data != null && apiResult.data.length > 0) {
+            result.data = [];
+            apiResult.data.forEach(element => {
+                result.data.push(convertArticle(element));
+            });
+        } else {
+            result = mimracleHelper.getFailResult(apiResult.code, apiResult.msg);
+        }
+
         res.json(result);
     });
 });
