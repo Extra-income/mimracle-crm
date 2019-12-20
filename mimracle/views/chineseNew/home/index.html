@@ -1,769 +1,675 @@
-<!DOCTYPE html>
-<html>
 
-<head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title>特时代</title>
-    <meta name="description" content="特网有深圳新闻、深圳城事、深圳财经、乐活、汽车、旅游等频道。" />
-    <meta name="keywords" content="" />
-    <link rel="stylesheet" href="/static/src/css/chineseNew/index.css">
-    <link href="/favicon.ico" rel="shortcut icon">
-    <meta http-equiv="mobile-agent" content="format=xhtml;url=http://www.tetimes.com/m/index.php">
-    <script type="text/javascript">
-        if (window.location.toString().indexOf('pref=padindex') != -1) {} else {
-            if (/AppleWebKit.*Mobile/i.test(navigator.userAgent) || (/MIDP|SymbianOS|NOKIA|SAMSUNG|LG|NEC|TCL|Alcatel|BIRD|DBTEL|Dopod|PHILIPS|HAIER|LENOVO|MOT-|Nokia|SonyEricsson|SIE-|Amoi|ZTE/.test(navigator.userAgent))) {
-                if (window.location.href.indexOf("?mobile") < 0) {
-                    try {
-                        if (/Android|Windows Phone|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) {
-                            window.location.href = "http://www.tetimes.com/m/index.php";
-                        } else if (/iPad/i.test(navigator.userAgent)) {} else {}
-                    } catch (e) {}
-                }
-            }
-        }
-    </script>
-</head>
-
-<body>
     <div class="wrap">
-        <!-- 导航功能区 begin-->
-        <div class="navTop">
-            <div class="navTopCon">
-                <a href="http://www.tetimes.com/" target="_blank" class="logo"><img src="/static/src/images/chineseNew/ed9715bdbbc03761688a3d50513e91fb.jpg" alt="特网" class="logop" style="width: 175px"></a>
-            </div>
+        {{include '../share/baseHeader'}}
+        
 
-            <!-- 导航 begin-->
-            <div class="navBg">
-                <div class="nav">
-                    <div class="navCon">
-                        <ul class="clear">
-                            <li>
-
-                                <a href='http://www.tetimes.com/society/'>社会<span><em><i></i></em></span></a><strong></strong>
-
-                                <a href='http://www.tetimes.com/world/'>国际<span><em><i></i></em></span></a><strong></strong>
-
-                                <a href='http://www.tetimes.com/xiaofei/'>消费<span><em><i></i></em></span></a><strong></strong>
-
-                                <a href='http://www.tetimes.com/finance/'>财经<span><em><i></i></em></span></a><strong></strong>
-
-                                <a href='http://www.tetimes.com/edu/'>教育<span><em><i></i></em></span></a><strong></strong>
-
-                                <a href='http://www.tetimes.com/auto/'>汽车<span><em><i></i></em></span></a><strong></strong>
-
-                                <a href='http://www.tetimes.com/money/'>金融<span><em><i></i></em></span></a><strong></strong>
-
-                                <a href='http://www.tetimes.com/wenhua/'>文化<span><em><i></i></em></span></a><strong></strong>
-
-                                <a href='http://www.tetimes.com/travel/'>旅游<span><em><i></i></em></span></a><strong></strong>
-
-                                <a href='http://www.tetimes.com/house/'>房产<span><em><i></i></em></span></a><strong></strong>
-
-                                <a href='http://www.tetimes.com/sports/'>体育<span><em><i></i></em></span></a><strong></strong>
-
-                                <a href='http://www.tetimes.com/life/'>生活<span><em><i></i></em></span></a><strong></strong>
-
-                                <a href='http://www.tetimes.com/qiye/'>企业<span><em><i></i></em></span></a><strong></strong>
-
-                                <a href='http://news.tetimes.com/'>资讯<span><em><i></i></em></span></a><strong></strong>
-
-                                <a href='http://www.tetimes.com/tech/'>科技<span><em><i></i></em></span></a><strong></strong>
-
-                                <a href='http://sztqb.tetimes.com/'>粤港澳<span><em><i></i></em></span></a><strong></strong>
-
-                                <a href='http://www.tetimes.com/ent/'>娱乐<span><em><i></i></em></span></a><strong></strong>
-
-                            </li>
-                        </ul>
+        <!-- 内容外侧 begin-->
+        <div class="wrapBg">
+            <div class="wrapPic">
+                <!-- 内容部分 begin-->
+                <div class="wrapCon">
+                    <div class="ad">
+                        <img style="border:0px;width:1200;height:120;" src="/static/src/images/chineseNew/9c196517-2189-48e8-884b-f9b04b645dd7.jpg">
                     </div>
-                </div>
-            </div>
-            <!-- 导航 end-->
 
-            <!-- 内容外侧 begin-->
-            <div class="wrapBg">
-                <div class="wrapPic">
-                    <!-- 内容部分 begin-->
-                    <div class="wrapCon">
-                        <div class="ad">
-                            <img style="border:0px;width:1200;height:120;" src="/static/src/images/chineseNew/9c196517-2189-48e8-884b-f9b04b645dd7.jpg">
+                    <!-- 第一部分 begin-->
+                    <div class="conFir">
+                        <!-- 左侧 begin-->
+                        <div class="leftFir">
+                            <!-- 焦点图 begin -->
+                            <div id="foucsBox">
+                                <ul class="imgCon" id="imgCon" style="width: 4320px; margin-left: -720px;">
+                                    <!--展示图片开始-->
+
+                                    <li>
+                                        <a href="http://www.tetimes.com/wenyu/20191220/29610.html" title="热门小说x y sy361悦享书驿《重生贵女：抱紧慎王" target="_blank"> <img src="/static/src/images/chineseNew/19_1220105333vm.gif"> </a>
+                                        <div class="imgTitle"><a href="http://www.tetimes.com/wenyu/20191220/29610.html" target="_blank" title="热门小说x y sy361悦享书驿《重生贵女：抱紧慎王">热门小说x y sy361悦享书驿《重生贵女：抱紧慎王</a></div>
+                                        <div class="showPage"></div>
+                                    </li>
+                                    <li>
+                                        <a href="http://www.tetimes.com/wenyu/20191220/29609.html" title="官方全免xingkongzhongwen《重生弃少归来》主角叶子" target="_blank"> <img src="/static/src/images/chineseNew/19_12201050515154.gif"> </a>
+                                        <div class="imgTitle"><a href="http://www.tetimes.com/wenyu/20191220/29609.html" target="_blank" title="官方全免xingkongzhongwen《重生弃少归来》主角叶子">官方全免xingkongzhongwen《重生弃少归来》主角叶子</a></div>
+                                        <div class="showPage"></div>
+                                    </li>
+                                    <li>
+                                        <a href="http://www.tetimes.com/wenyu/20191220/29607.html" title="正版全免swbd668嵍c《慕少，你老婆又重生了》主角" target="_blank"> <img src="/static/src/images/chineseNew/19_1220104313j43.gif"> </a>
+                                        <div class="imgTitle"><a href="http://www.tetimes.com/wenyu/20191220/29607.html" target="_blank" title="正版全免swbd668嵍c《慕少，你老婆又重生了》主角">正版全免swbd668嵍c《慕少，你老婆又重生了》主角</a></div>
+                                        <div class="showPage"></div>
+                                    </li>
+                                    <li>
+                                        <a href="http://www.tetimes.com/tech/20191220/29606.html" title="安路科技全线FPGA产品亮相深圳电子展，登榜“" target="_blank"> <img src="/static/src/images/chineseNew/10_12201042541f4.jpg"> </a>
+                                        <div class="imgTitle"><a href="http://www.tetimes.com/tech/20191220/29606.html" target="_blank" title="安路科技全线FPGA产品亮相深圳电子展，登榜“">安路科技全线FPGA产品亮相深圳电子展，登榜“</a></div>
+                                        <div class="showPage"></div>
+                                    </li>
+                                    <li>
+                                        <a href="http://www.tetimes.com/tech/20191220/29608.html" title="A.O.史密斯甲醛净化器荣膺8星认证 除醛滤芯升级" target="_blank"> <img src="/static/src/images/chineseNew/5_1220104529c92.jpg"> </a>
+                                        <div class="imgTitle"><a href="http://www.tetimes.com/tech/20191220/29608.html" target="_blank" title="A.O.史密斯甲醛净化器荣膺8星认证 除醛滤芯升级">A.O.史密斯甲醛净化器荣膺8星认证 除醛滤芯升级</a></div>
+                                        <div class="showPage"></div>
+                                    </li>
+                                    <li>
+                                        <a href="http://www.tetimes.com/wenyu/20191220/29605.html" title="zsbd688/枕书伴读《慕少，你老婆又重生了》主角苏" target="_blank"> <img src="/static/src/images/chineseNew/19_122010421462b.gif"> </a>
+                                        <div class="imgTitle"><a href="http://www.tetimes.com/wenyu/20191220/29605.html" target="_blank" title="zsbd688/枕书伴读《慕少，你老婆又重生了》主角苏">zsbd688/枕书伴读《慕少，你老婆又重生了》主角苏</a></div>
+                                        <div class="showPage"></div>
+                                    </li>
+
+
+                                    <!--展示图片结束-->
+                                </ul>
+                                <div class="foucs"><span class=""></span><span class="f"></span><span class=""></span><span class=""></span><span class=""></span><span class=""></span></div>
+                                <div class="rBtn foucsButton"> <span></span> <img src="/static/src/images/chineseNew/20180921122032403.jpg"> </div>
+                                <div class="lBtn foucsButton"> <span></span> <img src="/static/src/images/chineseNew/20180921085857955.jpg"> </div>
+                            </div>
+                            <!-- 焦点图 end -->
+                            <script type="text/javascript">
+                                (function() {
+                                    var foucsBox = document.getElementById('imgCon'),
+                                        foucsBoxEle = foucsBox.getElementsByTagName('li'),
+                                        foucsObj = foucsBoxEle[foucsBoxEle.length - 1],
+                                        t = foucsObj.getElementsByClassName("imgTitle");
+                                    !t.length && foucsObj.parentNode.removeChild(foucsObj);
+                                })();
+                            </script>
                         </div>
+                        <!-- 左侧 end-->
 
-                        <!-- 第一部分 begin-->
-                        <div class="conFir">
-                            <!-- 左侧 begin-->
-                            <div class="leftFir">
+                        <!-- 右侧 end-->
+                        <div class="rightFir">
+                            <dl class="rightFirNews">
+                                <dt><a href="http://www.tetimes.com/wenyu/20191220/29610.html">热门小说x y sy361悦享书驿《重生贵女：抱紧慎王大腿》</a></dt>
+
+                                <dd><a href="http://www.tetimes.com/wenyu/20191220/29609.html">官方全免xingkongzhongwen《重生弃少归来》主角叶子沁/卓</a></dd>
+                                <dd><a href="http://www.tetimes.com/wenyu/20191220/29607.html">正版全免swbd668嵍c《慕少，你老婆又重生了》主角苏梓</a></dd>
+                                <dd><a href="http://www.tetimes.com/tech/20191220/29606.html">安路科技全线FPGA产品亮相深圳电子展，登榜“2019硬核</a></dd>
+                                <dd><a href="http://www.tetimes.com/tech/20191220/29608.html">A.O.史密斯甲醛净化器荣膺8星认证 除醛滤芯升级产品震</a></dd>
+                                <dd><a href="http://www.tetimes.com/wenyu/20191220/29605.html">zsbd688/枕书伴读《慕少，你老婆又重生了》主角苏梓第</a></dd>
+                                <dd><a href="http://www.tetimes.com/wenyu/20191220/29604.html">baiyezw《暗恋成欢，女人休想逃》主角白汐/纪辰凌第2</a></dd>
+                                <dd><a href="http://www.tetimes.com/society/20191220/29603.html">青海省“三区两州”首批339项电网工程即将收尾</a></dd>
+                                <dd><a href="http://www.tetimes.com/wenyu/20191220/29602.html">cctw63正版全本完结精选《暗恋成欢，女人休想逃》主角</a></dd>
+                                <dd><a href="http://www.tetimes.com/wenyu/20191220/29601.html">xiaojbook在线阅读《好想住你隔壁》主角韩经年/夏晚安第</a></dd>
+                                <dd><a href="http://www.tetimes.com/wenyu/20191220/29600.html">ywsh23全文无删减《妖孽奶爸在都市》主角叶辰第43章 刘</a></dd>
+                                <dd><a href="http://www.tetimes.com/wenyu/20191220/29599.html">whwx288正版全集无删减《妖孽奶爸在都市》主角叶辰第</a></dd>
+                                <dd><a href="http://www.tetimes.com/sports/20191220/29598.html">西宁冰球馆冰壶馆28日起开放 招募5000名青少年免费体验</a></dd>
+
+
+
+                            </dl>
+                            <div>
+                            </div>
+                        </div>
+                        <!-- 右侧 end-->
+                    </div>
+                    <!-- 第一部分 end-->
+
+                    <!-- 第二部分 begin-->
+                    <div class="ad">
+
+                    </div>
+                    <div class="conSec clear">
+                        <!-- 左侧 begin-->
+                        <div class="leftSec">
+
+                            <div class="hqDayComment">
+                                <div class="indexTitle"> <strong>科技</strong> <a href="/tech/" target="_blank">更多</a> </div>
+                                <div class="commentTab">
+                                    <ul class="commentDetail">
+                                        <li class="commentDshow">
+                                            <dl class="commentNews">
+                                                <dt><a href="http://www.tetimes.com/tech/20191220/29606.html">安路科技全线FPGA产品亮相深圳电子展，登榜“2019硬核</a></dt>
+
+                                                <dd><a href="http://www.tetimes.com/tech/20191220/29608.html">A.O.史密斯甲醛净化器荣膺8星认证 除醛滤芯升级产品震</a></dd>
+                                                <dd><a href="http://www.tetimes.com/tech/20191220/29597.html">2019中国海外人才交流大会暨第21届中国留学人员广州科</a></dd>
+                                                <dd><a href="http://www.tetimes.com/tech/20191219/29495.html">We Office：想你所想，及你所及</a></dd>
+                                                <dd><a href="http://www.tetimes.com/tech/20191219/29463.html">游戏行业共同发布未成年人守护宣言，腾讯启动适龄提</a></dd>
+
+                                            </dl>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+
+
+                            <div class="overseaChina">
+                                <div class="indexTitle"> <strong>教育</strong> <a href="/edu/" target="_blank">更多</a> <span class="udline3"></span> </div>
+                                <div class="overseaCNews">
+                                    <h4><a href="http://www.tetimes.com/edu/20191219/29517.html" se_prerender_url="complete" target="_blank">2020全国硕士研究生考试周六开考 今年安庆市参考人数</a></h4>
+
+                                    <p><a href="http://www.tetimes.com/edu/20191219/29512.html" se_prerender_url="complete" target="_blank">头条|坚守本心的80后资本少帅陈俊州</a></p>
+                                    <p><a href="http://www.tetimes.com/edu/20191219/29428.html" se_prerender_url="complete" target="_blank">A.O.史密斯受邀百年学府东南大学，总裁丁威受聘客座教</a></p>
+                                    <p><a href="http://www.tetimes.com/edu/20191219/29419.html" se_prerender_url="complete" target="_blank">贵阳市白云区新增一所公办小学 24个班的办学规模</a></p>
+                                    <p><a href="http://www.tetimes.com/edu/20191219/29344.html" se_prerender_url="complete" target="_blank">校企携手合作共赢 广西英华国际职业学院一行参观千陌</a></p>
+                                    <p><a href="http://www.tetimes.com/edu/20191219/29340.html" se_prerender_url="complete" target="_blank">福建省新增2个人工智能教育实验区17所试点校 将惠及更</a></p>
+                                    <p><a href="http://www.tetimes.com/edu/20191218/29276.html" se_prerender_url="complete" target="_blank">浩海留学联合创始人张景舒做客《逐梦年代》栏目 讲述</a></p>
+                                    <p><a href="http://www.tetimes.com/edu/20191218/29275.html" se_prerender_url="complete" target="_blank">浩海留学联合创始人季羿荣获2019年度福布斯中国U30精英</a></p>
+
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 左侧 end-->
+
+                        <!-- 中间 begin-->
+                        <div class="centerSec">
+                            <div class="videoBlock">
+                                <div class="indexTitle"> <strong>汽车</strong> </div>
+                                <div class="videoPic">
+                                    <ul class="videoPic clear">
+                                        <li>
+                                            <a href="http://www.tetimes.com/auto/20191219/29452.html" target="_blank"> <img src="/static/src/images/chineseNew/8_1219154552h37.jpg" width="168px" height="112px" alt="一汽丰田奕泽E擎动"> <span></span> </a>
+                                            <p> <a href="http://www.tetimes.com/auto/20191219/29452.html" target="_blank">一汽丰田奕泽E擎动</a> </p>
+                                        </li>
+                                        <li>
+                                            <a href="http://www.tetimes.com/auto/20191219/29450.html" target="_blank"> <img src="/static/src/images/chineseNew/8_1219154459b61.jpg" width="168px" height="112px" alt="Jeep自由侠PHEV版明"> <span></span> </a>
+                                            <p> <a href="http://www.tetimes.com/auto/20191219/29450.html" target="_blank">Jeep自由侠PHEV版明</a> </p>
+                                        </li>
+
+                                    </ul>
+                                </div>
+                                <ul class="videoNews">
+                                    <li> <a href="http://www.tetimes.com/auto/20191219/29470.html" target="_blank"> 签下1500台大单！江铃汽车与11家邮政快递企业签订全面</a> </li>
+                                    <li> <a href="http://www.tetimes.com/auto/20191219/29452.html" target="_blank"> 一汽丰田奕泽E擎动力信息曝光 最高车速可达160km/h</a> </li>
+                                    <li> <a href="http://www.tetimes.com/auto/20191219/29450.html" target="_blank"> Jeep自由侠PHEV版明年上市 最高时速约130.35km/h</a> </li>
+                                    <li> <a href="http://www.tetimes.com/auto/20191219/29445.html" target="_blank"> 法拉利F8 Spider正式上市 共推出一款车型</a> </li>
+
+                                </ul>
+                            </div>
+
+
+                            <div class="topicBlock">
+                                <div class="indexTitle"> <strong>消费</strong> </div>
+
+                                <ul class="topicNews">
+                                    <li>
+                                        <a href="http://www.tetimes.com/xiaofei/20191217/28952.html" target="_blank"><span>· 亲草多效御龄眼霜，修护眼袋黑眼圈早衰，让你的眼睛</span></a>
+                                    </li>
+                                    <li>
+                                        <a href="http://www.tetimes.com/xiaofei/20191219/29422.html" target="_blank"><span>· 擦亮神灯，瓜分2000万，抽1001份全年免单，来神灯节当</span></a>
+                                    </li>
+                                    <li>
+                                        <a href="http://www.tetimes.com/xiaofei/20191219/29389.html" target="_blank"><span>· 植物医生续写国礼荣耀 石斛兰礼赠日本前首相鸠山由纪</span></a>
+                                    </li>
+                                    <li>
+                                        <a href="http://www.tetimes.com/xiaofei/20191219/29379.html" target="_blank"><span>· 执御开放平台发展迅猛</span></a>
+                                    </li>
+                                    <li>
+                                        <a href="http://www.tetimes.com/xiaofei/20191218/29219.html" target="_blank"><span>· 家装设计师更爱“轻薄风” A.O.史密斯薄型速热电热水</span></a>
+                                    </li>
+
+                                </ul>
+                            </div>
+
+                        </div>
+                        <!-- 中间 end-->
+
+                        <!-- 右侧 begin-->
+                        <div class="rightSec">
+
+                            <div class="secNewsBlock">
+                                <div class="indexTitle"> <strong>社会</strong> </div>
+                                <div class="secNewsList">
+                                    <p><a href="http://www.tetimes.com/society/20191220/29603.html" target="_blank">青海省“三区两州”首批339项电网工程即将收尾</a></p>
+                                    <p><a href="http://www.tetimes.com/society/20191220/29582.html" target="_blank">北京王府井步行街北延今日开街 打造时尚运动潮流聚集</a></p>
+                                    <p><a href="http://www.tetimes.com/society/20191220/29577.html" target="_blank">合宁、合安、芜合高速“四改八”扩建工程完工 全面开</a></p>
+                                    <p><a href="http://www.tetimes.com/society/20191219/29525.html" target="_blank">今年前11个月北京空气质量优良天215天 重污染3天</a></p>
+                                    <p><a href="http://www.tetimes.com/society/20191219/29491.html" target="_blank">沪苏湖铁路环评获批 线路正线全长163.708公里</a></p>
+
+                                </div>
+                                <div class="secNewsList">
+                                    <p><a href="http://www.tetimes.com/society/20191219/29481.html" target="_blank">苏南硕放机场新停机坪计划明年1月30日正式启用 总投资</a></p>
+                                    <p><a href="http://www.tetimes.com/society/20191219/29475.html" target="_blank">太仓港疏港铁路专用线开工 正线全长约13.1公里</a></p>
+                                    <p><a href="http://www.tetimes.com/society/20191219/29464.html" target="_blank">连云港市域列车5个客运站现有公交线网布局和配套接驳</a></p>
+                                    <p><a href="http://www.tetimes.com/society/20191219/29429.html" target="_blank">广西4条高铁公网升级改造完成实现4G全覆盖 为后期5G网</a></p>
+
+                                </div>
+                                <div class="secNewsList">
+                                    <p><a href="http://www.tetimes.com/society/20191219/29378.html" target="_blank">塞尔维亚E763高速公路苏尔钦-奥布雷诺瓦茨段通车</a></p>
+                                    <p><a href="http://www.tetimes.com/society/20191219/29366.html" target="_blank">州河特大桥主跨双幅现浇梁成功合龙 全长1150米</a></p>
+                                    <p><a href="http://www.tetimes.com/society/20191219/29362.html" target="_blank">资阳市临空经济区产业孵化中心正式开工建设 总建筑面</a></p>
+                                    <p><a href="http://www.tetimes.com/society/20191219/29354.html" target="_blank">合肥41条道路3119盏路灯将实行间隔关灯 预计月节电量达</a></p>
+
+                                </div>
+                            </div>
+
+                        </div>
+                        <!-- 右侧 end-->
+                    </div>
+                    <!-- 第二部分 end-->
+
+                    <!-- 第三部分-新闻 begin-->
+                    <div class="ad">
+
+                    </div>
+                    <div class="conThr clear">
+                        <div class="indexBTitle"> <strong>娱乐</strong> <span></span> </div>
+                        <!-- 左侧 begin-->
+                        <div class="leftThr">
+                            <div class="leftThrFocus">
                                 <!-- 焦点图 begin -->
-                                <div id="foucsBox">
-                                    <ul class="imgCon" id="imgCon" style="width: 4320px; margin-left: -720px;">
+                                <div id="foucsBox11">
+                                    <ul class="imgCon" id="imgCon11" style="width: 1700px; margin-left: -340px;">
                                         <!--展示图片开始-->
-
                                         <li>
-                                            <a href="http://www.tetimes.com/wenyu/20191220/29610.html" title="热门小说x y sy361悦享书驿《重生贵女：抱紧慎王" target="_blank"> <img src="/static/src/images/chineseNew/19_1220105333vm.gif"> </a>
-                                            <div class="imgTitle"><a href="http://www.tetimes.com/wenyu/20191220/29610.html" target="_blank" title="热门小说x y sy361悦享书驿《重生贵女：抱紧慎王">热门小说x y sy361悦享书驿《重生贵女：抱紧慎王</a></div>
+                                            <a href="http://www.tetimes.com/ent/zy/20191219/29533.html" title="酷漾娱乐旅行新蜜蜂斩获年度奖项,原创作品首秀" target="_blank"> <img src="/static/src/images/chineseNew/4_12191942439503.jpg"> </a>
+                                            <div class="imgTitle"><a href="http://www.tetimes.com/ent/zy/20191219/29533.html" target="_blank" title="酷漾娱乐旅行新蜜蜂斩获年度奖项,原创作品首秀">酷漾娱乐旅行新蜜蜂斩获年度奖项,原创作品首秀</a></div>
                                             <div class="showPage"></div>
                                         </li>
                                         <li>
-                                            <a href="http://www.tetimes.com/wenyu/20191220/29609.html" title="官方全免xingkongzhongwen《重生弃少归来》主角叶子" target="_blank"> <img src="/static/src/images/chineseNew/19_12201050515154.gif"> </a>
-                                            <div class="imgTitle"><a href="http://www.tetimes.com/wenyu/20191220/29609.html" target="_blank" title="官方全免xingkongzhongwen《重生弃少归来》主角叶子">官方全免xingkongzhongwen《重生弃少归来》主角叶子</a></div>
+                                            <a href="http://www.tetimes.com/ent/dsj/20191219/29510.html" title="电视剧《大明风华》节奏紧凑剧情持续高能 首播" target="_blank"> <img src="/static/src/images/chineseNew/8_12191hk51430.jpg"> </a>
+                                            <div class="imgTitle"><a href="http://www.tetimes.com/ent/dsj/20191219/29510.html" target="_blank" title="电视剧《大明风华》节奏紧凑剧情持续高能 首播">电视剧《大明风华》节奏紧凑剧情持续高能 首播</a></div>
                                             <div class="showPage"></div>
                                         </li>
                                         <li>
-                                            <a href="http://www.tetimes.com/wenyu/20191220/29607.html" title="正版全免swbd668嵍c《慕少，你老婆又重生了》主角" target="_blank"> <img src="/static/src/images/chineseNew/19_1220104313j43.gif"> </a>
-                                            <div class="imgTitle"><a href="http://www.tetimes.com/wenyu/20191220/29607.html" target="_blank" title="正版全免swbd668嵍c《慕少，你老婆又重生了》主角">正版全免swbd668嵍c《慕少，你老婆又重生了》主角</a></div>
-                                            <div class="showPage"></div>
-                                        </li>
-                                        <li>
-                                            <a href="http://www.tetimes.com/tech/20191220/29606.html" title="安路科技全线FPGA产品亮相深圳电子展，登榜“" target="_blank"> <img src="/static/src/images/chineseNew/10_12201042541f4.jpg"> </a>
-                                            <div class="imgTitle"><a href="http://www.tetimes.com/tech/20191220/29606.html" target="_blank" title="安路科技全线FPGA产品亮相深圳电子展，登榜“">安路科技全线FPGA产品亮相深圳电子展，登榜“</a></div>
-                                            <div class="showPage"></div>
-                                        </li>
-                                        <li>
-                                            <a href="http://www.tetimes.com/tech/20191220/29608.html" title="A.O.史密斯甲醛净化器荣膺8星认证 除醛滤芯升级" target="_blank"> <img src="/static/src/images/chineseNew/5_1220104529c92.jpg"> </a>
-                                            <div class="imgTitle"><a href="http://www.tetimes.com/tech/20191220/29608.html" target="_blank" title="A.O.史密斯甲醛净化器荣膺8星认证 除醛滤芯升级">A.O.史密斯甲醛净化器荣膺8星认证 除醛滤芯升级</a></div>
-                                            <div class="showPage"></div>
-                                        </li>
-                                        <li>
-                                            <a href="http://www.tetimes.com/wenyu/20191220/29605.html" title="zsbd688/枕书伴读《慕少，你老婆又重生了》主角苏" target="_blank"> <img src="/static/src/images/chineseNew/19_122010421462b.gif"> </a>
-                                            <div class="imgTitle"><a href="http://www.tetimes.com/wenyu/20191220/29605.html" target="_blank" title="zsbd688/枕书伴读《慕少，你老婆又重生了》主角苏">zsbd688/枕书伴读《慕少，你老婆又重生了》主角苏</a></div>
+                                            <a href="http://www.tetimes.com/ent/dy/20191219/29459.html" title="电影《青春再见青春》启动 预计将于2020年上映" target="_blank"> <img src="/static/src/images/chineseNew/8_121916022o028.jpg"> </a>
+                                            <div class="imgTitle"><a href="http://www.tetimes.com/ent/dy/20191219/29459.html" target="_blank" title="电影《青春再见青春》启动 预计将于2020年上映">电影《青春再见青春》启动 预计将于2020年上映</a></div>
                                             <div class="showPage"></div>
                                         </li>
 
 
                                         <!--展示图片结束-->
                                     </ul>
-                                    <div class="foucs"><span class=""></span><span class="f"></span><span class=""></span><span class=""></span><span class=""></span><span class=""></span></div>
-                                    <div class="rBtn foucsButton"> <span></span> <img src="/static/src/images/chineseNew/20180921122032403.jpg"> </div>
-                                    <div class="lBtn foucsButton"> <span></span> <img src="/static/src/images/chineseNew/20180921085857955.jpg"> </div>
+                                    <div class="foucs"><span class=""></span><span class="f"></span><span class=""></span><span class=""></span><span class=""></span></div>
+                                    <div class="rBtn foucsButton"> <span></span> <img src="/static/src/images/chineseNew/20180920070347202.jpg"> </div>
+                                    <div class="lBtn foucsButton"> <span></span> <img src="/static/src/images/chineseNew/20180920094845839.jpg"> </div>
                                 </div>
                                 <!-- 焦点图 end -->
-                                <script type="text/javascript">
-                                    (function() {
-                                        var foucsBox = document.getElementById('imgCon'),
-                                            foucsBoxEle = foucsBox.getElementsByTagName('li'),
-                                            foucsObj = foucsBoxEle[foucsBoxEle.length - 1],
-                                            t = foucsObj.getElementsByClassName("imgTitle");
-                                        !t.length && foucsObj.parentNode.removeChild(foucsObj);
-                                    })();
-                                </script>
                             </div>
-                            <!-- 左侧 end-->
-
-                            <!-- 右侧 end-->
-                            <div class="rightFir">
-                                <dl class="rightFirNews">
-                                    <dt><a href="http://www.tetimes.com/wenyu/20191220/29610.html">热门小说x y sy361悦享书驿《重生贵女：抱紧慎王大腿》</a></dt>
-
-                                    <dd><a href="http://www.tetimes.com/wenyu/20191220/29609.html">官方全免xingkongzhongwen《重生弃少归来》主角叶子沁/卓</a></dd>
-                                    <dd><a href="http://www.tetimes.com/wenyu/20191220/29607.html">正版全免swbd668嵍c《慕少，你老婆又重生了》主角苏梓</a></dd>
-                                    <dd><a href="http://www.tetimes.com/tech/20191220/29606.html">安路科技全线FPGA产品亮相深圳电子展，登榜“2019硬核</a></dd>
-                                    <dd><a href="http://www.tetimes.com/tech/20191220/29608.html">A.O.史密斯甲醛净化器荣膺8星认证 除醛滤芯升级产品震</a></dd>
-                                    <dd><a href="http://www.tetimes.com/wenyu/20191220/29605.html">zsbd688/枕书伴读《慕少，你老婆又重生了》主角苏梓第</a></dd>
-                                    <dd><a href="http://www.tetimes.com/wenyu/20191220/29604.html">baiyezw《暗恋成欢，女人休想逃》主角白汐/纪辰凌第2</a></dd>
-                                    <dd><a href="http://www.tetimes.com/society/20191220/29603.html">青海省“三区两州”首批339项电网工程即将收尾</a></dd>
-                                    <dd><a href="http://www.tetimes.com/wenyu/20191220/29602.html">cctw63正版全本完结精选《暗恋成欢，女人休想逃》主角</a></dd>
-                                    <dd><a href="http://www.tetimes.com/wenyu/20191220/29601.html">xiaojbook在线阅读《好想住你隔壁》主角韩经年/夏晚安第</a></dd>
-                                    <dd><a href="http://www.tetimes.com/wenyu/20191220/29600.html">ywsh23全文无删减《妖孽奶爸在都市》主角叶辰第43章 刘</a></dd>
-                                    <dd><a href="http://www.tetimes.com/wenyu/20191220/29599.html">whwx288正版全集无删减《妖孽奶爸在都市》主角叶辰第</a></dd>
-                                    <dd><a href="http://www.tetimes.com/sports/20191220/29598.html">西宁冰球馆冰壶馆28日起开放 招募5000名青少年免费体验</a></dd>
-
-
-
-                                </dl>
-                                <div>
-                                </div>
-                            </div>
-                            <!-- 右侧 end-->
-                        </div>
-                        <!-- 第一部分 end-->
-
-                        <!-- 第二部分 begin-->
-                        <div class="ad">
-
-                        </div>
-                        <div class="conSec clear">
-                            <!-- 左侧 begin-->
-                            <div class="leftSec">
-
-                                <div class="hqDayComment">
-                                    <div class="indexTitle"> <strong>科技</strong> <a href="/tech/" target="_blank">更多</a> </div>
-                                    <div class="commentTab">
-                                        <ul class="commentDetail">
-                                            <li class="commentDshow">
-                                                <dl class="commentNews">
-                                                    <dt><a href="http://www.tetimes.com/tech/20191220/29606.html">安路科技全线FPGA产品亮相深圳电子展，登榜“2019硬核</a></dt>
-
-                                                    <dd><a href="http://www.tetimes.com/tech/20191220/29608.html">A.O.史密斯甲醛净化器荣膺8星认证 除醛滤芯升级产品震</a></dd>
-                                                    <dd><a href="http://www.tetimes.com/tech/20191220/29597.html">2019中国海外人才交流大会暨第21届中国留学人员广州科</a></dd>
-                                                    <dd><a href="http://www.tetimes.com/tech/20191219/29495.html">We Office：想你所想，及你所及</a></dd>
-                                                    <dd><a href="http://www.tetimes.com/tech/20191219/29463.html">游戏行业共同发布未成年人守护宣言，腾讯启动适龄提</a></dd>
-
-                                                </dl>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-
-
-
-                                <div class="overseaChina">
-                                    <div class="indexTitle"> <strong>教育</strong> <a href="/edu/" target="_blank">更多</a> <span class="udline3"></span> </div>
-                                    <div class="overseaCNews">
-                                        <h4><a href="http://www.tetimes.com/edu/20191219/29517.html" se_prerender_url="complete" target="_blank">2020全国硕士研究生考试周六开考 今年安庆市参考人数</a></h4>
-
-                                        <p><a href="http://www.tetimes.com/edu/20191219/29512.html" se_prerender_url="complete" target="_blank">头条|坚守本心的80后资本少帅陈俊州</a></p>
-                                        <p><a href="http://www.tetimes.com/edu/20191219/29428.html" se_prerender_url="complete" target="_blank">A.O.史密斯受邀百年学府东南大学，总裁丁威受聘客座教</a></p>
-                                        <p><a href="http://www.tetimes.com/edu/20191219/29419.html" se_prerender_url="complete" target="_blank">贵阳市白云区新增一所公办小学 24个班的办学规模</a></p>
-                                        <p><a href="http://www.tetimes.com/edu/20191219/29344.html" se_prerender_url="complete" target="_blank">校企携手合作共赢 广西英华国际职业学院一行参观千陌</a></p>
-                                        <p><a href="http://www.tetimes.com/edu/20191219/29340.html" se_prerender_url="complete" target="_blank">福建省新增2个人工智能教育实验区17所试点校 将惠及更</a></p>
-                                        <p><a href="http://www.tetimes.com/edu/20191218/29276.html" se_prerender_url="complete" target="_blank">浩海留学联合创始人张景舒做客《逐梦年代》栏目 讲述</a></p>
-                                        <p><a href="http://www.tetimes.com/edu/20191218/29275.html" se_prerender_url="complete" target="_blank">浩海留学联合创始人季羿荣获2019年度福布斯中国U30精英</a></p>
-
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- 左侧 end-->
-
-                            <!-- 中间 begin-->
-                            <div class="centerSec">
-                                <div class="videoBlock">
-                                    <div class="indexTitle"> <strong>汽车</strong> </div>
-                                    <div class="videoPic">
-                                        <ul class="videoPic clear">
-                                            <li>
-                                                <a href="http://www.tetimes.com/auto/20191219/29452.html" target="_blank"> <img src="/static/src/images/chineseNew/8_1219154552h37.jpg" width="168px" height="112px" alt="一汽丰田奕泽E擎动"> <span></span> </a>
-                                                <p> <a href="http://www.tetimes.com/auto/20191219/29452.html" target="_blank">一汽丰田奕泽E擎动</a> </p>
-                                            </li>
-                                            <li>
-                                                <a href="http://www.tetimes.com/auto/20191219/29450.html" target="_blank"> <img src="/static/src/images/chineseNew/8_1219154459b61.jpg" width="168px" height="112px" alt="Jeep自由侠PHEV版明"> <span></span> </a>
-                                                <p> <a href="http://www.tetimes.com/auto/20191219/29450.html" target="_blank">Jeep自由侠PHEV版明</a> </p>
-                                            </li>
-
-                                        </ul>
-                                    </div>
-                                    <ul class="videoNews">
-                                        <li> <a href="http://www.tetimes.com/auto/20191219/29470.html" target="_blank"> 签下1500台大单！江铃汽车与11家邮政快递企业签订全面</a> </li>
-                                        <li> <a href="http://www.tetimes.com/auto/20191219/29452.html" target="_blank"> 一汽丰田奕泽E擎动力信息曝光 最高车速可达160km/h</a> </li>
-                                        <li> <a href="http://www.tetimes.com/auto/20191219/29450.html" target="_blank"> Jeep自由侠PHEV版明年上市 最高时速约130.35km/h</a> </li>
-                                        <li> <a href="http://www.tetimes.com/auto/20191219/29445.html" target="_blank"> 法拉利F8 Spider正式上市 共推出一款车型</a> </li>
-
-                                    </ul>
-                                </div>
-
-
-                                <div class="topicBlock">
-                                    <div class="indexTitle"> <strong>消费</strong> </div>
-
-                                    <ul class="topicNews">
-                                        <li>
-                                            <a href="http://www.tetimes.com/xiaofei/20191217/28952.html" target="_blank"><span>· 亲草多效御龄眼霜，修护眼袋黑眼圈早衰，让你的眼睛</span></a>
-                                        </li>
-                                        <li>
-                                            <a href="http://www.tetimes.com/xiaofei/20191219/29422.html" target="_blank"><span>· 擦亮神灯，瓜分2000万，抽1001份全年免单，来神灯节当</span></a>
-                                        </li>
-                                        <li>
-                                            <a href="http://www.tetimes.com/xiaofei/20191219/29389.html" target="_blank"><span>· 植物医生续写国礼荣耀 石斛兰礼赠日本前首相鸠山由纪</span></a>
-                                        </li>
-                                        <li>
-                                            <a href="http://www.tetimes.com/xiaofei/20191219/29379.html" target="_blank"><span>· 执御开放平台发展迅猛</span></a>
-                                        </li>
-                                        <li>
-                                            <a href="http://www.tetimes.com/xiaofei/20191218/29219.html" target="_blank"><span>· 家装设计师更爱“轻薄风” A.O.史密斯薄型速热电热水</span></a>
-                                        </li>
-
-                                    </ul>
-                                </div>
-
-                            </div>
-                            <!-- 中间 end-->
-
-                            <!-- 右侧 begin-->
-                            <div class="rightSec">
-
-                                <div class="secNewsBlock">
-                                    <div class="indexTitle"> <strong>社会</strong> </div>
-                                    <div class="secNewsList">
-                                        <p><a href="http://www.tetimes.com/society/20191220/29603.html" target="_blank">青海省“三区两州”首批339项电网工程即将收尾</a></p>
-                                        <p><a href="http://www.tetimes.com/society/20191220/29582.html" target="_blank">北京王府井步行街北延今日开街 打造时尚运动潮流聚集</a></p>
-                                        <p><a href="http://www.tetimes.com/society/20191220/29577.html" target="_blank">合宁、合安、芜合高速“四改八”扩建工程完工 全面开</a></p>
-                                        <p><a href="http://www.tetimes.com/society/20191219/29525.html" target="_blank">今年前11个月北京空气质量优良天215天 重污染3天</a></p>
-                                        <p><a href="http://www.tetimes.com/society/20191219/29491.html" target="_blank">沪苏湖铁路环评获批 线路正线全长163.708公里</a></p>
-
-                                    </div>
-                                    <div class="secNewsList">
-                                        <p><a href="http://www.tetimes.com/society/20191219/29481.html" target="_blank">苏南硕放机场新停机坪计划明年1月30日正式启用 总投资</a></p>
-                                        <p><a href="http://www.tetimes.com/society/20191219/29475.html" target="_blank">太仓港疏港铁路专用线开工 正线全长约13.1公里</a></p>
-                                        <p><a href="http://www.tetimes.com/society/20191219/29464.html" target="_blank">连云港市域列车5个客运站现有公交线网布局和配套接驳</a></p>
-                                        <p><a href="http://www.tetimes.com/society/20191219/29429.html" target="_blank">广西4条高铁公网升级改造完成实现4G全覆盖 为后期5G网</a></p>
-
-                                    </div>
-                                    <div class="secNewsList">
-                                        <p><a href="http://www.tetimes.com/society/20191219/29378.html" target="_blank">塞尔维亚E763高速公路苏尔钦-奥布雷诺瓦茨段通车</a></p>
-                                        <p><a href="http://www.tetimes.com/society/20191219/29366.html" target="_blank">州河特大桥主跨双幅现浇梁成功合龙 全长1150米</a></p>
-                                        <p><a href="http://www.tetimes.com/society/20191219/29362.html" target="_blank">资阳市临空经济区产业孵化中心正式开工建设 总建筑面</a></p>
-                                        <p><a href="http://www.tetimes.com/society/20191219/29354.html" target="_blank">合肥41条道路3119盏路灯将实行间隔关灯 预计月节电量达</a></p>
-
-                                    </div>
-                                </div>
-
-                            </div>
-                            <!-- 右侧 end-->
-                        </div>
-                        <!-- 第二部分 end-->
-
-                        <!-- 第三部分-新闻 begin-->
-                        <div class="ad">
-
-                        </div>
-                        <div class="conThr clear">
-                            <div class="indexBTitle"> <strong>娱乐</strong> <span></span> </div>
-                            <!-- 左侧 begin-->
-                            <div class="leftThr">
-                                <div class="leftThrFocus">
-                                    <!-- 焦点图 begin -->
-                                    <div id="foucsBox11">
-                                        <ul class="imgCon" id="imgCon11" style="width: 1700px; margin-left: -340px;">
-                                            <!--展示图片开始-->
-                                            <li>
-                                                <a href="http://www.tetimes.com/ent/zy/20191219/29533.html" title="酷漾娱乐旅行新蜜蜂斩获年度奖项,原创作品首秀" target="_blank"> <img src="/static/src/images/chineseNew/4_12191942439503.jpg"> </a>
-                                                <div class="imgTitle"><a href="http://www.tetimes.com/ent/zy/20191219/29533.html" target="_blank" title="酷漾娱乐旅行新蜜蜂斩获年度奖项,原创作品首秀">酷漾娱乐旅行新蜜蜂斩获年度奖项,原创作品首秀</a></div>
-                                                <div class="showPage"></div>
-                                            </li>
-                                            <li>
-                                                <a href="http://www.tetimes.com/ent/dsj/20191219/29510.html" title="电视剧《大明风华》节奏紧凑剧情持续高能 首播" target="_blank"> <img src="/static/src/images/chineseNew/8_12191hk51430.jpg"> </a>
-                                                <div class="imgTitle"><a href="http://www.tetimes.com/ent/dsj/20191219/29510.html" target="_blank" title="电视剧《大明风华》节奏紧凑剧情持续高能 首播">电视剧《大明风华》节奏紧凑剧情持续高能 首播</a></div>
-                                                <div class="showPage"></div>
-                                            </li>
-                                            <li>
-                                                <a href="http://www.tetimes.com/ent/dy/20191219/29459.html" title="电影《青春再见青春》启动 预计将于2020年上映" target="_blank"> <img src="/static/src/images/chineseNew/8_121916022o028.jpg"> </a>
-                                                <div class="imgTitle"><a href="http://www.tetimes.com/ent/dy/20191219/29459.html" target="_blank" title="电影《青春再见青春》启动 预计将于2020年上映">电影《青春再见青春》启动 预计将于2020年上映</a></div>
-                                                <div class="showPage"></div>
-                                            </li>
-
-
-                                            <!--展示图片结束-->
-                                        </ul>
-                                        <div class="foucs"><span class=""></span><span class="f"></span><span class=""></span><span class=""></span><span class=""></span></div>
-                                        <div class="rBtn foucsButton"> <span></span> <img src="/static/src/images/chineseNew/20180920070347202.jpg"> </div>
-                                        <div class="lBtn foucsButton"> <span></span> <img src="/static/src/images/chineseNew/20180920094845839.jpg"> </div>
-                                    </div>
-                                    <!-- 焦点图 end -->
-                                </div>
-                                <div class="leftThrPic">
-                                    <ul class="ThrPic clear">
-                                        <li>
-                                            <a href="http://www.tetimes.com/ent/dy/20191219/29438.html" target="_blank"><img src="/static/src/images/chineseNew/8_121915114h0v.jpg" alt="《武圣关公》中国风卷轴曝光 将2020年1月11日上映"></a>
-                                            <p><a href="http://www.tetimes.com/ent/dy/20191219/29438.html" target="_blank">《武圣关公》中国风卷轴曝光 将2020年1月11日上映</a></p>
-                                        </li>
-                                        <li>
-                                            <a href="http://www.tetimes.com/ent/20191219/29425.html" target="_blank"><img src="/static/src/images/chineseNew/10_12191413549448.jpg" alt="“再唱东方红”微视频大赛系列活动在京启动"></a>
-                                            <p><a href="http://www.tetimes.com/ent/20191219/29425.html" target="_blank">“再唱东方红”微视频大赛系列活动在京启动</a></p>
-                                        </li>
-
-                                    </ul>
-                                </div>
-                            </div>
-                            <!-- 左侧 end-->
-
-                            <!-- 中间 begin-->
-                            <div class="centerThr">
-                                <dl class="thrNewsList">
-                                    <dt> <a href="http://www.tetimes.com/ent/zy/20191219/29533.html" target="_blank">酷漾娱乐旅行新蜜蜂斩获年度奖项,原创作品首秀</a> </dt>
-
-                                    <dd> <a href="http://www.tetimes.com/ent/dsj/20191219/29510.html" target="_blank">电视剧《大明风华》节奏紧凑剧情持续高能 首播</a> </dd>
-                                    <dd> <a href="http://www.tetimes.com/ent/20191219/29505.html" target="_blank">腾讯程武：不遗余力、不计代价地做好未成年人</a> </dd>
-                                    <dd> <a href="http://www.tetimes.com/ent/dy/20191219/29459.html" target="_blank">电影《青春再见青春》启动 预计将于2020年上映</a> </dd>
-                                    <dd> <a href="http://www.tetimes.com/ent/dy/20191219/29438.html" target="_blank">《武圣关公》中国风卷轴曝光 将2020年1月11日上映</a> </dd>
-
-                                </dl>
-                                <dl class="thrNewsList newsDis">
-                                    <dt> <a href="http://www.tetimes.com/ent/20191219/29425.html" target="_blank">“再唱东方红”微视频大赛系列活动在京启动</a> </dt>
-
-                                    <dd> <a href="http://www.tetimes.com/ent/20191219/29364.html" target="_blank">一票难求的易烊千玺演唱会，神秘巨粉买空300张</a> </dd>
-                                    <dd> <a href="http://www.tetimes.com/ent/20191218/29244.html" target="_blank">李冰冰的风格百变，魅力源于精益求精</a> </dd>
-                                    <dd> <a href="http://www.tetimes.com/ent/20191218/29177.html" target="_blank">ANGSI昂司抽奖易烊千玺演唱会门票、诸多好物等你</a> </dd>
-                                    <dd> <a href="http://www.tetimes.com/ent/20191218/29118.html" target="_blank">探探等互联网婚恋交友平台联合发起行业自律公</a> </dd>
-
-                                </dl>
-                            </div>
-                            <!-- 中间 end-->
-
-                            <!-- 右侧 begin-->
-                            <div class="rightThr">
-                                <div class="speColumn">
-                                    <div class="indexTitle"> <strong>财经</strong> <a href="/财经/" target="_blank">更多</a> <span class="udline1"></span> </div>
-                                    <ul class="speColumnList">
-                                        <li> <a href="http://www.tetimes.com/finance/20191220/29574.html" target="_blank">闽侯推出万亩产业用地 吸引企业家到闽侯投资兴</a> </li>
-                                        <li> <a href="http://www.tetimes.com/finance/20191219/29472.html" target="_blank">1-11月苏州市外贸进出口20118.2亿元 其中出口1210</a> </li>
-                                        <li> <a href="http://www.tetimes.com/finance/20191219/29430.html" target="_blank">1至11月内蒙古用于民生支出2775.6亿元 占一般公共</a> </li>
-                                        <li> <a href="http://www.tetimes.com/finance/20191219/29393.html" target="_blank">德国12月商业景气指数升至半年来新高 超出市场</a> </li>
-                                        <li> <a href="http://www.tetimes.com/finance/20191219/29392.html" target="_blank">山西运城直飞越南芽庄国际航线正式通航 采用空</a> </li>
-                                        <li> <a href="http://www.tetimes.com/finance/20191219/29387.html" target="_blank">2020年中国在线音频用户规模将达5.42亿人</a> </li>
-                                        <li> <a href="http://www.tetimes.com/finance/20191219/29382.html" target="_blank">平安人寿荣膺第四届金桔奖“最佳理赔服务”奖</a> </li>
-                                        <li> <a href="http://www.tetimes.com/finance/20191219/29371.html" target="_blank">南充91个重大项目集中开工 年度计划投资86.7亿元</a> </li>
-                                        <li> <a href="http://www.tetimes.com/finance/20191219/29339.html" target="_blank">前11月福州市邮政行业业务总量累计达到107.63亿元</a> </li>
-                                        <li> <a href="http://www.tetimes.com/finance/20191218/29152.html" target="_blank">wefox Group完成B+轮融资 宜信产业基金布局保险科技</a> </li>
-
-                                    </ul>
-                                </div>
-                            </div>
-                            <!-- 右侧 end-->
-                        </div>
-
-                        <div class="conThr clear">
-                            <div class="indexBTitle"> <strong>旅游</strong> <a href="/travel/" target="_blank">更多</a> <span></span> </div>
-                            <!-- 左侧 begin-->
-                            <div class="leftThr">
-                                <div class="leftThrFocus">
-                                    <!-- 焦点图 begin -->
-                                    <div id="foucsBox22">
-                                        <ul class="imgCon" id="imgCon22" style="width: 1020px; margin-left: -340px;">
-                                            <!--展示图片开始-->
-                                            <li>
-                                                <a href="http://www.tetimes.com/travel/20191219/29557.html" title="去年中国百强县平均实现旅游总收入达172.22亿元" target="_blank"> <img src="/static/src/images/chineseNew/8_12192302313055.jpg"> </a>
-                                                <div class="imgTitle"><a href="http://www.tetimes.com/travel/20191219/29557.html" target="_blank" title="去年中国百强县平均实现旅游总收入达172.22亿元">去年中国百强县平均实现旅游总收入达172.22亿元</a></div>
-                                                <div class="showPage"></div>
-                                            </li>
-                                            <li>
-                                                <a href="http://www.tetimes.com/travel/20191218/29128.html" title="OPPO Reno3 Pro 5G手机现身Geekbench 多核得分7686" target="_blank"> <img src="/static/src/images/chineseNew/8_121q5210kk9.jpg"> </a>
-                                                <div class="imgTitle"><a href="http://www.tetimes.com/travel/20191218/29128.html" target="_blank" title="OPPO Reno3 Pro 5G手机现身Geekbench 多核得分7686">OPPO Reno3 Pro 5G手机现身Geekbench 多核得分7686</a></div>
-                                                <div class="showPage"></div>
-                                            </li>
-                                            <li>
-                                                <a href="http://www.tetimes.com/travel/20191218/29081.html" title="博湖县第十二届冰雪节12月27日启动 为期两个月" target="_blank"> <img src="/static/src/images/chineseNew/8_121q14644t07.jpg"> </a>
-                                                <div class="imgTitle"><a href="http://www.tetimes.com/travel/20191218/29081.html" target="_blank" title="博湖县第十二届冰雪节12月27日启动 为期两个月">博湖县第十二届冰雪节12月27日启动 为期两个月</a></div>
-                                                <div class="showPage"></div>
-                                            </li>
-                                            <li>
-                                                <a href="http://www.tetimes.com/travel/20191217/28950.html" title="景宁家地乡摄影节，有“杏”与你相遇，来邂逅" target="_blank"> <img src="/static/src/images/chineseNew/4_121g92z59120.png"> </a>
-                                                <div class="imgTitle"><a href="http://www.tetimes.com/travel/20191217/28950.html" target="_blank" title="景宁家地乡摄影节，有“杏”与你相遇，来邂逅">景宁家地乡摄影节，有“杏”与你相遇，来邂逅</a></div>
-                                                <div class="showPage"></div>
-                                            </li>
-                                            <li>
-                                                <a href="http://www.tetimes.com/travel/20191216/28490.html" title="千万粉丝环球旅行者公益为新疆赛里木湖代言 开" target="_blank"> <img src="/static/src/images/chineseNew/4_121616111245i.jpg"> </a>
-                                                <div class="imgTitle"><a href="http://www.tetimes.com/travel/20191216/28490.html" target="_blank" title="千万粉丝环球旅行者公益为新疆赛里木湖代言 开">千万粉丝环球旅行者公益为新疆赛里木湖代言 开</a></div>
-                                                <div class="showPage"></div>
-                                            </li>
-
-                                            <!--展示图片结束-->
-                                        </ul>
-                                        <div class="foucs"><span class=""></span><span class="f"></span><span class=""></span></div>
-                                        <div class="rBtn foucsButton"> <span></span> <img src="/static/src/images/chineseNew/20180910053605710.jpg"> </div>
-                                        <div class="lBtn foucsButton"> <span></span> <img src="/static/src/images/chineseNew/20180921091914111.jpg"></div>
-                                    </div>
-                                    <!-- 焦点图 end -->
-                                </div>
-                                <div class="leftThrPic">
-                                    <ul class="ThrPic clear">
-                                        <li>
-                                            <a href="http://www.tetimes.com/travel/20191216/28372.html" target="_blank"><img src="/static/src/images/chineseNew/10_12161130436018.png" alt="12月15日，阿勒泰地区冬季旅游推介会走进羊城"></a>
-                                            <p><a href="http://www.tetimes.com/travel/20191216/28372.html" target="_blank">12月15日，阿勒泰地区冬季旅游推介会走进羊城</a></p>
-                                        </li>
-                                        <li>
-                                            <a href="http://www.tetimes.com/travel/20191212/27347.html" target="_blank"><img src="/static/src/images/chineseNew/8_1212160334c10.jpg" alt="北京市发布金秋旅游季京郊美食评选结果 公布"></a>
-                                            <p><a href="http://www.tetimes.com/travel/20191212/27347.html" target="_blank">北京市发布金秋旅游季京郊美食评选结果 公布</a></p>
-                                        </li>
-
-                                    </ul>
-                                </div>
-                            </div>
-                            <!-- 左侧 end-->
-
-                            <!-- 中间 begin-->
-                            <div class="centerThr">
-                                <dl class="thrNewsList">
-                                    <dt> <a href="http://www.tetimes.com/travel/20191219/29557.html" target="_blank">去年中国百强县平均实现旅游总收入达172.22亿元</a> </dt>
-
-                                    <dd> <a href="http://www.tetimes.com/travel/20191219/29497.html" target="_blank">滁州批准来安县池杉湖湿地公园为国家AAA级旅游</a> </dd>
-                                    <dd> <a href="http://www.tetimes.com/travel/20191219/29483.html" target="_blank">长隆广珠项目引领广东省级旅游度假区发展</a> </dd>
-                                    <dd> <a href="http://www.tetimes.com/travel/20191218/29329.html" target="_blank">闽江高端旅游船明年下半年投用 共含212个客位</a> </dd>
-                                    <dd> <a href="http://www.tetimes.com/travel/20191218/29128.html" target="_blank">OPPO Reno3 Pro 5G手机现身Geekbench 多核得分7686</a> </dd>
-
-                                </dl>
-                                <dl class="thrNewsList newsDis">
-                                    <dt> <a href="http://www.tetimes.com/travel/20191218/29105.html" target="_blank">巴里坤县第十五届冰雪文化旅游节12月27日开幕</a> </dt>
-
-                                    <dd> <a href="http://www.tetimes.com/travel/20191218/29095.html" target="_blank">冬至兴安岭 泼出好风景</a> </dd>
-                                    <dd> <a href="http://www.tetimes.com/travel/20191218/29081.html" target="_blank">博湖县第十二届冰雪节12月27日启动 为期两个月</a> </dd>
-                                    <dd> <a href="http://www.tetimes.com/travel/20191217/28950.html" target="_blank">景宁家地乡摄影节，有“杏”与你相遇，来邂逅</a> </dd>
-                                    <dd> <a href="http://www.tetimes.com/travel/20191217/28858.html" target="_blank">前11个月乌鲁木齐实现旅游收入1074.88亿元 同比增</a> </dd>
-
-                                </dl>
-                            </div>
-                            <!-- 中间 end-->
-
-                            <!-- 右侧 begin-->
-                            <div class="rightThr">
-                                <div class="speColumn">
-                                    <div class="indexTitle"> <strong>文化</strong> <a href="/wenhua/" target="_blank">更多</a> . <a href="http://www.tetimes.com/wenyu/news/" target="_blank">文娱</a> <span class="udline1"></span> </div>
-                                    <ul class="speColumnList">
-                                        <li> <a href="http://www.tetimes.com/wenhua/20191218/29171.html" target="_blank">中国首家综合性桥梁博物馆开馆 建筑面积近300</a> </li>
-                                        <li> <a href="http://www.tetimes.com/wenhua/20191218/29113.html" target="_blank">中国紫檀博物馆横琴分馆正式对公众开放 以明清</a> </li>
-                                        <li> <a href="http://www.tetimes.com/wenhua/20191217/28797.html" target="_blank">第四届蓝光杯-漳州钟表设计大赛落幕 肯宁家、尼</a> </li>
-                                        <li> <a href="http://www.tetimes.com/wenhua/20191216/28456.html" target="_blank">2019中国常州国际动漫艺术周将于12月19日在常州举</a> </li>
-                                        <li> <a href="http://www.tetimes.com/wenhua/20191213/27608.html" target="_blank">别致典雅 青雅钟表受邀参展中外时钟名品鉴赏会</a> </li>
-                                        <li> <a href="http://www.tetimes.com/wenhua/20191213/27530.html" target="_blank">贵阳学院美术学院教师作品展开展 展出至12月1</a> </li>
-                                        <li> <a href="http://www.tetimes.com/wenhua/20191212/27410.html" target="_blank">鄂温克族自治旗冬季游牧文化展示活动在内蒙古</a> </li>
-                                        <li> <a href="http://www.tetimes.com/wenhua/20191212/27364.html" target="_blank">国家博物馆将添中国古代书画展 52件宋元墨宝亮</a> </li>
-                                        <li> <a href="http://www.tetimes.com/wenhua/20191212/27331.html" target="_blank">北朝时期墓葬壁画山西展出 展期至2020年3月12日</a> </li>
-                                        <li> <a href="http://www.tetimes.com/wenhua/20191211/27033.html" target="_blank">中国大庆工业版画作品邀请展在北京举行 持续至</a> </li>
-
-                                    </ul>
-                                </div>
-                            </div>
-                            <!-- 右侧 end-->
-                        </div>
-
-
-
-                        <div class="ad">
-                            <img style="border:0px;width:1200;height:120;" src="/static/src/images/chineseNew/584f2f05-90e6-4615-996c-d86d6f58702a.jpg">
-                        </div>
-                        <div class="conThr clear">
-                            <div class="indexBTitle">
-                                <strong>国际</strong> <a href="http://www.tetimes.com/world/">更多</a>
-                                <span></span> </div>
-                            <!-- 左侧 begin-->
-                            <div class="leftThr">
-                                <div class="leftThrFocus">
-                                    <!-- 焦点图 begin -->
-                                    <div id="foucsBox33">
-                                        <ul class="imgCon" id="imgCon33" style="width: 1700px; margin-left: -340px;">
-                                            <!--展示图片开始-->
-                                            <li>
-                                                <a href="http://www.tetimes.com/world/20191218/29323.html" title="北京时间12月18日20时19分斐济南部海域发生5.3级地" target="_blank"> <img src="/static/src/images/chineseNew/8_121r244319120.jpg"> </a>
-                                                <div class="imgTitle"><a href="http://www.tetimes.com/world/20191218/29323.html" target="_blank" title="北京时间12月18日20时19分斐济南部海域发生5.3级地">北京时间12月18日20时19分斐济南部海域发生5.3级地</a></div>
-                                                <div class="showPage"></div>
-                                            </li>
-                                            <li>
-                                                <a href="http://www.tetimes.com/world/20191218/29056.html" title="北京时间12月18日9时56分新西兰附近海域发生5.9级" target="_blank"> <img src="/static/src/images/chineseNew/8_121q1024053d.jpg"> </a>
-                                                <div class="imgTitle"><a href="http://www.tetimes.com/world/20191218/29056.html" target="_blank" title="北京时间12月18日9时56分新西兰附近海域发生5.9级">北京时间12月18日9时56分新西兰附近海域发生5.9级</a></div>
-                                                <div class="showPage"></div>
-                                            </li>
-                                            <li>
-                                                <a href="http://www.tetimes.com/world/20191217/28716.html" title="北京时间12月17日10时04分斐济群岛南部海域发生" target="_blank"> <img src="/static/src/images/chineseNew/8_121g055504d5.jpg"> </a>
-                                                <div class="imgTitle"><a href="http://www.tetimes.com/world/20191217/28716.html" target="_blank" title="北京时间12月17日10时04分斐济群岛南部海域发生">北京时间12月17日10时04分斐济群岛南部海域发生</a></div>
-                                                <div class="showPage"></div>
-                                            </li>
-                                            <li>
-                                                <a href="http://www.tetimes.com/world/20191212/27409.html" title="印度尼西亚一幅描述史前狩猎场景洞穴壁画或是" target="_blank"> <img src="/static/src/images/chineseNew/8_12121p1223x6.jpg"> </a>
-                                                <div class="imgTitle"><a href="http://www.tetimes.com/world/20191212/27409.html" target="_blank" title="印度尼西亚一幅描述史前狩猎场景洞穴壁画或是">印度尼西亚一幅描述史前狩猎场景洞穴壁画或是</a></div>
-                                                <div class="showPage"></div>
-                                            </li>
-                                            <li>
-                                                <a href="http://www.tetimes.com/world/20191210/26747.html" title="北京时间12月10日16时40分新喀里多尼亚东部海域发" target="_blank"> <img src="/static/src/images/chineseNew/8_12101j143v57.jpg"> </a>
-                                                <div class="imgTitle"><a href="http://www.tetimes.com/world/20191210/26747.html" target="_blank" title="北京时间12月10日16时40分新喀里多尼亚东部海域发">北京时间12月10日16时40分新喀里多尼亚东部海域发</a></div>
-                                                <div class="showPage"></div>
-                                            </li>
-
-                                            <!--展示图片结束-->
-                                        </ul>
-                                        <div class="foucs"><span class=""></span><span class="f"></span><span class=""></span><span class=""></span><span class=""></span></div>
-                                        <div class="rBtn foucsButton"> <span></span> <img src="/static/src/images/chineseNew/20180921083806402.jpg"> </div>
-                                        <div class="lBtn foucsButton"> <span></span> <img src="/static/src/images/chineseNew/20180921083706881.jpg"> </div>
-                                    </div>
-                                    <!-- 焦点图 end -->
-                                </div>
-                                <div class="leftThrPic">
-                                    <ul class="ThrPic clear">
-                                        <li>
-                                            <a href="http://www.tetimes.com/world/20191209/26579.html" target="_blank"><img src="/static/src/images/chineseNew/8_12091ku5h00.jpg" alt="意大利佛罗伦萨地区4.8级地震 没有人员伤亡报告"></a>
-                                            <p><a href="http://www.tetimes.com/world/20191209/26579.html" target="_blank">意大利佛罗伦萨地区4.8级地震 没有人员伤亡报告</a></p>
-                                        </li>
-                                        <li>
-                                            <a href="http://www.tetimes.com/world/20191209/26547.html" target="_blank"><img src="/static/src/images/chineseNew/8_1209142fn128.jpg" alt="北京时间12月9日11时37分意大利佛罗伦萨北部发生"></a>
-                                            <p><a href="http://www.tetimes.com/world/20191209/26547.html" target="_blank">北京时间12月9日11时37分意大利佛罗伦萨北部发生</a></p>
-                                        </li>
-
-                                    </ul>
-                                </div>
-                            </div>
-                            <!-- 左侧 end-->
-
-                            <!-- 中间 begin-->
-                            <div class="centerThr">
-                                <dl class="thrNewsList">
-                                    <dt> <a href="http://www.tetimes.com/world/20191220/29575.html" target="_blank">泰国普吉岛附近一艘快艇撞上一艘俄罗斯船长驾</a> </dt>
-
-                                    <dd> <a href="http://www.tetimes.com/world/20191219/29410.html" target="_blank">一架日本全日空波音767客机因引擎故障在日本福</a> </dd>
-                                    <dd> <a href="http://www.tetimes.com/world/20191218/29323.html" target="_blank">北京时间12月18日20时19分斐济南部海域发生5.3级地</a> </dd>
-                                    <dd> <a href="http://www.tetimes.com/world/20191218/29056.html" target="_blank">北京时间12月18日9时56分新西兰附近海域发生5.9级</a> </dd>
-                                    <dd> <a href="http://www.tetimes.com/world/20191217/28829.html" target="_blank">波音公司“星际客机”将于12月20日首飞 目的地是</a> </dd>
-
-                                </dl>
-                                <dl class="thrNewsList newsDis">
-                                    <dt> <a href="http://www.tetimes.com/world/20191217/28716.html" target="_blank">北京时间12月17日10时04分斐济群岛南部海域发生</a> </dt>
-
-                                    <dd> <a href="http://www.tetimes.com/world/20191216/28318.html" target="_blank">刚果（金）东北部上韦莱省一处金矿发生塌陷 至</a> </dd>
-                                    <dd> <a href="http://www.tetimes.com/world/20191216/28287.html" target="_blank">美“火星2020”拟于明年夏季升空 将搜寻生命可能</a> </dd>
-                                    <dd> <a href="http://www.tetimes.com/world/20191216/28285.html" target="_blank">菲律宾棉兰老岛附近发生6.8级浅层地震 造成大面</a> </dd>
-                                    <dd> <a href="http://www.tetimes.com/world/20191212/27409.html" target="_blank">印度尼西亚一幅描述史前狩猎场景洞穴壁画或是</a> </dd>
-
-                                </dl>
-                            </div>
-                            <!-- 中间 end-->
-
-                            <!-- 右侧 begin-->
-                            <div class="rightThr">
-                                <div class="speColumn">
-                                    <div class="indexTitle"> <strong>企业</strong> <a href="/qiye/" target="_blank">更多</a> <span class="udline2"></span> </div>
-                                    <ul class="speColumnList">
-                                        <li> <a href="http://www.tetimes.com/qiye/20191220/29595.html" target="_blank">2019年中国民族医药协会科学技术奖颁奖大会在京</a> </li>
-                                        <li> <a href="http://www.tetimes.com/qiye/20191219/29534.html" target="_blank">亿达之声绕江城 壮美赞歌献祖国</a> </li>
-                                        <li> <a href="http://www.tetimes.com/qiye/20191219/29530.html" target="_blank">ATLAS 寰图荣获 GBE“最佳室内设计办公建筑奖”</a> </li>
-                                        <li> <a href="http://www.tetimes.com/qiye/20191219/29460.html" target="_blank">力克举办2019越南服装智慧生产研讨会，以精益管</a> </li>
-                                        <li> <a href="http://www.tetimes.com/qiye/20191219/29456.html" target="_blank">企鹅杏仁集团构建深圳城市模型，全面布局基层</a> </li>
-
-                                    </ul>
-                                </div>
-                                <div class="speColumnDis"></div>
-                                <div class="speColumn">
-                                    <div class="indexTitle"> <strong>生活</strong> <a href="/life/" target="_blank">更多</a> <span class="udline2"></span> </div>
-                                    <ul class="speColumnList">
-                                        <li> <a href="http://www.tetimes.com/life/20191219/29543.html" target="_blank">一位旅行网红，是如何秒杀各时装博主的？戴肖</a> </li>
-                                        <li> <a href="http://www.tetimes.com/life/20191219/29503.html" target="_blank">会员再花50软妹币得《庆余年》VIP中P？我不如直</a> </li>
-                                        <li> <a href="http://www.tetimes.com/life/20191219/29501.html" target="_blank">出门被小朋友叫阿姨？一定是你没用VE面膜</a> </li>
-                                        <li> <a href="http://www.tetimes.com/life/20191218/29226.html" target="_blank">美到心醉的珂琳丝络落日十二色眼影盘，眼睛上</a> </li>
-                                        <li> <a href="http://www.tetimes.com/life/20191218/29089.html" target="_blank">7款面膜真实测评——这款VE酵母多肽面膜值得入</a> </li>
-
-                                    </ul>
-                                </div>
-                            </div>
-                            <!-- 右侧 end-->
-                        </div>
-                        <!-- 第五部分-科技 end-->
-
-                        <!-- 第六部分-体育旅游 begin-->
-                        <div class="ad">
-                            <img style="border:0px;width:1200;height:120;" src="/static/src/images/chineseNew/9c196517-2189-48e8-884b-f9b04b645dd7.jpg">
-                        </div>
-                        <div class="conThr clear">
-                            <div class="indexBTitle"> <strong>体育<i></i></strong> <a href="/sports/" target="_blank">更多</a> <span class="udline"></span> </div>
-                            <!-- 左侧 begin-->
-                            <div class="leftThr">
-                                <div class="leftThrFocus">
-                                    <!-- 焦点图 begin -->
-                                    <div id="foucsBox44">
-                                        <ul class="imgCon" id="imgCon44" style="width: 1360px; margin-left: -340px;">
-                                            <!--展示图片开始-->
-                                            <li>
-                                                <a href="http://www.tetimes.com/sports/20191220/29585.html" title="周俐君在2019年世界跆拳道大满贯冠军系列赛中获" target="_blank"> <img src="/static/src/images/chineseNew/8_122009560n439.jpg"> </a>
-                                                <div class="imgTitle"><a href="http://www.tetimes.com/sports/20191220/29585.html" target="_blank" title="周俐君在2019年世界跆拳道大满贯冠军系列赛中获">周俐君在2019年世界跆拳道大满贯冠军系列赛中获</a></div>
-                                                <div class="showPage"></div>
-                                            </li>
-                                            <li>
-                                                <a href="http://www.tetimes.com/sports/20191219/29561.html" title="2019中国大学生桨板竞速挑战赛万宁收官 北华大学" target="_blank"> <img src="/static/src/images/chineseNew/8_12192304492e9.jpg"> </a>
-                                                <div class="imgTitle"><a href="http://www.tetimes.com/sports/20191219/29561.html" target="_blank" title="2019中国大学生桨板竞速挑战赛万宁收官 北华大学">2019中国大学生桨板竞速挑战赛万宁收官 北华大学</a></div>
-                                                <div class="showPage"></div>
-                                            </li>
-                                            <li>
-                                                <a href="http://www.tetimes.com/sports/20191219/29359.html" title="2019世界跆拳道大满贯冠军系列赛在无锡太湖国际" target="_blank"> <img src="/static/src/images/chineseNew/8_121z9544rh2.jpg"> </a>
-                                                <div class="imgTitle"><a href="http://www.tetimes.com/sports/20191219/29359.html" target="_blank" title="2019世界跆拳道大满贯冠军系列赛在无锡太湖国际">2019世界跆拳道大满贯冠军系列赛在无锡太湖国际</a></div>
-                                                <div class="showPage"></div>
-                                            </li>
-                                            <li>
-                                                <a href="http://www.tetimes.com/sports/20191218/29122.html" title="立咕运动五人制足球赛火热开启 引爆深圳全民足" target="_blank"> <img src="/static/src/images/chineseNew/10_121q5044x241.png"> </a>
-                                                <div class="imgTitle"><a href="http://www.tetimes.com/sports/20191218/29122.html" target="_blank" title="立咕运动五人制足球赛火热开启 引爆深圳全民足">立咕运动五人制足球赛火热开启 引爆深圳全民足</a></div>
-                                                <div class="showPage"></div>
-                                            </li>
-                                            <li>
-                                                <a href="http://www.tetimes.com/sports/20191218/29015.html" title="厦门50个校园体育场地将正式对外开放 校外人员" target="_blank"> <img src="/static/src/images/chineseNew/8_121p936164h5.jpg"> </a>
-                                                <div class="imgTitle"><a href="http://www.tetimes.com/sports/20191218/29015.html" target="_blank" title="厦门50个校园体育场地将正式对外开放 校外人员">厦门50个校园体育场地将正式对外开放 校外人员</a></div>
-                                                <div class="showPage"></div>
-                                            </li>
-
-                                            <!--展示图片结束-->
-                                        </ul>
-                                        <div class="foucs"><span class=""></span><span class="f"></span><span class=""></span><span class=""></span></div>
-                                        <div class="rBtn foucsButton"> <span></span> <img src="/static/src/images/chineseNew/20180921083819103.jpg"> </div>
-                                        <div class="lBtn foucsButton"> <span></span> <img src="/static/src/images/chineseNew/20180921083515654.jpg"> </div>
-                                    </div>
-                                    <!-- 焦点图 end -->
-                                </div>
-                                <div class="leftThrPic">
-                                    <ul class="ThrPic clear">
-                                        <li>
-                                            <a href="http://www.tetimes.com/sports/20191217/28661.html" target="_blank"><img src="/static/src/images/chineseNew/8_121f92gc214.jpg" alt="贵州足球协会青少年足球联赛在贵安新区开赛 采"></a>
-                                            <p><a href="http://www.tetimes.com/sports/20191217/28661.html" target="_blank">贵州足球协会青少年足球联赛在贵安新区开赛 采</a></p>
-                                        </li>
-                                        <li>
-                                            <a href="http://www.tetimes.com/sports/20191216/28644.html" target="_blank"><img src="/static/src/images/chineseNew/8_1216231zg1j.jpg" alt="全国“体校杯”足球赛总决赛开幕 将持续到12月"></a>
-                                            <p><a href="http://www.tetimes.com/sports/20191216/28644.html" target="_blank">全国“体校杯”足球赛总决赛开幕 将持续到12月</a></p>
-                                        </li>
-
-                                    </ul>
-                                </div>
-                            </div>
-                            <!-- 左侧 end-->
-
-                            <!-- 中间 begin-->
-                            <div class="centerThr">
-                                <dl class="thrNewsList">
-                                    <dt> <a href="http://www.tetimes.com/sports/20191220/29598.html" target="_blank">西宁冰球馆冰壶馆28日起开放 招募5000名青少年免</a> </dt>
-
-                                    <dd> <a href="http://www.tetimes.com/sports/20191220/29585.html" target="_blank">周俐君在2019年世界跆拳道大满贯冠军系列赛中获</a> </dd>
-                                    <dd> <a href="http://www.tetimes.com/sports/20191219/29561.html" target="_blank">2019中国大学生桨板竞速挑战赛万宁收官 北华大学</a> </dd>
-                                    <dd> <a href="http://www.tetimes.com/sports/20191219/29521.html" target="_blank">2019-2020WCBA联赛常规赛新疆女篮主场胜山西女篮</a> </dd>
-                                    <dd> <a href="http://www.tetimes.com/sports/20191219/29507.html" target="_blank">中国女排超级联赛八强战战罢 四强赛悬念多</a> </dd>
-
-                                </dl>
-                                <dl class="thrNewsList newsDis">
-                                    <dt> <a href="http://www.tetimes.com/sports/20191219/29469.html" target="_blank">淮安市第一届民俗运动会开幕 确定14个项目</a> </dt>
-
-                                    <dd> <a href="http://www.tetimes.com/sports/20191219/29359.html" target="_blank">2019世界跆拳道大满贯冠军系列赛在无锡太湖国际</a> </dd>
-                                    <dd> <a href="http://www.tetimes.com/sports/20191219/29338.html" target="_blank">连江将添城市体育综合体 占地面积约350亩</a> </dd>
-                                    <dd> <a href="http://www.tetimes.com/sports/20191218/29202.html" target="_blank">中超观赛人次同比增长12.1% 达到15.99亿人次</a> </dd>
-                                    <dd> <a href="http://www.tetimes.com/sports/20191218/29122.html" target="_blank">立咕运动五人制足球赛火热开启 引爆深圳全民足</a> </dd>
-
-                                </dl>
-                            </div>
-                            <!-- 中间 end-->
-
-                            <!-- 右侧 begin-->
-                            <div class="rightThr">
-                                <div class="speColumn">
-                                    <div class="indexTitle"> <strong>房产</strong> <a href="/house/" target="_blank">更多</a> </div>
-                                    <a href="http://www.tetimes.com/house/20191216/28375.html" target="_blank"><img src="/static/src/images/chineseNew/10_121611350u108.png" alt="金地东北探寻城市消费新动能 推动住宅产业升级 " width="340" height="226"></a>
-                                    <div class="hqlx"> 金地东北探寻城市消费新动能 推动住宅产业升级</div>
-
-                                    <ul class="speColumnList">
-                                        <li> <a href="http://www.tetimes.com/house/20191220/29589.html" target="_blank">青海省超额完成今年棚户区改造及老旧小区改造</a> </li>
-                                        <li> <a href="http://www.tetimes.com/house/20191219/29498.html" target="_blank">合肥市肥东县磷矿恢复楼小区将进行改造 总建筑</a> </li>
-                                        <li> <a href="http://www.tetimes.com/house/20191218/29319.html" target="_blank">外国买家在马来西亚所有住宅交易中所占比例不</a> </li>
-                                        <li> <a href="http://www.tetimes.com/house/20191218/29230.html" target="_blank">2020年起厦门市申请保障性租赁房和市级公共租赁</a> </li>
-
-                                    </ul>
-                                </div>
-                            </div>
-                            <!-- 右侧 end-->
-                        </div>
-
-
-
-                        <div class="footNew">
-                            <div class="copyMain"> <span>联系QQ：2437 809 247 电话：1353 059 0469 Copyright © 中国特网www.tetimes.com版权所有 未经授权禁止使用</span>
-                                <p> <a href='http://www.xjqnpx.com.cn/' target='_blank'>新疆青年网</a> <a href='http://www.shoujibao.cn/news/sxnews/' target='_blank'>手机报</a> <a href='http://www.iot-online.com/' target='_blank'>物联网在线</a> <a href='http://www.eupeople.com.cn/'
-                                        target='_blank'>人民日报欧洲网</a> </p>
+                            <div class="leftThrPic">
+                                <ul class="ThrPic clear">
+                                    <li>
+                                        <a href="http://www.tetimes.com/ent/dy/20191219/29438.html" target="_blank"><img src="/static/src/images/chineseNew/8_121915114h0v.jpg" alt="《武圣关公》中国风卷轴曝光 将2020年1月11日上映"></a>
+                                        <p><a href="http://www.tetimes.com/ent/dy/20191219/29438.html" target="_blank">《武圣关公》中国风卷轴曝光 将2020年1月11日上映</a></p>
+                                    </li>
+                                    <li>
+                                        <a href="http://www.tetimes.com/ent/20191219/29425.html" target="_blank"><img src="/static/src/images/chineseNew/10_12191413549448.jpg" alt="“再唱东方红”微视频大赛系列活动在京启动"></a>
+                                        <p><a href="http://www.tetimes.com/ent/20191219/29425.html" target="_blank">“再唱东方红”微视频大赛系列活动在京启动</a></p>
+                                    </li>
+
+                                </ul>
                             </div>
                         </div>
+                        <!-- 左侧 end-->
+
+                        <!-- 中间 begin-->
+                        <div class="centerThr">
+                            <dl class="thrNewsList">
+                                <dt> <a href="http://www.tetimes.com/ent/zy/20191219/29533.html" target="_blank">酷漾娱乐旅行新蜜蜂斩获年度奖项,原创作品首秀</a> </dt>
+
+                                <dd> <a href="http://www.tetimes.com/ent/dsj/20191219/29510.html" target="_blank">电视剧《大明风华》节奏紧凑剧情持续高能 首播</a> </dd>
+                                <dd> <a href="http://www.tetimes.com/ent/20191219/29505.html" target="_blank">腾讯程武：不遗余力、不计代价地做好未成年人</a> </dd>
+                                <dd> <a href="http://www.tetimes.com/ent/dy/20191219/29459.html" target="_blank">电影《青春再见青春》启动 预计将于2020年上映</a> </dd>
+                                <dd> <a href="http://www.tetimes.com/ent/dy/20191219/29438.html" target="_blank">《武圣关公》中国风卷轴曝光 将2020年1月11日上映</a> </dd>
+
+                            </dl>
+                            <dl class="thrNewsList newsDis">
+                                <dt> <a href="http://www.tetimes.com/ent/20191219/29425.html" target="_blank">“再唱东方红”微视频大赛系列活动在京启动</a> </dt>
+
+                                <dd> <a href="http://www.tetimes.com/ent/20191219/29364.html" target="_blank">一票难求的易烊千玺演唱会，神秘巨粉买空300张</a> </dd>
+                                <dd> <a href="http://www.tetimes.com/ent/20191218/29244.html" target="_blank">李冰冰的风格百变，魅力源于精益求精</a> </dd>
+                                <dd> <a href="http://www.tetimes.com/ent/20191218/29177.html" target="_blank">ANGSI昂司抽奖易烊千玺演唱会门票、诸多好物等你</a> </dd>
+                                <dd> <a href="http://www.tetimes.com/ent/20191218/29118.html" target="_blank">探探等互联网婚恋交友平台联合发起行业自律公</a> </dd>
+
+                            </dl>
+                        </div>
+                        <!-- 中间 end-->
+
+                        <!-- 右侧 begin-->
+                        <div class="rightThr">
+                            <div class="speColumn">
+                                <div class="indexTitle"> <strong>财经</strong> <a href="/财经/" target="_blank">更多</a> <span class="udline1"></span> </div>
+                                <ul class="speColumnList">
+                                    <li> <a href="http://www.tetimes.com/finance/20191220/29574.html" target="_blank">闽侯推出万亩产业用地 吸引企业家到闽侯投资兴</a> </li>
+                                    <li> <a href="http://www.tetimes.com/finance/20191219/29472.html" target="_blank">1-11月苏州市外贸进出口20118.2亿元 其中出口1210</a> </li>
+                                    <li> <a href="http://www.tetimes.com/finance/20191219/29430.html" target="_blank">1至11月内蒙古用于民生支出2775.6亿元 占一般公共</a> </li>
+                                    <li> <a href="http://www.tetimes.com/finance/20191219/29393.html" target="_blank">德国12月商业景气指数升至半年来新高 超出市场</a> </li>
+                                    <li> <a href="http://www.tetimes.com/finance/20191219/29392.html" target="_blank">山西运城直飞越南芽庄国际航线正式通航 采用空</a> </li>
+                                    <li> <a href="http://www.tetimes.com/finance/20191219/29387.html" target="_blank">2020年中国在线音频用户规模将达5.42亿人</a> </li>
+                                    <li> <a href="http://www.tetimes.com/finance/20191219/29382.html" target="_blank">平安人寿荣膺第四届金桔奖“最佳理赔服务”奖</a> </li>
+                                    <li> <a href="http://www.tetimes.com/finance/20191219/29371.html" target="_blank">南充91个重大项目集中开工 年度计划投资86.7亿元</a> </li>
+                                    <li> <a href="http://www.tetimes.com/finance/20191219/29339.html" target="_blank">前11月福州市邮政行业业务总量累计达到107.63亿元</a> </li>
+                                    <li> <a href="http://www.tetimes.com/finance/20191218/29152.html" target="_blank">wefox Group完成B+轮融资 宜信产业基金布局保险科技</a> </li>
+
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- 右侧 end-->
                     </div>
+
+                    <div class="conThr clear">
+                        <div class="indexBTitle"> <strong>旅游</strong> <a href="/travel/" target="_blank">更多</a> <span></span> </div>
+                        <!-- 左侧 begin-->
+                        <div class="leftThr">
+                            <div class="leftThrFocus">
+                                <!-- 焦点图 begin -->
+                                <div id="foucsBox22">
+                                    <ul class="imgCon" id="imgCon22" style="width: 1020px; margin-left: -340px;">
+                                        <!--展示图片开始-->
+                                        <li>
+                                            <a href="http://www.tetimes.com/travel/20191219/29557.html" title="去年中国百强县平均实现旅游总收入达172.22亿元" target="_blank"> <img src="/static/src/images/chineseNew/8_12192302313055.jpg"> </a>
+                                            <div class="imgTitle"><a href="http://www.tetimes.com/travel/20191219/29557.html" target="_blank" title="去年中国百强县平均实现旅游总收入达172.22亿元">去年中国百强县平均实现旅游总收入达172.22亿元</a></div>
+                                            <div class="showPage"></div>
+                                        </li>
+                                        <li>
+                                            <a href="http://www.tetimes.com/travel/20191218/29128.html" title="OPPO Reno3 Pro 5G手机现身Geekbench 多核得分7686" target="_blank"> <img src="/static/src/images/chineseNew/8_121q5210kk9.jpg"> </a>
+                                            <div class="imgTitle"><a href="http://www.tetimes.com/travel/20191218/29128.html" target="_blank" title="OPPO Reno3 Pro 5G手机现身Geekbench 多核得分7686">OPPO Reno3 Pro 5G手机现身Geekbench 多核得分7686</a></div>
+                                            <div class="showPage"></div>
+                                        </li>
+                                        <li>
+                                            <a href="http://www.tetimes.com/travel/20191218/29081.html" title="博湖县第十二届冰雪节12月27日启动 为期两个月" target="_blank"> <img src="/static/src/images/chineseNew/8_121q14644t07.jpg"> </a>
+                                            <div class="imgTitle"><a href="http://www.tetimes.com/travel/20191218/29081.html" target="_blank" title="博湖县第十二届冰雪节12月27日启动 为期两个月">博湖县第十二届冰雪节12月27日启动 为期两个月</a></div>
+                                            <div class="showPage"></div>
+                                        </li>
+                                        <li>
+                                            <a href="http://www.tetimes.com/travel/20191217/28950.html" title="景宁家地乡摄影节，有“杏”与你相遇，来邂逅" target="_blank"> <img src="/static/src/images/chineseNew/4_121g92z59120.png"> </a>
+                                            <div class="imgTitle"><a href="http://www.tetimes.com/travel/20191217/28950.html" target="_blank" title="景宁家地乡摄影节，有“杏”与你相遇，来邂逅">景宁家地乡摄影节，有“杏”与你相遇，来邂逅</a></div>
+                                            <div class="showPage"></div>
+                                        </li>
+                                        <li>
+                                            <a href="http://www.tetimes.com/travel/20191216/28490.html" title="千万粉丝环球旅行者公益为新疆赛里木湖代言 开" target="_blank"> <img src="/static/src/images/chineseNew/4_121616111245i.jpg"> </a>
+                                            <div class="imgTitle"><a href="http://www.tetimes.com/travel/20191216/28490.html" target="_blank" title="千万粉丝环球旅行者公益为新疆赛里木湖代言 开">千万粉丝环球旅行者公益为新疆赛里木湖代言 开</a></div>
+                                            <div class="showPage"></div>
+                                        </li>
+
+                                        <!--展示图片结束-->
+                                    </ul>
+                                    <div class="foucs"><span class=""></span><span class="f"></span><span class=""></span></div>
+                                    <div class="rBtn foucsButton"> <span></span> <img src="/static/src/images/chineseNew/20180910053605710.jpg"> </div>
+                                    <div class="lBtn foucsButton"> <span></span> <img src="/static/src/images/chineseNew/20180921091914111.jpg"></div>
+                                </div>
+                                <!-- 焦点图 end -->
+                            </div>
+                            <div class="leftThrPic">
+                                <ul class="ThrPic clear">
+                                    <li>
+                                        <a href="http://www.tetimes.com/travel/20191216/28372.html" target="_blank"><img src="/static/src/images/chineseNew/10_12161130436018.png" alt="12月15日，阿勒泰地区冬季旅游推介会走进羊城"></a>
+                                        <p><a href="http://www.tetimes.com/travel/20191216/28372.html" target="_blank">12月15日，阿勒泰地区冬季旅游推介会走进羊城</a></p>
+                                    </li>
+                                    <li>
+                                        <a href="http://www.tetimes.com/travel/20191212/27347.html" target="_blank"><img src="/static/src/images/chineseNew/8_1212160334c10.jpg" alt="北京市发布金秋旅游季京郊美食评选结果 公布"></a>
+                                        <p><a href="http://www.tetimes.com/travel/20191212/27347.html" target="_blank">北京市发布金秋旅游季京郊美食评选结果 公布</a></p>
+                                    </li>
+
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- 左侧 end-->
+
+                        <!-- 中间 begin-->
+                        <div class="centerThr">
+                            <dl class="thrNewsList">
+                                <dt> <a href="http://www.tetimes.com/travel/20191219/29557.html" target="_blank">去年中国百强县平均实现旅游总收入达172.22亿元</a> </dt>
+
+                                <dd> <a href="http://www.tetimes.com/travel/20191219/29497.html" target="_blank">滁州批准来安县池杉湖湿地公园为国家AAA级旅游</a> </dd>
+                                <dd> <a href="http://www.tetimes.com/travel/20191219/29483.html" target="_blank">长隆广珠项目引领广东省级旅游度假区发展</a> </dd>
+                                <dd> <a href="http://www.tetimes.com/travel/20191218/29329.html" target="_blank">闽江高端旅游船明年下半年投用 共含212个客位</a> </dd>
+                                <dd> <a href="http://www.tetimes.com/travel/20191218/29128.html" target="_blank">OPPO Reno3 Pro 5G手机现身Geekbench 多核得分7686</a> </dd>
+
+                            </dl>
+                            <dl class="thrNewsList newsDis">
+                                <dt> <a href="http://www.tetimes.com/travel/20191218/29105.html" target="_blank">巴里坤县第十五届冰雪文化旅游节12月27日开幕</a> </dt>
+
+                                <dd> <a href="http://www.tetimes.com/travel/20191218/29095.html" target="_blank">冬至兴安岭 泼出好风景</a> </dd>
+                                <dd> <a href="http://www.tetimes.com/travel/20191218/29081.html" target="_blank">博湖县第十二届冰雪节12月27日启动 为期两个月</a> </dd>
+                                <dd> <a href="http://www.tetimes.com/travel/20191217/28950.html" target="_blank">景宁家地乡摄影节，有“杏”与你相遇，来邂逅</a> </dd>
+                                <dd> <a href="http://www.tetimes.com/travel/20191217/28858.html" target="_blank">前11个月乌鲁木齐实现旅游收入1074.88亿元 同比增</a> </dd>
+
+                            </dl>
+                        </div>
+                        <!-- 中间 end-->
+
+                        <!-- 右侧 begin-->
+                        <div class="rightThr">
+                            <div class="speColumn">
+                                <div class="indexTitle"> <strong>文化</strong> <a href="/wenhua/" target="_blank">更多</a> . <a href="http://www.tetimes.com/wenyu/news/" target="_blank">文娱</a> <span class="udline1"></span> </div>
+                                <ul class="speColumnList">
+                                    <li> <a href="http://www.tetimes.com/wenhua/20191218/29171.html" target="_blank">中国首家综合性桥梁博物馆开馆 建筑面积近300</a> </li>
+                                    <li> <a href="http://www.tetimes.com/wenhua/20191218/29113.html" target="_blank">中国紫檀博物馆横琴分馆正式对公众开放 以明清</a> </li>
+                                    <li> <a href="http://www.tetimes.com/wenhua/20191217/28797.html" target="_blank">第四届蓝光杯-漳州钟表设计大赛落幕 肯宁家、尼</a> </li>
+                                    <li> <a href="http://www.tetimes.com/wenhua/20191216/28456.html" target="_blank">2019中国常州国际动漫艺术周将于12月19日在常州举</a> </li>
+                                    <li> <a href="http://www.tetimes.com/wenhua/20191213/27608.html" target="_blank">别致典雅 青雅钟表受邀参展中外时钟名品鉴赏会</a> </li>
+                                    <li> <a href="http://www.tetimes.com/wenhua/20191213/27530.html" target="_blank">贵阳学院美术学院教师作品展开展 展出至12月1</a> </li>
+                                    <li> <a href="http://www.tetimes.com/wenhua/20191212/27410.html" target="_blank">鄂温克族自治旗冬季游牧文化展示活动在内蒙古</a> </li>
+                                    <li> <a href="http://www.tetimes.com/wenhua/20191212/27364.html" target="_blank">国家博物馆将添中国古代书画展 52件宋元墨宝亮</a> </li>
+                                    <li> <a href="http://www.tetimes.com/wenhua/20191212/27331.html" target="_blank">北朝时期墓葬壁画山西展出 展期至2020年3月12日</a> </li>
+                                    <li> <a href="http://www.tetimes.com/wenhua/20191211/27033.html" target="_blank">中国大庆工业版画作品邀请展在北京举行 持续至</a> </li>
+
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- 右侧 end-->
+                    </div>
+
+
+
+                    <div class="ad">
+                        <img style="border:0px;width:1200;height:120;" src="/static/src/images/chineseNew/584f2f05-90e6-4615-996c-d86d6f58702a.jpg">
+                    </div>
+                    <div class="conThr clear">
+                        <div class="indexBTitle">
+                            <strong>国际</strong> <a href="http://www.tetimes.com/world/">更多</a>
+                            <span></span> </div>
+                        <!-- 左侧 begin-->
+                        <div class="leftThr">
+                            <div class="leftThrFocus">
+                                <!-- 焦点图 begin -->
+                                <div id="foucsBox33">
+                                    <ul class="imgCon" id="imgCon33" style="width: 1700px; margin-left: -340px;">
+                                        <!--展示图片开始-->
+                                        <li>
+                                            <a href="http://www.tetimes.com/world/20191218/29323.html" title="北京时间12月18日20时19分斐济南部海域发生5.3级地" target="_blank"> <img src="/static/src/images/chineseNew/8_121r244319120.jpg"> </a>
+                                            <div class="imgTitle"><a href="http://www.tetimes.com/world/20191218/29323.html" target="_blank" title="北京时间12月18日20时19分斐济南部海域发生5.3级地">北京时间12月18日20时19分斐济南部海域发生5.3级地</a></div>
+                                            <div class="showPage"></div>
+                                        </li>
+                                        <li>
+                                            <a href="http://www.tetimes.com/world/20191218/29056.html" title="北京时间12月18日9时56分新西兰附近海域发生5.9级" target="_blank"> <img src="/static/src/images/chineseNew/8_121q1024053d.jpg"> </a>
+                                            <div class="imgTitle"><a href="http://www.tetimes.com/world/20191218/29056.html" target="_blank" title="北京时间12月18日9时56分新西兰附近海域发生5.9级">北京时间12月18日9时56分新西兰附近海域发生5.9级</a></div>
+                                            <div class="showPage"></div>
+                                        </li>
+                                        <li>
+                                            <a href="http://www.tetimes.com/world/20191217/28716.html" title="北京时间12月17日10时04分斐济群岛南部海域发生" target="_blank"> <img src="/static/src/images/chineseNew/8_121g055504d5.jpg"> </a>
+                                            <div class="imgTitle"><a href="http://www.tetimes.com/world/20191217/28716.html" target="_blank" title="北京时间12月17日10时04分斐济群岛南部海域发生">北京时间12月17日10时04分斐济群岛南部海域发生</a></div>
+                                            <div class="showPage"></div>
+                                        </li>
+                                        <li>
+                                            <a href="http://www.tetimes.com/world/20191212/27409.html" title="印度尼西亚一幅描述史前狩猎场景洞穴壁画或是" target="_blank"> <img src="/static/src/images/chineseNew/8_12121p1223x6.jpg"> </a>
+                                            <div class="imgTitle"><a href="http://www.tetimes.com/world/20191212/27409.html" target="_blank" title="印度尼西亚一幅描述史前狩猎场景洞穴壁画或是">印度尼西亚一幅描述史前狩猎场景洞穴壁画或是</a></div>
+                                            <div class="showPage"></div>
+                                        </li>
+                                        <li>
+                                            <a href="http://www.tetimes.com/world/20191210/26747.html" title="北京时间12月10日16时40分新喀里多尼亚东部海域发" target="_blank"> <img src="/static/src/images/chineseNew/8_12101j143v57.jpg"> </a>
+                                            <div class="imgTitle"><a href="http://www.tetimes.com/world/20191210/26747.html" target="_blank" title="北京时间12月10日16时40分新喀里多尼亚东部海域发">北京时间12月10日16时40分新喀里多尼亚东部海域发</a></div>
+                                            <div class="showPage"></div>
+                                        </li>
+
+                                        <!--展示图片结束-->
+                                    </ul>
+                                    <div class="foucs"><span class=""></span><span class="f"></span><span class=""></span><span class=""></span><span class=""></span></div>
+                                    <div class="rBtn foucsButton"> <span></span> <img src="/static/src/images/chineseNew/20180921083806402.jpg"> </div>
+                                    <div class="lBtn foucsButton"> <span></span> <img src="/static/src/images/chineseNew/20180921083706881.jpg"> </div>
+                                </div>
+                                <!-- 焦点图 end -->
+                            </div>
+                            <div class="leftThrPic">
+                                <ul class="ThrPic clear">
+                                    <li>
+                                        <a href="http://www.tetimes.com/world/20191209/26579.html" target="_blank"><img src="/static/src/images/chineseNew/8_12091ku5h00.jpg" alt="意大利佛罗伦萨地区4.8级地震 没有人员伤亡报告"></a>
+                                        <p><a href="http://www.tetimes.com/world/20191209/26579.html" target="_blank">意大利佛罗伦萨地区4.8级地震 没有人员伤亡报告</a></p>
+                                    </li>
+                                    <li>
+                                        <a href="http://www.tetimes.com/world/20191209/26547.html" target="_blank"><img src="/static/src/images/chineseNew/8_1209142fn128.jpg" alt="北京时间12月9日11时37分意大利佛罗伦萨北部发生"></a>
+                                        <p><a href="http://www.tetimes.com/world/20191209/26547.html" target="_blank">北京时间12月9日11时37分意大利佛罗伦萨北部发生</a></p>
+                                    </li>
+
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- 左侧 end-->
+
+                        <!-- 中间 begin-->
+                        <div class="centerThr">
+                            <dl class="thrNewsList">
+                                <dt> <a href="http://www.tetimes.com/world/20191220/29575.html" target="_blank">泰国普吉岛附近一艘快艇撞上一艘俄罗斯船长驾</a> </dt>
+
+                                <dd> <a href="http://www.tetimes.com/world/20191219/29410.html" target="_blank">一架日本全日空波音767客机因引擎故障在日本福</a> </dd>
+                                <dd> <a href="http://www.tetimes.com/world/20191218/29323.html" target="_blank">北京时间12月18日20时19分斐济南部海域发生5.3级地</a> </dd>
+                                <dd> <a href="http://www.tetimes.com/world/20191218/29056.html" target="_blank">北京时间12月18日9时56分新西兰附近海域发生5.9级</a> </dd>
+                                <dd> <a href="http://www.tetimes.com/world/20191217/28829.html" target="_blank">波音公司“星际客机”将于12月20日首飞 目的地是</a> </dd>
+
+                            </dl>
+                            <dl class="thrNewsList newsDis">
+                                <dt> <a href="http://www.tetimes.com/world/20191217/28716.html" target="_blank">北京时间12月17日10时04分斐济群岛南部海域发生</a> </dt>
+
+                                <dd> <a href="http://www.tetimes.com/world/20191216/28318.html" target="_blank">刚果（金）东北部上韦莱省一处金矿发生塌陷 至</a> </dd>
+                                <dd> <a href="http://www.tetimes.com/world/20191216/28287.html" target="_blank">美“火星2020”拟于明年夏季升空 将搜寻生命可能</a> </dd>
+                                <dd> <a href="http://www.tetimes.com/world/20191216/28285.html" target="_blank">菲律宾棉兰老岛附近发生6.8级浅层地震 造成大面</a> </dd>
+                                <dd> <a href="http://www.tetimes.com/world/20191212/27409.html" target="_blank">印度尼西亚一幅描述史前狩猎场景洞穴壁画或是</a> </dd>
+
+                            </dl>
+                        </div>
+                        <!-- 中间 end-->
+
+                        <!-- 右侧 begin-->
+                        <div class="rightThr">
+                            <div class="speColumn">
+                                <div class="indexTitle"> <strong>企业</strong> <a href="/qiye/" target="_blank">更多</a> <span class="udline2"></span> </div>
+                                <ul class="speColumnList">
+                                    <li> <a href="http://www.tetimes.com/qiye/20191220/29595.html" target="_blank">2019年中国民族医药协会科学技术奖颁奖大会在京</a> </li>
+                                    <li> <a href="http://www.tetimes.com/qiye/20191219/29534.html" target="_blank">亿达之声绕江城 壮美赞歌献祖国</a> </li>
+                                    <li> <a href="http://www.tetimes.com/qiye/20191219/29530.html" target="_blank">ATLAS 寰图荣获 GBE“最佳室内设计办公建筑奖”</a> </li>
+                                    <li> <a href="http://www.tetimes.com/qiye/20191219/29460.html" target="_blank">力克举办2019越南服装智慧生产研讨会，以精益管</a> </li>
+                                    <li> <a href="http://www.tetimes.com/qiye/20191219/29456.html" target="_blank">企鹅杏仁集团构建深圳城市模型，全面布局基层</a> </li>
+
+                                </ul>
+                            </div>
+                            <div class="speColumnDis"></div>
+                            <div class="speColumn">
+                                <div class="indexTitle"> <strong>生活</strong> <a href="/life/" target="_blank">更多</a> <span class="udline2"></span> </div>
+                                <ul class="speColumnList">
+                                    <li> <a href="http://www.tetimes.com/life/20191219/29543.html" target="_blank">一位旅行网红，是如何秒杀各时装博主的？戴肖</a> </li>
+                                    <li> <a href="http://www.tetimes.com/life/20191219/29503.html" target="_blank">会员再花50软妹币得《庆余年》VIP中P？我不如直</a> </li>
+                                    <li> <a href="http://www.tetimes.com/life/20191219/29501.html" target="_blank">出门被小朋友叫阿姨？一定是你没用VE面膜</a> </li>
+                                    <li> <a href="http://www.tetimes.com/life/20191218/29226.html" target="_blank">美到心醉的珂琳丝络落日十二色眼影盘，眼睛上</a> </li>
+                                    <li> <a href="http://www.tetimes.com/life/20191218/29089.html" target="_blank">7款面膜真实测评——这款VE酵母多肽面膜值得入</a> </li>
+
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- 右侧 end-->
+                    </div>
+                    <!-- 第五部分-科技 end-->
+
+                    <!-- 第六部分-体育旅游 begin-->
+                    <div class="ad">
+                        <img style="border:0px;width:1200;height:120;" src="/static/src/images/chineseNew/9c196517-2189-48e8-884b-f9b04b645dd7.jpg">
+                    </div>
+                    <div class="conThr clear">
+                        <div class="indexBTitle"> <strong>体育<i></i></strong> <a href="/sports/" target="_blank">更多</a> <span class="udline"></span> </div>
+                        <!-- 左侧 begin-->
+                        <div class="leftThr">
+                            <div class="leftThrFocus">
+                                <!-- 焦点图 begin -->
+                                <div id="foucsBox44">
+                                    <ul class="imgCon" id="imgCon44" style="width: 1360px; margin-left: -340px;">
+                                        <!--展示图片开始-->
+                                        <li>
+                                            <a href="http://www.tetimes.com/sports/20191220/29585.html" title="周俐君在2019年世界跆拳道大满贯冠军系列赛中获" target="_blank"> <img src="/static/src/images/chineseNew/8_122009560n439.jpg"> </a>
+                                            <div class="imgTitle"><a href="http://www.tetimes.com/sports/20191220/29585.html" target="_blank" title="周俐君在2019年世界跆拳道大满贯冠军系列赛中获">周俐君在2019年世界跆拳道大满贯冠军系列赛中获</a></div>
+                                            <div class="showPage"></div>
+                                        </li>
+                                        <li>
+                                            <a href="http://www.tetimes.com/sports/20191219/29561.html" title="2019中国大学生桨板竞速挑战赛万宁收官 北华大学" target="_blank"> <img src="/static/src/images/chineseNew/8_12192304492e9.jpg"> </a>
+                                            <div class="imgTitle"><a href="http://www.tetimes.com/sports/20191219/29561.html" target="_blank" title="2019中国大学生桨板竞速挑战赛万宁收官 北华大学">2019中国大学生桨板竞速挑战赛万宁收官 北华大学</a></div>
+                                            <div class="showPage"></div>
+                                        </li>
+                                        <li>
+                                            <a href="http://www.tetimes.com/sports/20191219/29359.html" title="2019世界跆拳道大满贯冠军系列赛在无锡太湖国际" target="_blank"> <img src="/static/src/images/chineseNew/8_121z9544rh2.jpg"> </a>
+                                            <div class="imgTitle"><a href="http://www.tetimes.com/sports/20191219/29359.html" target="_blank" title="2019世界跆拳道大满贯冠军系列赛在无锡太湖国际">2019世界跆拳道大满贯冠军系列赛在无锡太湖国际</a></div>
+                                            <div class="showPage"></div>
+                                        </li>
+                                        <li>
+                                            <a href="http://www.tetimes.com/sports/20191218/29122.html" title="立咕运动五人制足球赛火热开启 引爆深圳全民足" target="_blank"> <img src="/static/src/images/chineseNew/10_121q5044x241.png"> </a>
+                                            <div class="imgTitle"><a href="http://www.tetimes.com/sports/20191218/29122.html" target="_blank" title="立咕运动五人制足球赛火热开启 引爆深圳全民足">立咕运动五人制足球赛火热开启 引爆深圳全民足</a></div>
+                                            <div class="showPage"></div>
+                                        </li>
+                                        <li>
+                                            <a href="http://www.tetimes.com/sports/20191218/29015.html" title="厦门50个校园体育场地将正式对外开放 校外人员" target="_blank"> <img src="/static/src/images/chineseNew/8_121p936164h5.jpg"> </a>
+                                            <div class="imgTitle"><a href="http://www.tetimes.com/sports/20191218/29015.html" target="_blank" title="厦门50个校园体育场地将正式对外开放 校外人员">厦门50个校园体育场地将正式对外开放 校外人员</a></div>
+                                            <div class="showPage"></div>
+                                        </li>
+
+                                        <!--展示图片结束-->
+                                    </ul>
+                                    <div class="foucs"><span class=""></span><span class="f"></span><span class=""></span><span class=""></span></div>
+                                    <div class="rBtn foucsButton"> <span></span> <img src="/static/src/images/chineseNew/20180921083819103.jpg"> </div>
+                                    <div class="lBtn foucsButton"> <span></span> <img src="/static/src/images/chineseNew/20180921083515654.jpg"> </div>
+                                </div>
+                                <!-- 焦点图 end -->
+                            </div>
+                            <div class="leftThrPic">
+                                <ul class="ThrPic clear">
+                                    <li>
+                                        <a href="http://www.tetimes.com/sports/20191217/28661.html" target="_blank"><img src="/static/src/images/chineseNew/8_121f92gc214.jpg" alt="贵州足球协会青少年足球联赛在贵安新区开赛 采"></a>
+                                        <p><a href="http://www.tetimes.com/sports/20191217/28661.html" target="_blank">贵州足球协会青少年足球联赛在贵安新区开赛 采</a></p>
+                                    </li>
+                                    <li>
+                                        <a href="http://www.tetimes.com/sports/20191216/28644.html" target="_blank"><img src="/static/src/images/chineseNew/8_1216231zg1j.jpg" alt="全国“体校杯”足球赛总决赛开幕 将持续到12月"></a>
+                                        <p><a href="http://www.tetimes.com/sports/20191216/28644.html" target="_blank">全国“体校杯”足球赛总决赛开幕 将持续到12月</a></p>
+                                    </li>
+
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- 左侧 end-->
+
+                        <!-- 中间 begin-->
+                        <div class="centerThr">
+                            <dl class="thrNewsList">
+                                <dt> <a href="http://www.tetimes.com/sports/20191220/29598.html" target="_blank">西宁冰球馆冰壶馆28日起开放 招募5000名青少年免</a> </dt>
+
+                                <dd> <a href="http://www.tetimes.com/sports/20191220/29585.html" target="_blank">周俐君在2019年世界跆拳道大满贯冠军系列赛中获</a> </dd>
+                                <dd> <a href="http://www.tetimes.com/sports/20191219/29561.html" target="_blank">2019中国大学生桨板竞速挑战赛万宁收官 北华大学</a> </dd>
+                                <dd> <a href="http://www.tetimes.com/sports/20191219/29521.html" target="_blank">2019-2020WCBA联赛常规赛新疆女篮主场胜山西女篮</a> </dd>
+                                <dd> <a href="http://www.tetimes.com/sports/20191219/29507.html" target="_blank">中国女排超级联赛八强战战罢 四强赛悬念多</a> </dd>
+
+                            </dl>
+                            <dl class="thrNewsList newsDis">
+                                <dt> <a href="http://www.tetimes.com/sports/20191219/29469.html" target="_blank">淮安市第一届民俗运动会开幕 确定14个项目</a> </dt>
+
+                                <dd> <a href="http://www.tetimes.com/sports/20191219/29359.html" target="_blank">2019世界跆拳道大满贯冠军系列赛在无锡太湖国际</a> </dd>
+                                <dd> <a href="http://www.tetimes.com/sports/20191219/29338.html" target="_blank">连江将添城市体育综合体 占地面积约350亩</a> </dd>
+                                <dd> <a href="http://www.tetimes.com/sports/20191218/29202.html" target="_blank">中超观赛人次同比增长12.1% 达到15.99亿人次</a> </dd>
+                                <dd> <a href="http://www.tetimes.com/sports/20191218/29122.html" target="_blank">立咕运动五人制足球赛火热开启 引爆深圳全民足</a> </dd>
+
+                            </dl>
+                        </div>
+                        <!-- 中间 end-->
+
+                        <!-- 右侧 begin-->
+                        <div class="rightThr">
+                            <div class="speColumn">
+                                <div class="indexTitle"> <strong>房产</strong> <a href="/house/" target="_blank">更多</a> </div>
+                                <a href="http://www.tetimes.com/house/20191216/28375.html" target="_blank"><img src="/static/src/images/chineseNew/10_121611350u108.png" alt="金地东北探寻城市消费新动能 推动住宅产业升级 " width="340" height="226"></a>
+                                <div class="hqlx"> 金地东北探寻城市消费新动能 推动住宅产业升级</div>
+
+                                <ul class="speColumnList">
+                                    <li> <a href="http://www.tetimes.com/house/20191220/29589.html" target="_blank">青海省超额完成今年棚户区改造及老旧小区改造</a> </li>
+                                    <li> <a href="http://www.tetimes.com/house/20191219/29498.html" target="_blank">合肥市肥东县磷矿恢复楼小区将进行改造 总建筑</a> </li>
+                                    <li> <a href="http://www.tetimes.com/house/20191218/29319.html" target="_blank">外国买家在马来西亚所有住宅交易中所占比例不</a> </li>
+                                    <li> <a href="http://www.tetimes.com/house/20191218/29230.html" target="_blank">2020年起厦门市申请保障性租赁房和市级公共租赁</a> </li>
+
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- 右侧 end-->
+                    </div>
+
+
+                    {{include '../share/baseFooter'}}
+                    <!-- <div class="footNew">
+                        <div class="copyMain"> <span>联系QQ：2437 809 247 电话：1353 059 0469 Copyright © 中国特网www.tetimes.com版权所有 未经授权禁止使用</span>
+                            <p> <a href='http://www.xjqnpx.com.cn/' target='_blank'>新疆青年网</a> <a href='http://www.shoujibao.cn/news/sxnews/' target='_blank'>手机报</a> <a href='http://www.iot-online.com/' target='_blank'>物联网在线</a> <a href='http://www.eupeople.com.cn/'
+                                    target='_blank'>人民日报欧洲网</a> </p>
+                        </div>
+                    </div> -->
                 </div>
             </div>
-            <script src="static/js/jquery1.9.1.js" type="text/javascript"></script>
-            <script src="static/js/sea.js" type="text/javascript" data-main="/index2015.js"></script>
-            <script>
-                (function() {
-                    var bp = document.createElement('script');
-                    var curProtocol = window.location.protocol.split(':')[0];
-                    if (curProtocol === 'https') {
-                        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
-                    } else {
-                        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
-                    }
-                    var s = document.getElementsByTagName("script")[0];
-                    s.parentNode.insertBefore(bp, s);
-                })();
-            </script>
-</body>
-
-</html>
+        </div>
+        <link rel="stylesheet" href="/static/src/css/chineseNew/index.css">
