@@ -2,25 +2,26 @@ const express = require('express');
 const router = express.Router();
 const global = require('../../my_modules/global');
 const mimracleHelper = require('../../my_modules/mimracleHelper');
+const util = require('../../my_modules/util');
+
+let _logger = util.logger;
 
 router.get('/chineseNew/', function(req, res, next) {
 
-    let api_key = req.headers["micracle-crm"];
+    //let api_key = req.headers["micracle-crm"];
 
-    let getTopCategories = new Promise((resolve, reject) => {
+    let getMenus = new Promise((resolve, reject) => {
         var api = {
-            getTopCategories: {
-                url: '/api/category/top-categories',
-                data: {
-                    api_key: api_key
-                }
+            getMenus: {
+                url: '/api/category/menu',
+                data: {}
             }
         };
 
         global.data(req, api, function(err, resource) {
             var data = {};
             global.formatData("获取顶级导航栏", data, req, resource);
-            console.log(data);
+            _logger.debug("getMenus", data.data);
             resolve(data.data);
         });
     });
@@ -30,7 +31,7 @@ router.get('/chineseNew/', function(req, res, next) {
             getSepcialList: {
                 url: '/api/article/sepcial-list',
                 data: {
-                    api_key: api_key
+                    //api_key: api_key
                 }
             }
         };
@@ -47,7 +48,7 @@ router.get('/chineseNew/', function(req, res, next) {
             getCustomSetting: {
                 url: "/api/custom/company-setting",
                 data: {
-                    api_key: api_key
+                    //api_key: api_key
                 }
             }
         };
@@ -64,7 +65,7 @@ router.get('/chineseNew/', function(req, res, next) {
             getHomeAdversts: {
                 url: '/api/advert/list',
                 data: {
-                    api_key: api_key
+                    //api_key: api_key
                 }
             }
         };
@@ -84,21 +85,21 @@ router.get('/chineseNew/', function(req, res, next) {
     });
 
     // 获取新闻(快讯)
-    let getNewsForFast = getArticlesByCategory(req, api_key, "new", 9, 1);
+    let getNewsForFast = getArticlesByCategory(req, "", "new", 9, 1);
     // 获取国内文章
-    let getNewsForInland = getArticlesByCategory(req, api_key, "inland", 6, 1);
+    let getNewsForInland = getArticlesByCategory(req, "", "inland", 6, 1);
     // 获取社会文章
-    let getNewForSocial = getArticlesByCategory(req, api_key, "social", 10, 1);
+    let getNewForSocial = getArticlesByCategory(req, "", "social", 10, 1);
     // 获取国际文章
-    let getNewForInternational = getArticlesByCategory(req, api_key, "international", 10, 1);
+    let getNewForInternational = getArticlesByCategory(req, "", "international", 10, 1);
     // 获取科技文章
-    let getNewForTechnology = getArticlesByCategory(req, api_key, "technology", 10, 1);
+    let getNewForTechnology = getArticlesByCategory(req, "", "technology", 10, 1);
     // 获取财经文章
-    let getNewForEconomics = getArticlesByCategory(req, api_key, "economics", 10, 1);
+    let getNewForEconomics = getArticlesByCategory(req, "", "economics", 10, 1);
     // 获取时尚文章
-    let getNewForFashion = getArticlesByCategory(req, api_key, "fashion", 10, 1);
+    let getNewForFashion = getArticlesByCategory(req, "", "fashion", 10, 1);
 
-    Promise.all([getTopCategories, getAdversts, getCustomSetting, getHomeAdversts, getNewsForFast, getNewsForInland, getNewForSocial,
+    Promise.all([getMenus, getAdversts, getCustomSetting, getHomeAdversts, getNewsForFast, getNewsForInland, getNewForSocial,
         getNewForInternational, getNewForTechnology, getNewForEconomics, getNewForFashion
     ]).then((result) => {
         let d = {
