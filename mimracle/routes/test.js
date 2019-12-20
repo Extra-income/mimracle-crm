@@ -2,6 +2,7 @@ const express = require('express');
 const router = express.Router();
 const global = require('../my_modules/global');
 const mimracleHelper = require('../my_modules/mimracleHelper');
+const $ = require("../my_modules/util");
 
 router.get('/test.html', function(req, res, next) {
 
@@ -113,10 +114,9 @@ router.get('/test.html', function(req, res, next) {
             economics: result[9], //财经
             fashion: result[10] //时尚
         };
-        console.log(d);
         res.render("test/index.html", d);
     }).catch((error) => {
-        console.log(error)
+        $.logger.error(error);
     });
 });
 
