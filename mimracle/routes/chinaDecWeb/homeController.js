@@ -1,9 +1,9 @@
 const express = require('express');
 const router = express.Router();
-const global = require('../my_modules/global');
-const mimracleHelper = require('../my_modules/mimracleHelper');
+const global = require('../../my_modules/global');
+const mimracleHelper = require('../../my_modules/mimracleHelper');
 
-router.get('/test.html', function(req, res, next) {
+router.get('/chinaDecWeb/home.html', function(req, res, next) {
 
     let api_key = req.headers["micracle-crm"];
 
@@ -20,6 +20,7 @@ router.get('/test.html', function(req, res, next) {
         global.data(req, api, function(err, resource) {
             var data = {};
             global.formatData("获取顶级导航栏", data, req, resource);
+            console.log(data);
             resolve(data.data);
         });
     });
@@ -114,7 +115,7 @@ router.get('/test.html', function(req, res, next) {
             fashion: result[10] //时尚
         };
         console.log(d);
-        res.render("test/index.html", d);
+        res.render("chinaDecWeb/home/index.html", d);
     }).catch((error) => {
         console.log(error)
     });
