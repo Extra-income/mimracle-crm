@@ -20,7 +20,6 @@ router.get('/chinaDecWeb/home.html', function(req, res, next) {
         global.data(req, api, function(err, resource) {
             var data = {};
             global.formatData("获取顶级导航栏", data, req, resource);
-            console.log(data);
             resolve(data.data);
         });
     });
@@ -114,7 +113,6 @@ router.get('/chinaDecWeb/home.html', function(req, res, next) {
             economics: result[9], //财经
             fashion: result[10] //时尚
         };
-        console.log(d);
         res.render("chinaDecWeb/home/index.html", d);
     }).catch((error) => {
         console.log(error)
