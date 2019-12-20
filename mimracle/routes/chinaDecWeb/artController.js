@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
-const global = require('../my_modules/global');
-const $ = require("../my_modules/util");
+const global = require('../../my_modules/global');
+const $ = require("../../my_modules/util");
 
 router.get('/article/:article_id', function(req, res, next) {
     let api_key = req.headers["micracle-crm"];
@@ -42,12 +42,30 @@ router.get('/article/:article_id', function(req, res, next) {
         });
     });
 
-    Promise.all([getArticle, getAdversts]).then((result) => {
+    let getTopCategories = new Promise((resolve, reject) => {
+        var api = {
+            getTopCategories: {
+                url: '/api/category/top-categories',
+                data: {
+                    api_key: api_key
+                }
+            }
+        };
+    
+        global.data(req, api, function(err, resource) {
+            var data = {};
+            global.formatData("获取顶级导航栏", data, req, resource);
+            resolve(data.data);
+        });
+    });
+
+    Promise.all([getArticle, getAdversts, getTopCategories]).then((result) => {
         let d = {
             articleDetail: result[0],
-            adversts: result[1]
+            adversts: result[1],
+            memus: result[2]
         };
-        res.render("article/index.html", d);
+        res.render("chinaDecWeb/article/index.html", d);
     }).catch((error) => {
         $.logger.error(error);
     });

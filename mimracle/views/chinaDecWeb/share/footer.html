@@ -2,9 +2,14 @@
     <div class="nav">
         <ul class="footer-list">
             {{each customSetting as item}}
-            <li id="{{item.page_id}}">{{item.title}}</li>
+            <li id="{{item.page_id}}"><a id="footer-a-wrap" href="/footer/detail/{{item.page_id}}">{{item.title}}</a></li>
             {{/each}}
         </ul>
         <div class="more-nav-show clear" show="false"></div>
     </div>
 </div>
+
+<style>
+#footer-a-wrap{text-decoration:none;color: rgb(230, 230, 230)}
+#footer-a-wrap:hover{color:#fff;text-decoration:underline;font-weight: bold;}
+</style>

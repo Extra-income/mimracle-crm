@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
-const global = require('../my_modules/global');
-const $ = require("../my_modules/util");
+const global = require('../../my_modules/global');
+const $ = require("../../my_modules/util");
 
 router.get('/footer/detail/:page_id', function(req, res, next) {
     let api_key = req.headers["micracle-crm"];
@@ -30,8 +30,6 @@ router.get('/footer/detail/:page_id', function(req, res, next) {
                 url: '/api/category/top-categories',
                 data: {
                     api_key: api_key,
-                    category_id: '47',
-                    page_size: '1'
                 }
             }
         };
@@ -61,7 +59,7 @@ router.get('/footer/detail/:page_id', function(req, res, next) {
     });
 
     Promise.all([getFooterDetail, getTopCategories, getCustomSetting]).then((reslove) => {
-        res.render("footer/detail.html", { pagedetail: reslove[0], memus: reslove[1], customSetting: reslove[2], });
+        res.render("chinaDecWeb/footer/detail.html", { pagedetail: reslove[0], memus: reslove[1], customSetting: reslove[2], });
     }).catch((error) => {
         $.logger.error(error);
     })

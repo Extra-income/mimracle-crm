@@ -111,7 +111,7 @@ _fn.prototype.getCatetoryKey = function(code) {
  * 生成栏目链接
  */
 _fn.prototype.getCatetoryPageUrl = function(category_id) {
-    return "/cagetory/" + category_id;
+    return "/category/" + category_id;
 }
 
 /**

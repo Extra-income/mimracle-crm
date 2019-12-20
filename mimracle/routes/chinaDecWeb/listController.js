@@ -1,8 +1,8 @@
 const express = require('express');
 const router = express.Router();
-const global = require('../my_modules/global');
-let mimracleHelper = require('../my_modules/mimracleHelper');
-const $ = require("../my_modules/util");
+const global = require('../../my_modules/global');
+let mimracleHelper = require('../../my_modules/mimracleHelper');
+const $ = require("../../my_modules/util");
 
 router.get('/list/:category_code', function (req, res, next) {
   let api_key = req.headers["micracle-crm"];
@@ -51,11 +51,9 @@ router.get('/list/:category_code', function (req, res, next) {
   let getTopCategories = new Promise((resolve, reject) => {
     var api = {
         getTopCategories: {
-            url: '/api/category/top-cagetories',
+            url: '/api/category/top-categories',
             data: {
-                api_key: api_key,
-                category_id: '47',
-                page_size: '1'
+                api_key: api_key
             }
         }
     };
@@ -69,7 +67,7 @@ router.get('/list/:category_code', function (req, res, next) {
 
   let getCustomSetting = new Promise((resolve, reject) => {
     var api = {
-        getTopCategories: {
+      getCustomSetting: {
             url: '/api/custom/company-setting',
             data: {
                 api_key: api_key
@@ -85,7 +83,7 @@ router.get('/list/:category_code', function (req, res, next) {
 });
 
   Promise.all([getArticleList, getHotArticleList, getCustomSetting, getTopCategories]).then((reslove) => {
-    res.render("list/index.html", { articleList: reslove[0], adverstsList: reslove[1], customSetting: reslove[2], memus: reslove[3],});
+    res.render("chinaDecWeb/list/index.html", { articleList: reslove[0], adverstsList: reslove[1], customSetting: reslove[2], memus: reslove[3],});
   }).catch((error) => {
     $.logger.error(error);
   });
