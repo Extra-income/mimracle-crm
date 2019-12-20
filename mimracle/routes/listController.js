@@ -48,6 +48,25 @@ router.get('/list/:category_code', function (req, res, next) {
     });
   });
 
+  let getTopCategories = new Promise((resolve, reject) => {
+    var api = {
+        getTopCategories: {
+            url: '/api/category/top-cagetories',
+            data: {
+                api_key: api_key,
+                category_id: '47',
+                page_size: '1'
+            }
+        }
+    };
+
+    global.data(req, api, function(err, resource) {
+        var data = {};
+        global.formatData("获取顶级导航栏", data, req, resource);
+        resolve(data.data);
+    });
+});
+
   let getCustomSetting = new Promise((resolve, reject) => {
     var api = {
         getTopCategories: {
@@ -65,8 +84,8 @@ router.get('/list/:category_code', function (req, res, next) {
     });
 });
 
-  Promise.all([getArticleList, getHotArticleList, getCustomSetting]).then((reslove) => {
-    res.render("list/index.html", { articleList: reslove[0], adverstsList: reslove[1], customSetting: reslove[2],});
+  Promise.all([getArticleList, getHotArticleList, getCustomSetting, getTopCategories]).then((reslove) => {
+    res.render("list/index.html", { articleList: reslove[0], adverstsList: reslove[1], customSetting: reslove[2], memus: reslove[3],});
   }).catch((error) => {
     $.logger.error(error);
   });

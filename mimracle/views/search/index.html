@@ -1,0 +1,60 @@
+{{include '../base/baseHeader'}}
+
+<div class="content">
+	<!-- 左侧频道菜单 -->
+	<div class="leftCate">
+		<div class="rangeBig"></div>
+		{{each adverstsList.hots as item}}
+		<div class="cateItem">
+			<h6 class="list-title"><a href="{{item.url}}">{{item.title}}</a></h6>
+			<ul class="list-inner"></ul>
+		</div>
+		{{/each}}
+	</div>
+	<!-- 中间内容列表 -->
+	<div class="cenCon">
+		<div class="rangeBig"></div>
+		<!-- 轮播图结束 -->
+		<!-- 推荐内容开始 -->
+		<div class="m-recommend">
+			<ul id="recommend">
+				{{each articleList.article_list as articleitem}}
+				{{if articleitem.img !== ''}}
+				<li class="imgitem">
+					<a href="{{articleitem.url}}">
+						<span class="listPw">
+							<img src="{{articleitem.img}}" alt="">
+						</span>
+						<div class="con-txt">
+							<h6>{{articleitem.title}}</h6>
+							<div class="con-tool">
+								<span class="left">{{articleitem.from}}</span>
+								<span class="right">{{articleitem.edit_time}}</span>
+							</div>
+						</div>
+					</a>
+				</li>
+
+				{{else}}
+				<li class="wzitem">
+					<a href="{{articleitem.url}}">
+						<div>
+							<h6>{{articleitem.title}}</h6>
+							<div>
+								<span class="left">{{articleitem.from}}</span>
+								<span class="right">{{articleitem.edit_time}}</span>
+							</div>
+						</div>
+					</a>
+				</li>
+				{{/if}}
+				{{/each}}
+			</ul>
+		</div>
+		<!-- 推荐内容结束 -->
+
+	</div>
+</div>
+<link rel="stylesheet" type="text/css" href="/static/src/css/css/cate.css">
+
+{{include '../base/baseFooter'}}

@@ -176,7 +176,6 @@ router.get("/api/article/search", function(req, res, next) {
         } else {
             result = mimracleHelper.getFailResult(apiResult.code, apiResult.msg);
         }
-        console.log(result);
         res.json(result);
     });
 });

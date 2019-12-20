@@ -1,6 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const global = require('../my_modules/global');
+const $ = require("../my_modules/util");
 
 router.get('/article/:article_id', function(req, res, next) {
     let api_key = req.headers["micracle-crm"];
@@ -46,10 +47,9 @@ router.get('/article/:article_id', function(req, res, next) {
             articleDetail: result[0],
             adversts: result[1]
         };
-        console.log(d);
         res.render("article/index.html", d);
     }).catch((error) => {
-        console.log(error);
+        $.logger.error(error);
     });
 });
 

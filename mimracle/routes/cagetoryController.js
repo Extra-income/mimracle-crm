@@ -26,7 +26,6 @@ router.get('/category/:category_code', function(req, res, next) {
         var data = {};
         global.formatData("获取栏目下文章", data, req, resource);
         let d = data.data;
-        console.log(d);
         res.render("category/index.html", d);
     });
 
