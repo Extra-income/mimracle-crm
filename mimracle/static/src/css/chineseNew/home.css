@@ -348,3 +348,39 @@ a.spePic:hover span { background-image:url(../images/bgicon.png);background-repe
 #bcTabCon1 { height:160px; overflow:hidden;}
 #bcTabCon2 { height:198px; overflow:hidden;}
 
+/* Make the image fully responsive */
+.leftFir img {
+	width: 100%;
+	height: 406px;
+}
+
+.banbox{
+	height: 406px;
+}
+.banboxtitle{
+	padding: 0;
+	bottom: 0px;
+	color: #000;
+	z-index: 999;
+	left: 0;
+	right: 0;
+	width: 100%;
+	overflow:hidden;
+}
+.banboxtitle a{
+	display: block;
+	width: 100%;
+	font-size: 14px;
+	overflow:hidden;
+	height:20px;
+}
+.banboxzhishi{
+	bottom: 30px;
+	margin:0px;
+	left:76%;
+}
+.banboxzhishi li{
+	width: 8px;
+	height: 8px;
+	border-radius:50%;
+}

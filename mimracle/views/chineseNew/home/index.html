@@ -14,61 +14,67 @@
 
                 <!-- 第一部分 begin-->
                 <div class="conFir">
-                    <!-- 左侧 begin-->
+                    
+                    <!-- 左侧 -->
                     <div class="leftFir">
-                        <!-- 焦点图 begin -->
-                        <div id="foucsBox">
-                            <ul class="imgCon" id="imgCon" style="width: 4320px; margin-left: -720px;">
-                                <!--展示图片开始-->
-
-                                <li>
-                                    <a href="http://www.tetimes.com/wenyu/20191220/29610.html" title="热门小说x y sy361悦享书驿《重生贵女：抱紧慎王" target="_blank"> <img src="/static/src/images/chineseNew/19_1220105333vm.gif"> </a>
-                                    <div class="imgTitle"><a href="http://www.tetimes.com/wenyu/20191220/29610.html" target="_blank" title="热门小说x y sy361悦享书驿《重生贵女：抱紧慎王">热门小说x y sy361悦享书驿《重生贵女：抱紧慎王</a></div>
-                                    <div class="showPage"></div>
-                                </li>
-                                <li>
-                                    <a href="http://www.tetimes.com/wenyu/20191220/29609.html" title="官方全免xingkongzhongwen《重生弃少归来》主角叶子" target="_blank"> <img src="/static/src/images/chineseNew/19_12201050515154.gif"> </a>
-                                    <div class="imgTitle"><a href="http://www.tetimes.com/wenyu/20191220/29609.html" target="_blank" title="官方全免xingkongzhongwen《重生弃少归来》主角叶子">官方全免xingkongzhongwen《重生弃少归来》主角叶子</a></div>
-                                    <div class="showPage"></div>
-                                </li>
-                                <li>
-                                    <a href="http://www.tetimes.com/wenyu/20191220/29607.html" title="正版全免swbd668嵍c《慕少，你老婆又重生了》主角" target="_blank"> <img src="/static/src/images/chineseNew/19_1220104313j43.gif"> </a>
-                                    <div class="imgTitle"><a href="http://www.tetimes.com/wenyu/20191220/29607.html" target="_blank" title="正版全免swbd668嵍c《慕少，你老婆又重生了》主角">正版全免swbd668嵍c《慕少，你老婆又重生了》主角</a></div>
-                                    <div class="showPage"></div>
-                                </li>
-                                <li>
-                                    <a href="http://www.tetimes.com/tech/20191220/29606.html" title="安路科技全线FPGA产品亮相深圳电子展，登榜“" target="_blank"> <img src="/static/src/images/chineseNew/10_12201042541f4.jpg"> </a>
-                                    <div class="imgTitle"><a href="http://www.tetimes.com/tech/20191220/29606.html" target="_blank" title="安路科技全线FPGA产品亮相深圳电子展，登榜“">安路科技全线FPGA产品亮相深圳电子展，登榜“</a></div>
-                                    <div class="showPage"></div>
-                                </li>
-                                <li>
-                                    <a href="http://www.tetimes.com/tech/20191220/29608.html" title="A.O.史密斯甲醛净化器荣膺8星认证 除醛滤芯升级" target="_blank"> <img src="/static/src/images/chineseNew/5_1220104529c92.jpg"> </a>
-                                    <div class="imgTitle"><a href="http://www.tetimes.com/tech/20191220/29608.html" target="_blank" title="A.O.史密斯甲醛净化器荣膺8星认证 除醛滤芯升级">A.O.史密斯甲醛净化器荣膺8星认证 除醛滤芯升级</a></div>
-                                    <div class="showPage"></div>
-                                </li>
-                                <li>
-                                    <a href="http://www.tetimes.com/wenyu/20191220/29605.html" title="zsbd688/枕书伴读《慕少，你老婆又重生了》主角苏" target="_blank"> <img src="/static/src/images/chineseNew/19_122010421462b.gif"> </a>
-                                    <div class="imgTitle"><a href="http://www.tetimes.com/wenyu/20191220/29605.html" target="_blank" title="zsbd688/枕书伴读《慕少，你老婆又重生了》主角苏">zsbd688/枕书伴读《慕少，你老婆又重生了》主角苏</a></div>
-                                    <div class="showPage"></div>
-                                </li>
-
-
-                                <!--展示图片结束-->
+                      
+                        <div id="demo" class="carousel slide" data-ride="carousel">
+                            <!-- 指示符 -->
+                            <ul class="carousel-indicators banboxzhishi">
+                                <li data-target="#demo" data-slide-to="0" class="active"></li>
+                                <li data-target="#demo" data-slide-to="1"></li>
+                                <li data-target="#demo" data-slide-to="2"></li>
+                                <li data-target="#demo" data-slide-to="3"></li>
                             </ul>
-                            <div class="foucs"><span class=""></span><span class="f"></span><span class=""></span><span class=""></span><span class=""></span><span class=""></span></div>
-                            <div class="rBtn foucsButton"> <span></span> <img src="/static/src/images/chineseNew/20180921122032403.jpg"> </div>
-                            <div class="lBtn foucsButton"> <span></span> <img src="/static/src/images/chineseNew/20180921085857955.jpg"> </div>
+                            <div class="banbox carousel-inner ">
+
+                                <!-- 轮播图片 -->
+                                {{each adversts.heads as item i}} {{if i< 4}} 
+                                    <div class="carousel-item {{if i == 0}} active {{/if}}">
+                                        <img src="{{item.img}}" alt="图片">
+                                        <div class="carousel-caption banboxtitle">
+                                            <a href="/article/{{item.article_id}}">{{item.title}}</a>
+                                        </div>
+                                    </div>
+
+                                {{/if}} {{/each}}
+                            </div>
+                                <!-- <div class="carousel-item active ">
+                                    <img src="/static/src/images/chineseNew/8_12191hk51430.jpg"> 
+                                    <div class="carousel-caption banboxtitle">
+                                        <a href="/static/src/images/chineseNew/19_1220105333vm.gif">测试1</a>
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="/static/src/images/chineseNew/8_12191hk51430.jpg"> 
+                                    <div class="carousel-caption banboxtitle">
+                                        <a href="/static/src/images/chineseNew/19_1220105333vm.gif">测试2</a>
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="/static/src/images/chineseNew/8_12191hk51430.jpg"> 
+                                    <div class="carousel-caption banboxtitle">
+                                        <a href="/static/src/images/chineseNew/19_1220105333vm.gif">测试3</a>
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="/static/src/images/chineseNew/8_12191hk51430.jpg"> 
+                                    <div class="carousel-caption banboxtitle">
+                                        <a href="/static/src/images/chineseNew/19_1220105333vm.gif">测试4<a>
+                                    </div>
+                                </div>
+                            </div> -->
+                            
+                            
+                            
+                            <!-- 左右切换按钮 -->
+                            <a class="carousel-control-prev" href="#demo" data-slide="prev" title="链接说明">
+                                <span class="carousel-control-prev-icon"></span>
+                            </a>
+                            <a class="carousel-control-next" href="#demo" data-slide="next" title="链接说明">
+                                <span class="carousel-control-next-icon"></span>
+                            </a>
                         </div>
-                        <!-- 焦点图 end -->
-                        <script type="text/javascript">
-                            (function() {
-                                var foucsBox = document.getElementById('imgCon'),
-                                    foucsBoxEle = foucsBox.getElementsByTagName('li'),
-                                    foucsObj = foucsBoxEle[foucsBoxEle.length - 1],
-                                    t = foucsObj.getElementsByClassName("imgTitle");
-                                !t.length && foucsObj.parentNode.removeChild(foucsObj);
-                            })();
-                        </script>
                     </div>
                     <!-- 左侧 end-->
 
@@ -672,4 +678,3 @@
             </div>
         </div>
     </div>
-    <link rel="stylesheet" href="/static/src/css/chineseNew/index.css">
