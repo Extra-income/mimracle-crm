@@ -84,17 +84,69 @@ router.get('/chineseNew/', function(req, res, next) {
         });
     });
 
-    // 获取科技文章
-    let getNewForTechnology = getArticlesByCategory(req, "technology", 10, 1);
+    let getFirstSectionArticles = new Promise((resolve, reject) => {
+        let d = [];
+        resolve(d);
+    }).then(function (input) {
+        // 获取科技文章
+        return getArticlesByCategory(req, "technology", 5, 1, input);
+    }).then(function (input) {
+        // 获取社会文章
+        return getArticlesByCategory(req, "social", 13, 1, input);
+    }).then(function (input) {
+        // 获取教育文章
+        return getArticlesByCategory(req, "education", 8, 1, input);
+    }).then(function (input) {
+        // 获取汽车文章
+        return getArticlesByCategory(req, "car", 6, 1, input);
+    }).then(function (input) {
+        // 获取娱乐文章
+        return getArticlesByCategory(req, "entertainment", 6, 1, input);
+    }).then(function (input) {
+        // 获取影视文章
+        return getArticlesByCategory(req, "film", 7, 1, input);
+    }).then(function (input) {
+        // 获取明星文章
+        return getArticlesByCategory(req, "star", 5, 1, input);
+    }).then(function (input) {
+        // 获取财经文章
+        return getArticlesByCategory(req, "economics", 10, 1, input);
+    }).then(function (input) {
+        return refactorObjProp(input);
+    });
 
-    Promise.all([getMenus, getAdversts, getCustomSetting, getHomeAdversts, getNewForTechnology
+    let getSecondSectionArticles = new Promise((resolve, reject) => {
+        let d = [];
+        resolve(d);
+    }).then(function (input) {
+        // 获取旅游文章
+        return getArticlesByCategory(req, "travel", 17, 1, input);
+    }).then(function (input) {
+        // 获取文化文章
+        return getArticlesByCategory(req, "culture", 10, 1, input);
+    }).then(function (input) {
+        return refactorObjProp(input);
+    });
+
+    Promise.all([getMenus, getAdversts, getCustomSetting, getHomeAdversts, 
+        getFirstSectionArticles, getSecondSectionArticles
     ]).then((result) => {
+        console.log("result[4]", result[4]);
         let d = {
             memus: result[0],
             adversts: result[1],
             customSetting: result[2],
             homeAdverst: result[3],
-            technology: result[4] //科技
+            technology: result[4].technology,
+            social: result[4].social,
+            education: result[4].education,
+            car: result[4].car,
+            entertainment: result[4].entertainment,
+            film: result[4].film,
+            star: result[4].star,
+            economic: result[4].economics,
+            travel: result[5].travel,
+            culture: result[5].culture
         };
         console.log("index result", d);
         res.render("chineseNew/home/index.html", d);
@@ -103,7 +155,7 @@ router.get('/chineseNew/', function(req, res, next) {
     });
 });
 
-let getArticlesByCategory = function(req, category_code, page_size, page_no) {
+let getArticlesByCategory = function(req, category_code, page_size, page_no, r) {
     return new Promise((resolve, reject) => {
         let code = category_code;
         var api = {
@@ -120,8 +172,19 @@ let getArticlesByCategory = function(req, category_code, page_size, page_no) {
         global.data(req, api, function(err, resource) {
             var data = {};
             global.formatData("获取" + category_code + "新闻", data, req, resource);
-            resolve(data.data);
+            r.push({key: category_code, list: data.data});
+            resolve(r);
         });
+    });
+}
+
+let refactorObjProp = function (input) {
+    return new Promise((resolve, reject) => {
+        let articles = {};
+        for (let i = 0, len = input.length; i < len; i++) {    
+            articles[input[i].key] = input[i].list || [];
+        }
+        resolve(articles);
     });
 }
 
