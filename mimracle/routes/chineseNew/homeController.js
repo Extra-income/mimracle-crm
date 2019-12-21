@@ -13,7 +13,7 @@ router.get('/chineseNew/', function(req, res, next) {
     let getMenus = new Promise((resolve, reject) => {
         var api = {
             getMenus: {
-                url: '/api/category/menu',
+                url: '/api/category/top-categories',
                 data: {}
             }
         };
@@ -84,52 +84,32 @@ router.get('/chineseNew/', function(req, res, next) {
         });
     });
 
-    // 获取新闻(快讯)
-    let getNewsForFast = getArticlesByCategory(req, "", "new", 9, 1);
-    // 获取国内文章
-    let getNewsForInland = getArticlesByCategory(req, "", "inland", 6, 1);
-    // 获取社会文章
-    let getNewForSocial = getArticlesByCategory(req, "", "social", 10, 1);
-    // 获取国际文章
-    let getNewForInternational = getArticlesByCategory(req, "", "international", 10, 1);
     // 获取科技文章
-    let getNewForTechnology = getArticlesByCategory(req, "", "technology", 10, 1);
-    // 获取财经文章
-    let getNewForEconomics = getArticlesByCategory(req, "", "economics", 10, 1);
-    // 获取时尚文章
-    let getNewForFashion = getArticlesByCategory(req, "", "fashion", 10, 1);
+    let getNewForTechnology = getArticlesByCategory(req, "technology", 10, 1);
 
-    Promise.all([getMenus, getAdversts, getCustomSetting, getHomeAdversts, getNewsForFast, getNewsForInland, getNewForSocial,
-        getNewForInternational, getNewForTechnology, getNewForEconomics, getNewForFashion
+    Promise.all([getMenus, getAdversts, getCustomSetting, getHomeAdversts, getNewForTechnology
     ]).then((result) => {
         let d = {
             memus: result[0],
             adversts: result[1],
             customSetting: result[2],
             homeAdverst: result[3],
-            fastNew: result[4], // 新闻(快讯)
-            inland: result[5], //国内文章
-            social: result[6], //社会
-            international: result[7], //国际
-            technology: result[8], //科技
-            economics: result[9], //财经
-            fashion: result[10] //时尚
+            technology: result[4] //科技
         };
-        console.log(d);
+        console.log("index result", d);
         res.render("chineseNew/home/index.html", d);
     }).catch((error) => {
         console.log(error)
     });
 });
 
-let getArticlesByCategory = function(req, api_key, category_code, page_size, page_no) {
+let getArticlesByCategory = function(req, category_code, page_size, page_no) {
     return new Promise((resolve, reject) => {
         let code = category_code;
         var api = {
             getHomeAdversts: {
                 url: '/api/article/list',
                 data: {
-                    api_key: api_key,
                     category_key: mimracleHelper.getCatetoryKey(code),
                     page_size: page_size || 8,
                     page_no: page_no || 1
