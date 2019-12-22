@@ -42,15 +42,16 @@
                             <div class="banbox carousel-inner ">
 
                                 <!-- 轮播图片 -->
-                                {{each specialList.imgs as item i}} {{if i< 4}} 
+                                {{each specialList.imgs as item i}} 
+                                {{if i< 4}} 
                                     <div class="carousel-item {{if i == 0}} active {{/if}}">
                                         <img src="{{item.img}}" alt="图片">
                                         <div class="carousel-caption banboxtitle">
                                             <a href="/article/{{item.article_id}}">{{item.title}}</a>
                                         </div>
                                     </div>
-
-                                {{/if}} {{/each}}
+                                {{/if}} 
+                                {{/each}}
                             </div>
                                 <!-- <div class="carousel-item active ">
                                     <img src="/static/src/images/chineseNew/8_12191hk51430.jpg"> 
@@ -136,7 +137,7 @@
                     <div class="leftSec">
 
                         <div class="hqDayComment">
-                            <div class="indexTitle"> <strong>科技</strong> <a href="/category/technology" target="_blank">更多</a> </div>
+                            <div class="indexTitle"> <strong>科技</strong> <a href="/list/technology" target="_blank">更多</a> </div>
                             
                             <div class="leftThrPic">
                                 <ul class="ThrPic clear">
@@ -185,7 +186,7 @@
 
 
                         <div class="overseaChina">
-                            <div class="indexTitle"> <strong>教育[样式错乱，需调整]</strong> <a href="/category/education" target="_blank">更多</a> <span class="udline3"></span> </div>
+                            <div class="indexTitle"> <strong>教育[样式错乱，需调整]</strong> <a href="/list/education" target="_blank">更多</a> <span class="udline3"></span> </div>
                             <div class="overseaCNews">
                                 <ul class="ThrPic clear">
                                     {{each technology}}
@@ -469,7 +470,7 @@
                     <!-- 右侧 begin-->
                     <div class="rightThr">
                         <div class="speColumn">
-                            <div class="indexTitle"> <strong>财经</strong> <a href="/category/economic" target="_blank">更多</a> <span class="udline1"></span> </div>
+                            <div class="indexTitle"> <strong>财经</strong> <a href="/list/economic" target="_blank">更多</a> <span class="udline1"></span> </div>
                             <ul class="speColumnList">
                                 {{each economic}}
                                 <li> <a href="{{$value.url}}" target="_blank">{{$value.title}}</a> </li>
@@ -492,7 +493,7 @@
                 </div>
 
                 <div class="conThr clear">
-                    <div class="indexBTitle"> <strong>旅游</strong> <a href="/category/travel" target="_blank">更多</a> <span></span> </div>
+                    <div class="indexBTitle"> <strong>旅游</strong> <a href="/list/travel" target="_blank">更多</a> <span></span> </div>
                     <!-- 左侧 begin-->
                     <div class="leftThr">
                         <div class="leftThrFocus">
@@ -611,7 +612,7 @@
                     <!-- 右侧 begin-->
                     <div class="rightThr">
                         <div class="speColumn">
-                            <div class="indexTitle"> <strong>文化</strong> <a href="/category/culture" target="_blank">更多</a> . <a href="/category/culture" target="_blank">文娱</a> <span class="udline1"></span> </div>
+                            <div class="indexTitle"> <strong>文化</strong> <a href="/list/culture" target="_blank">更多</a> . <a href="/list/culture" target="_blank">文娱</a> <span class="udline1"></span> </div>
                             <ul class="speColumnList">
                                 {{each culture}}
                                 <li> <a href="{{$value.url}}" target="_blank">{{$value.title}}</a> </li>
@@ -640,7 +641,7 @@
                 </div>
                 <div class="conThr clear">
                     <div class="indexBTitle">
-                        <strong>国际</strong> <a href="/category/international">更多</a>
+                        <strong>国际</strong> <a href="/list/international">更多</a>
                         <span></span> </div>
                     <!-- 左侧 begin-->
                     <div class="leftThr">
@@ -760,7 +761,7 @@
                     <!-- 右侧 begin-->
                     <div class="rightThr">
                         <div class="speColumn">
-                            <div class="indexTitle"> <strong>商业</strong> <a href="/category/commerce" target="_blank">更多</a> <span class="udline2"></span> </div>
+                            <div class="indexTitle"> <strong>商业</strong> <a href="/list/commerce" target="_blank">更多</a> <span class="udline2"></span> </div>
                             <ul class="speColumnList">
                                 {{each commerce}}
                                 <li> <a href="{{$value.url}}" target="_blank">{{$value.title}}</a> </li>
@@ -775,7 +776,7 @@
                         </div>
                         <div class="speColumnDis"></div>
                         <div class="speColumn">
-                            <div class="indexTitle"> <strong>生活</strong> <a href="/category/life" target="_blank">更多</a> <span class="udline2"></span> </div>
+                            <div class="indexTitle"> <strong>生活</strong> <a href="/list/life" target="_blank">更多</a> <span class="udline2"></span> </div>
                             <ul class="speColumnList">
                                 {{each life}}
                                 <li> <a href="{{$value.url}}" target="_blank">{{$value.title}}</a> </li>
@@ -798,7 +799,7 @@
                     <a href="{{homeAdverst.fivth.url}}"><img style="border:0px;width:1200;height:120;" src="{{homeAdverst.fivth.img}}"></a>
                 </div>
                 <div class="conThr clear">
-                    <div class="indexBTitle"> <strong>体育<i></i></strong> <a href="/category/sports" target="_blank">更多</a> <span class="udline"></span> </div>
+                    <div class="indexBTitle"> <strong>体育<i></i></strong> <a href="/list/sports" target="_blank">更多</a> <span class="udline"></span> </div>
                     <!-- 左侧 begin-->
                     <div class="leftThr">
                         <div class="leftThrFocus">
@@ -917,7 +918,7 @@
                     <!-- 右侧 begin-->
                     <div class="rightThr">
                         <div class="speColumn">
-                            <div class="indexTitle"> <strong>房产</strong> <a href="/category/houseProperty" target="_blank">更多</a> </div>
+                            <div class="indexTitle"> <strong>房产</strong> <a href="/list/houseProperty" target="_blank">更多</a> </div>
                             {{each houseProperty}}
                             {{if $index == 0}}
                             <a href="{{$value.url}}" target="_blank"><img src="{{$value.img}}" alt="{{$value.img}}" width="340" height="226"></a>
@@ -950,7 +951,7 @@
 
                 <!-- 第七部分-图说财经 begin-->
                 <div class="conThr clear">
-                    <div class="indexBTitle"> <strong>图说财经[样式需要调整]<i></i></strong> <a href="/category/sports" target="_blank">更多</a> <span class="udline"></span> </div>
+                    <div class="indexBTitle"> <strong>图说财经[样式需要调整]<i></i></strong> <a href="/list/sports" target="_blank">更多</a> <span class="udline"></span> </div>
                     <div class="centerThr">
                         <ul class="ThrPic clear">
                             {{each financial}}
@@ -973,3 +974,4 @@
             </div>
         </div>
     </div>
+
