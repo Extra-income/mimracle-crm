@@ -26,7 +26,7 @@ router.get('/chineseNew/', function(req, res, next) {
         });
     });
 
-    let getAdversts = new Promise((resolve, reject) => {
+    let getSepcialList = new Promise((resolve, reject) => {
         var api = {
             getSepcialList: {
                 url: '/api/article/sepcial-list',
@@ -92,7 +92,7 @@ router.get('/chineseNew/', function(req, res, next) {
         return getArticlesByCategory(req, "news", 13, 1, input);
     }).then(function(input) {
         // 获取科技文章
-        return getArticlesByCategory(req, "technology", 5, 1, input);
+        return getArticlesByCategory(req, "technology", 6, 1, input);
     }).then(function(input) {
         // 获取社会文章
         return getArticlesByCategory(req, "social", 13, 1, input);
@@ -137,6 +137,9 @@ router.get('/chineseNew/', function(req, res, next) {
         // 获取生活文章
         return getArticlesByCategory(req, "life", 5, 1, input);
     }).then(function(input) {
+        // 获取公益文章
+        return getArticlesByCategory(req, "publicWelfare", 5, 1, input);
+    }).then(function(input) {
         return refactorObjProp(input);
     });
 
@@ -150,15 +153,18 @@ router.get('/chineseNew/', function(req, res, next) {
         // 获取房产文章
         return getArticlesByCategory(req, "houseProperty", 5, 1, input);
     }).then(function(input) {
+        // 获取金融文章
+        return getArticlesByCategory(req, "financial", 5, 1, input);
+    }).then(function(input) {
         return refactorObjProp(input);
     });
 
-    Promise.all([getMenus, getAdversts, getCustomSetting, getHomeAdversts,
+    Promise.all([getMenus, getSepcialList, getCustomSetting, getHomeAdversts,
         getFirstSectionArticles, getSecondSectionArticles, getThirdSectionArticles
     ]).then((result) => {
         let d = {
             memus: result[0],
-            adversts: result[1],
+            specialList: result[1],
             customSetting: result[2],
             homeAdverst: result[3],
             news: result[4].news,
@@ -176,9 +182,11 @@ router.get('/chineseNew/', function(req, res, next) {
             commerce: result[5].commerce,
             life: result[5].life,
             sports: result[6].sports,
-            houseProperty: result[6].houseProperty
+            houseProperty: result[6].houseProperty,
+            publicWelfare: result[5].publicWelfare,
+            financial: result[6].financial
         };
-        console.log("index adversts", d.homeAdverst);
+        console.log("index publicWelfare", d);
         res.render("chineseNew/home/index.html", d);
     }).catch((error) => {
         console.log(error)
@@ -212,7 +220,31 @@ let refactorObjProp = function(input) {
     return new Promise((resolve, reject) => {
         let articles = {};
         for (let i = 0, len = input.length; i < len; i++) {
-            articles[input[i].key] = input[i].list || [];
+            articles[input[i].key] = input[i].list || [{
+                article_id: 306,
+                title: '今晚8点暂停发稿阿萨法发生放散阀暗室逢灯发生发达啊',
+                keyword: '查收 一份 冬季 燃气热水器 保养 指南',
+                from: '互联网',
+                img: 'https://himg2.huanqiucdn.cn/attachment2010/2019/1202/20191202050535595.jpg?w=240',
+                edit_time: '2019-12-11T03:14:00.000Z',
+                url: '/article/306'
+              }, {
+                article_id: 306,
+                title: '今晚8点暂停发稿阿萨法发生放散阀暗室逢灯发生发达啊',
+                keyword: '查收 一份 冬季 燃气热水器 保养 指南',
+                from: '互联网',
+                img: 'https://himg2.huanqiucdn.cn/attachment2010/2019/1202/20191202050535595.jpg?w=240',
+                edit_time: '2019-12-11T03:14:00.000Z',
+                url: '/article/306'
+              }, {
+                article_id: 306,
+                title: '今晚8点暂停发稿阿萨法发生放散阀暗室逢灯发生发达啊',
+                keyword: '查收 一份 冬季 燃气热水器 保养 指南',
+                from: '互联网',
+                img: 'https://himg2.huanqiucdn.cn/attachment2010/2019/1202/20191202050535595.jpg?w=240',
+                edit_time: '2019-12-11T03:14:00.000Z',
+                url: '/article/306'
+              }];
         }
         resolve(articles);
     });

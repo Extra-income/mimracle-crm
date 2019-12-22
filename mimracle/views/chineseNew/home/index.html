@@ -9,6 +9,18 @@
             <!-- 内容部分 begin-->
             <div class="wrapCon">
                 <div class="ad">
+                    {{each specialList.heads}}
+                    {{if $index == 0}}
+                    <h1><p><a href="{{$value.url}}" target="_blank">[头条，未完成样式]{{$value.title}}</a></p></h1>
+                    {{else}}
+                    {{if $index < 4}}
+                    <span><a href="{{$value.url}}" target="_blank">[{{$value.title}}]</a></span>
+                    {{/if}}
+                    {{/if}}
+                    {{/each}}
+                </div>
+
+                <div class="ad">
                     <a href="{{homeAdverst.top.url}}"><img style="border:0px;width:1200;height:120;" src="{{homeAdverst.top.img}}"></a>
                     <!-- <img style="border:0px;width:1200;height:120;" src="/static/src/images/chineseNew/9c196517-2189-48e8-884b-f9b04b645dd7.jpg"> -->
                 </div>
@@ -30,7 +42,7 @@
                             <div class="banbox carousel-inner ">
 
                                 <!-- 轮播图片 -->
-                                {{each adversts.heads as item i}} {{if i< 4}} 
+                                {{each specialList.imgs as item i}} {{if i< 4}} 
                                     <div class="carousel-item {{if i == 0}} active {{/if}}">
                                         <img src="{{item.img}}" alt="图片">
                                         <div class="carousel-caption banboxtitle">
@@ -116,7 +128,8 @@
 
                 <!-- 第二部分 begin-->
                 <div class="ad">
-
+                    <a href="{{homeAdverst.second.url}}"><img style="border:0px;width:1200;height:120;" src="{{homeAdverst.second.img}}"></a>
+                    <!-- <img style="border:0px;width:1200;height:120;" src="/static/src/images/chineseNew/9c196517-2189-48e8-884b-f9b04b645dd7.jpg"> -->
                 </div>
                 <div class="conSec clear">
                     <!-- 左侧 begin-->
@@ -124,17 +137,38 @@
 
                         <div class="hqDayComment">
                             <div class="indexTitle"> <strong>科技</strong> <a href="/category/technology" target="_blank">更多</a> </div>
+                            
+                            <div class="leftThrPic">
+                                <ul class="ThrPic clear">
+                                    {{each technology}}
+                                    {{if $index >= 4}}
+                                    <li>
+                                        <a href="{{$value.url}}" target="_blank"><img src="{{$value.img}}" alt="{{$value.title}}"></a>
+                                        <p><a href="{{$value.url}}" target="_blank">{{$value.title}}</a></p>
+                                    </li>
+                                    {{/if}}
+                                    {{/each}} 
+                                    
+                                    <!-- <li>
+                                        <a href="http://www.tetimes.com/world/20191209/26547.html" target="_blank"><img src="/static/src/images/chineseNew/8_1209142fn128.jpg" alt="北京时间12月9日11时37分意大利佛罗伦萨北部发生"></a>
+                                        <p><a href="http://www.tetimes.com/world/20191209/26547.html" target="_blank">北京时间12月9日11时37分意大利佛罗伦萨北部发生</a></p>
+                                    </li>
+                                    <li>
+                                        <a href="http://www.tetimes.com/world/20191209/26547.html" target="_blank"><img src="/static/src/images/chineseNew/8_1209142fn128.jpg" alt="北京时间12月9日11时37分意大利佛罗伦萨北部发生"></a>
+                                        <p><a href="http://www.tetimes.com/world/20191209/26547.html" target="_blank">北京时间12月9日11时37分意大利佛罗伦萨北部发生</a></p>
+                                    </li> -->
+    
+                                </ul>
+                            </div>
                             <div class="commentTab">
                                 <ul class="commentDetail">
                                     <li class="commentDshow">
                                         <dl class="commentNews">
                                             {{each technology}}
-                                                {{if $index == 0}}
-                                                <dt><a href="{{$value.url}}">{{$value.title}}</a></dt>
-                                                {{else}}
-                                                <dd><a href="{{$value.url}}">{{$value.title}}</a></dd>
-                                                {{/if}}
-                                                {{/each}} 
+                                            {{if $index < 4}}
+                                            <dd><a href="{{$value.url}}">{{$value.title}}</a></dd>
+                                            {{/if}}
+                                            {{/each}} 
                                             <!-- <dt><a href="http://www.tetimes.com/tech/20191220/29606.html">安路科技全线FPGA产品亮相深圳电子展，登榜“2019硬核</a></dt>
 
                                             <dd><a href="http://www.tetimes.com/tech/20191220/29608.html">A.O.史密斯甲醛净化器荣膺8星认证 除醛滤芯升级产品震</a></dd>
@@ -151,8 +185,28 @@
 
 
                         <div class="overseaChina">
-                            <div class="indexTitle"> <strong>教育</strong> <a href="/category/education" target="_blank">更多</a> <span class="udline3"></span> </div>
+                            <div class="indexTitle"> <strong>教育[样式错乱，需调整]</strong> <a href="/category/education" target="_blank">更多</a> <span class="udline3"></span> </div>
                             <div class="overseaCNews">
+                                <ul class="ThrPic clear">
+                                    {{each technology}}
+                                    {{if $index >= 4}}
+                                    <li>
+                                        <a href="{{$value.url}}" target="_blank"><img src="{{$value.img}}" alt="{{$value.title}}"></a>
+                                        <p><a href="{{$value.url}}" target="_blank">{{$value.title}}</a></p>
+                                    </li>
+                                    {{/if}}
+                                    {{/each}} 
+                                    
+                                    <!-- <li>
+                                        <a href="http://www.tetimes.com/world/20191209/26547.html" target="_blank"><img src="/static/src/images/chineseNew/8_1209142fn128.jpg" alt="北京时间12月9日11时37分意大利佛罗伦萨北部发生"></a>
+                                        <p><a href="http://www.tetimes.com/world/20191209/26547.html" target="_blank">北京时间12月9日11时37分意大利佛罗伦萨北部发生</a></p>
+                                    </li>
+                                    <li>
+                                        <a href="http://www.tetimes.com/world/20191209/26547.html" target="_blank"><img src="/static/src/images/chineseNew/8_1209142fn128.jpg" alt="北京时间12月9日11时37分意大利佛罗伦萨北部发生"></a>
+                                        <p><a href="http://www.tetimes.com/world/20191209/26547.html" target="_blank">北京时间12月9日11时37分意大利佛罗伦萨北部发生</a></p>
+                                    </li> -->
+    
+                                </ul>
                                 {{each education}}
                                 {{if $index == 0}}
                                 <h4><a href="{{$value.url}}" se_prerender_url="complete" target="_blank">{{$value.title}}</a></h4>
@@ -179,47 +233,44 @@
                     <div class="centerSec">
                         <div class="videoBlock">
                             <div class="indexTitle"> <strong>汽车</strong> </div>
-                            <div class="videoPic">
-                                <ul class="videoPic clear">
-                                    {{each car}}
-                                    {{if $index < 2}}
-                                    <li>
-                                        <a href="{{$value.url}}" target="_blank"> <img src="{{$value.img}}" width="168px" height="112px" alt="{{$value.title}}"> <span></span> </a>
-                                        <p> <a href="{{$value.url}}" target="_blank">{{$value.title}}</a> </p>
-                                    </li>
-                                    {{/if}}
-                                    {{/each}}
-                                    <!-- <li>
-                                        <a href="http://www.tetimes.com/auto/20191219/29452.html" target="_blank"> <img src="/static/src/images/chineseNew/8_1219154552h37.jpg" width="168px" height="112px" alt="一汽丰田奕泽E擎动"> <span></span> </a>
-                                        <p> <a href="http://www.tetimes.com/auto/20191219/29452.html" target="_blank">一汽丰田奕泽E擎动</a> </p>
-                                    </li>
-                                    <li>
-                                        <a href="http://www.tetimes.com/auto/20191219/29450.html" target="_blank"> <img src="/static/src/images/chineseNew/8_1219154459b61.jpg" width="168px" height="112px" alt="Jeep自由侠PHEV版明"> <span></span> </a>
-                                        <p> <a href="http://www.tetimes.com/auto/20191219/29450.html" target="_blank">Jeep自由侠PHEV版明</a> </p>
-                                    </li> -->
 
+                            <ul class="ThrPic clear">
+                                {{each car}}
+                                {{if $index >= 4}}
+                                <li>
+                                    <a href="{{$value.url}}" target="_blank"><img src="{{$value.img}}" alt="{{$value.title}}"></a>
+                                    <p><a href="{{$value.url}}" target="_blank">{{$value.title}}</a></p>
+                                </li>
+                                {{/if}}
+                                {{/each}}                            
+                            </ul>
+
+                            <div class="commentTab">
+                                <ul class="commentDetail">
+                                    <li class="commentDshow">
+                                        <dl class="commentNews">
+                                            {{each car}}
+                                            {{if $index < 4}}
+                                            <dd><a href="{{$value.url}}">{{$value.title}}</a></dd>
+                                            {{/if}}
+                                            {{/each}} 
+                                        </dl>
+                                    </li>
                                 </ul>
                             </div>
-                            <ul class="videoNews">
-                                {{each car}}
-                                {{if $index > 1}}
-                                <li> <a href="{{$value.url}}" target="_blank">{{$value.title}}</a> </li>
-                                {{/if}}
-                                {{/each}}
-                                <!-- <li> <a href="http://www.tetimes.com/auto/20191219/29470.html" target="_blank"> 签下1500台大单！江铃汽车与11家邮政快递企业签订全面</a> </li>
-                                <li> <a href="http://www.tetimes.com/auto/20191219/29452.html" target="_blank"> 一汽丰田奕泽E擎动力信息曝光 最高车速可达160km/h</a> </li>
-                                <li> <a href="http://www.tetimes.com/auto/20191219/29450.html" target="_blank"> Jeep自由侠PHEV版明年上市 最高时速约130.35km/h</a> </li>
-                                <li> <a href="http://www.tetimes.com/auto/20191219/29445.html" target="_blank"> 法拉利F8 Spider正式上市 共推出一款车型</a> </li> -->
-
-                            </ul>
                         </div>
 
 
                         <div class="topicBlock">
-                            <div class="indexTitle"> <strong>消费</strong> </div>
+                            <div class="indexTitle"> <strong>公益</strong> </div>
 
                             <ul class="topicNews">
+                                {{each publicWelfare}}
                                 <li>
+                                    <a href="{{$value.url}}" target="_blank"><span>· {{$value.title}}</span></a>
+                                </li>
+                                {{/each}}
+                                <!-- <li>
                                     <a href="http://www.tetimes.com/xiaofei/20191217/28952.html" target="_blank"><span>· 亲草多效御龄眼霜，修护眼袋黑眼圈早衰，让你的眼睛</span></a>
                                 </li>
                                 <li>
@@ -233,7 +284,7 @@
                                 </li>
                                 <li>
                                     <a href="http://www.tetimes.com/xiaofei/20191218/29219.html" target="_blank"><span>· 家装设计师更爱“轻薄风” A.O.史密斯薄型速热电热水</span></a>
-                                </li>
+                                </li> -->
 
                             </ul>
                         </div>
@@ -246,6 +297,32 @@
 
                         <div class="secNewsBlock">
                             <div class="indexTitle"> <strong>社会</strong> </div>
+
+                            <ul class="ThrPic clear">
+                                {{each social}}
+                                {{if $index < 2}}
+                                <li>
+                                    <a href="{{$value.url}}" target="_blank"><img src="{{$value.img}}" alt="{{$value.title}}"></a>
+                                    <p><a href="{{$value.url}}" target="_blank">{{$value.title}}</a></p>
+                                </li>
+                                {{/if}}
+                                {{/each}}                            
+                            </ul>
+
+                            <!-- <div class="commentTab">
+                                <ul class="commentDetail">
+                                    <li class="commentDshow">
+                                        <dl class="commentNews">
+                                            {{each sports}}
+                                            {{if $index < 11}}
+                                            <dd><a href="{{$value.url}}">{{$value.title}}</a></dd>
+                                            {{/if}}
+                                            {{/each}} 
+                                        </dl>
+                                    </li>
+                                </ul>
+                            </div> -->
+
                             <div class="secNewsList">
                                 {{each social}}
                                 <p><a href="{{$value.url}}" target="_blank">{{$value.title}}</a></p>
@@ -284,7 +361,7 @@
 
                 <!-- 第三部分-新闻 begin-->
                 <div class="ad">
-
+                    <a href="{{homeAdverst.third.url}}"><img style="border:0px;width:1200;height:120;" src="{{homeAdverst.third.img}}"></a>
                 </div>
                 <div class="conThr clear">
                     <div class="indexBTitle"> <strong>娱乐</strong> <span></span> </div>
@@ -559,7 +636,7 @@
 
 
                 <div class="ad">
-                    <img style="border:0px;width:1200;height:120;" src="/static/src/images/chineseNew/584f2f05-90e6-4615-996c-d86d6f58702a.jpg">
+                    <a href="{{homeAdverst.fourth.url}}"><img style="border:0px;width:1200;height:120;" src="{{homeAdverst.fourth.img}}"></a>
                 </div>
                 <div class="conThr clear">
                     <div class="indexBTitle">
@@ -718,7 +795,7 @@
 
                 <!-- 第六部分-体育旅游 begin-->
                 <div class="ad">
-                    <img style="border:0px;width:1200;height:120;" src="/static/src/images/chineseNew/9c196517-2189-48e8-884b-f9b04b645dd7.jpg">
+                    <a href="{{homeAdverst.fivth.url}}"><img style="border:0px;width:1200;height:120;" src="{{homeAdverst.fivth.img}}"></a>
                 </div>
                 <div class="conThr clear">
                     <div class="indexBTitle"> <strong>体育<i></i></strong> <a href="/category/sports" target="_blank">更多</a> <span class="udline"></span> </div>
@@ -871,6 +948,20 @@
                     <!-- 右侧 end-->
                 </div>
 
+                <!-- 第七部分-图说财经 begin-->
+                <div class="conThr clear">
+                    <div class="indexBTitle"> <strong>图说财经[样式需要调整]<i></i></strong> <a href="/category/sports" target="_blank">更多</a> <span class="udline"></span> </div>
+                    <div class="centerThr">
+                        <ul class="ThrPic clear">
+                            {{each financial}}
+                            <li>
+                                <a href="{{$value.url}}" target="_blank"><img src="{{$value.img}}" alt="{{$value.title}}"></a>
+                                <p><a href="{{$value.url}}" target="_blank">{{$value.title}}</a></p>
+                            </li>
+                            {{/each}}
+                        </ul>
+                    </div>
+                </div>
 
                 {{include '../share/baseFooter'}}
                 <!-- <div class="footNew">
