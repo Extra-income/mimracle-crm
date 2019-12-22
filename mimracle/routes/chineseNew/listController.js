@@ -49,8 +49,25 @@ router.get('/chineseNew/list/:category_code', function (req, res, next) {
         });
     });
 
-    Promise.all([getArticleList, getHotArticleList]).then((resolve) => {
-        res.render("chineseNew/list/index.html", { articleList: resolve[0], hotArticle: resolve[1] });
+    let getTopCategories = new Promise((resolve, reject) => {
+        var api = {
+            getTopCategories: {
+                url: '/api/category/top-categories',
+                data: {
+                    api_key: api_key
+                }
+            }
+        };
+    
+        global.data(req, api, function(err, resource) {
+            var data = {};
+            global.formatData("获取顶级导航栏", data, req, resource);
+            resolve(data.data);
+        });
+    });
+
+    Promise.all([getArticleList, getHotArticleList, getTopCategories]).then((resolve) => {
+        res.render("chineseNew/list/index.html", { articleList: resolve[0], hotArticle: resolve[1],  memus: resolve[2]});
     }).catch((error) => {
         $.logger.error(error);
     });
