@@ -22,7 +22,9 @@ select {
     padding: 0;
     list-style: none;
 }
-
+.navTopCon{height: 68px;}
+.logo { float:left;}
+.logo .logop { width:440px; height:68px; overflow:hidden; display:block;}
 img {
     border: none;
     vertical-align: top;
@@ -1771,3 +1773,7 @@ body {
     float: left;
     margin-left: 10px;
 }
+
+
+/*********** 尾巴 ************/
+.footNew { display:block; width:100%; min-width:1000px; margin:0 auto 0;}
