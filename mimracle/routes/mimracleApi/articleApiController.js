@@ -10,10 +10,15 @@ let mimracleHelper = require('../../my_modules/mimracleHelper');
  */
 router.get("/api/article/list", function(req, res, next) {
     let postData = {
-        cate_key: req.query["category_key"],
         row: req.query["page_size"] || 10,
         page: req.query["page_no"] || 1
     };
+    if (typeof req.query["category_key"] !== "undefined") {
+        postData.cate_key = req.query["category_key"];
+    }
+    if (typeof req.query["category_id"] !== "undefined") {
+        postData.cateid = req.query["category_id"];
+    }
     let opt = mimracleHelper.buildOpt("/api/Apilist/cates_article", postData, req);
     console.log("opt", opt);
     if (opt == null) {
@@ -90,7 +95,27 @@ router.get("/api/article/detail", function(req, res, next) {
  * 获取特别文章列表
  */
 router.get("/api/article/sepcial-list", function(req, res, next) {
-    let opt = mimracleHelper.buildOpt("/api/Apilist/special_article", {}, req);
+    let postData = {};
+    if (typeof req.query["recomend_count"] !== "undefined") {
+        postData.isrecommend = req.query["recomend_count"];
+    }
+    if (typeof req.query["hot_count"] !== "undefined") {
+        postData.ishot = req.query["hot_count"];
+    }
+    if (typeof req.query["head_count"] !== "undefined") {
+        postData.ishead = req.query["head_count"];
+    }
+    if (typeof req.query["banner_count"] !== "undefined") {
+        postData.isbanner = req.query["banner_count"];
+    }
+    if (typeof req.query["img_count"] !== "undefined") {
+        postData.isimg = req.query["img_count"];
+    }
+    if (typeof req.query["project_count"] !== "undefined") {
+        postData.isproject = req.query["project_count"];
+    }
+
+    let opt = mimracleHelper.buildOpt("/api/Apilist/special_article", postData, req);
     if (opt == null) {
         res.json(mimracleHelper.notExistsApiKeyResult());
         return;

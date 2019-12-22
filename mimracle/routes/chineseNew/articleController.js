@@ -4,9 +4,6 @@ const global = require('../../my_modules/global');
 const mimracleHelper = require('../../my_modules/mimracleHelper');
 
 router.get('/chineseNew/article/:article_id', function(req, res, next) {
-
-    // res.render("chineseNew/article/index.html");
-    let api_key = req.headers["micracle-crm"];
     let id = req.params.article_id;
 
     let getArticle = new Promise((resolve, reject) => {
@@ -14,7 +11,6 @@ router.get('/chineseNew/article/:article_id', function(req, res, next) {
             getArticle: {
                 url: '/api/article/detail',
                 data: {
-                    api_key: api_key,
                     article_id: id
                 }
             }
@@ -23,7 +19,28 @@ router.get('/chineseNew/article/:article_id', function(req, res, next) {
         global.data(req, api, function(err, resource) {
             var data = {};
             global.formatData("获取文章详情", data, req, resource);
+            console.log(data.data);
             resolve(data.data);
+        });
+    }).then(function (input) {
+        return new Promise((resolve, reject) => {
+            var api = {
+                getArticle: {
+                    url: '/api/article/list',
+                    data: {
+                        category_id: input.category.current.category_id,
+                        row: 6,
+                        page: 1
+                    }
+                }
+            };
+    
+            global.data(req, api, function(err, resource) {
+                var data = {};
+                global.formatData("获取相关文章", data, req, resource);
+                input.relatedArticals = data.data;
+                resolve(input);
+            });
         });
     });
 
@@ -31,9 +48,7 @@ router.get('/chineseNew/article/:article_id', function(req, res, next) {
         var api = {
             getAdversts: {
                 url: '/api/article/sepcial-list',
-                data: {
-                    api_key: api_key
-                }
+                data: {}
             }
         };
 
@@ -48,9 +63,7 @@ router.get('/chineseNew/article/:article_id', function(req, res, next) {
         var api = {
             getTopCategories: {
                 url: '/api/category/top-categories',
-                data: {
-                    api_key: api_key
-                }
+                data: {}
             }
         };
     
@@ -61,13 +74,29 @@ router.get('/chineseNew/article/:article_id', function(req, res, next) {
         });
     });
 
-    Promise.all([getArticle, getAdversts, getTopCategories]).then((result) => {
+    let getSidebar = new Promise((resolve, reject) => {
+        var api = {
+            getTopCategories: {
+                url: '/common/get-sidebar',
+                data: {}
+            }
+        };
+    
+        global.data(req, api, function(err, resource) {
+            var data = {};
+            global.formatData("获取侧边栏内容", data, req, resource);
+            resolve(data.data);
+        });
+    });
+
+    Promise.all([getArticle, getAdversts, getTopCategories, getSidebar]).then((result) => {
         let d = {
             articleDetail: result[0],
             adversts: result[1],
-            memus: result[2]
+            memus: result[2],
+            sidebar: result[3]
         };
-        // res.render("chinaDecWeb/article/index.html", d);
+        console.log("result", d);
         res.render("chineseNew/article/index.html",d);
         
 
