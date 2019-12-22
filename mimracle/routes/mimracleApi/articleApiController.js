@@ -192,13 +192,16 @@ router.get("/api/article/search", function(req, res, next) {
             apiResult.data.data.forEach(element => {
                 result.data.push(convertArticle(element));
             });
+            console.log("apiresult.data", apiResult.data);
             let pager = {
                 total: apiResult.data.total,
-                pre_page_no: apiResult.data.pre_page,
-                current_page_no: apiResult.data.current_page,
-                last_page_no: apiResult.data.last_page
+                page_size: postData.row,
+                page_index: apiResult.data.current_page,
+                max_page_no: apiResult.data.last_page
             };
-            result.pager = pager;
+            let serachUrl = `/chineseNew/search/${postData.keyword}`;
+            result.pager = mimracleHelper.initPagerDetail(pager, serachUrl);
+            console.log(result.pager);
         } else {
             result = mimracleHelper.getFailResult(apiResult.code, apiResult.msg);
         }

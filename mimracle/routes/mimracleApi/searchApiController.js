@@ -24,8 +24,22 @@ router.get("/api/search", function (req, res, next) {
     let result = mimracleHelper.toMimracleResult(apiResult);
     if (apiResult.code == 200 && apiResult.data != null) {
       result.data = { article_list: []};
+
+      let pager = {
+        total: apiResult.data.total,
+        page_size: postData.row,
+        page_index: apiResult.data.current_page,
+        max_page_no: apiResult.data.last_page
+      };
+      let serachUrl = `/chineseNew/search/${postData.keyword}`;
+      result.pager = mimracleHelper.initPagerDetail(pager, serachUrl);
+      console.log(result.pager);
+
       result.data.total_page = apiResult.data.total;  
       result.data.current_index = apiResult.data.current_page; //当前页
+      
+      
+      
       apiResult.data.data.forEach(element => {
         result.data.article_list.push({
           article_id: element.articleid,

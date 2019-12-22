@@ -121,6 +121,44 @@ _fn.prototype.getArticlePageUrl = function(article_id) {
     return "/article/" + article_id;
 }
 
+/**
+ * 生成页码
+ */
+_fn.prototype.initPagerDetail = function(pager, serachUrl) {
+    console.log("pager", pager);
+    console.log("searchUrl", serachUrl);
+    let pageNumberArr = [];
+    if (pager.total == 0) {
+        return [];
+    }
+    let minIndex = pager.page_size;
+    let maxIndex = pager.page_size;
+    if (pager.max_page_no > 10) {
+        let pageCount = 10;
+        while (pageCount > 0) {
+            if (minIndex - 1 > 0) {
+                minIndex--;
+                pageCount--;
+            }
+            if (maxIndex + 1 < pager.max_page_no) {
+                maxIndex++;
+                pageCount--;
+            }
+        }
+    }
+    for (let index = minIndex; index <= maxIndex; index++) {
+        pageNumberArr.push(index);
+    }
+    let result = [];
+    pageNumberArr.forEach(element => {
+        result.push({
+            page_number: element,
+            url: `${serachUrl}?page_size=${pager.page_size}&page_no=${element}`
+        });
+    });
+    return result;
+}
+
 let mimracleHelper = new _fn();
 
 module.exports = mimracleHelper;

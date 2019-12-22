@@ -1,7 +1,7 @@
 <!-- 导航功能区 begin-->
 <div class="navTop">
     <div class="navTopCon">
-        <a href="http://www.tetimes.com/" target="_blank" class="logo"><img src="/static/src/images/chineseNew/ed9715bdbbc03761688a3d50513e91fb.jpg" alt="特网" class="logop" style="width: 175px"></a>
+        <a href="/" target="_blank" class="logo"><img src="/static/src/images/chineseNew/ed9715bdbbc03761688a3d50513e91fb.jpg" alt="特网" class="logop" style="width: 175px"></a>
         <div style="float: left; margin-left: 690px;margin-top: 10px;">
             <iframe id="fancybox-frame" name="fancybox-frame1576920574966" style="height:20px;" frameborder="0" scrolling="no" hspace="0"  src="http://i.tianqi.com/index.php?c=code&a=getcode&id=34&h=25&w=280"></iframe>
             <div class="input-panel">
@@ -33,20 +33,18 @@
     <script>
         $(function() {
             let searchArticle = function () {
-                    let searchText = $("#search-input").val();
-                    if (searchText != "") {
-                        window.location.href = "/search/" + searchText;
-                    }
+                let searchText = $("#search-input").val();
+                if (searchText != "") {
+                    window.location.href = "/search/" + searchText;
                 }
+            };
 
-                $(".j-btn-search").on("click", searchArticle);
+            $(".j-btn-search").on("click", searchArticle);
 
-                $('#search-input').bind('keypress', function (event) {
-                    if (event.keyCode == "13") {
-                        searchArticle();
-                    }
-                });
-
-                
-            });
+            $('#search-input').bind('keypress', function (event) {
+                if (event.keyCode == "13") {
+                    searchArticle();
+                }
+            });       
+        });
     </script>
