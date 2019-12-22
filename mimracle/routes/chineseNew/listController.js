@@ -9,4 +9,11 @@ router.get('/chineseNew/list', function(req, res, next) {
 
 });
 
+router.get('/chineseNew/category/:category_code', function(req, res, next) {
+
+    console.log("category_code", req.params.category_code);
+    res.render("chineseNew/list/index.html");
+
+});
+
 module.exports = router;
