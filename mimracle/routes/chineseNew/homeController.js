@@ -79,7 +79,7 @@ router.get('/chineseNew/', function(req, res, next) {
                 third: data.data[2],
                 fourth: data.data[3],
                 fivth: data.data[4]
-            }
+            };
             resolve(r);
         });
     });
@@ -178,7 +178,7 @@ router.get('/chineseNew/', function(req, res, next) {
             sports: result[6].sports,
             houseProperty: result[6].houseProperty
         };
-        console.log("index result", d.news);
+        console.log("index adversts", d.homeAdverst);
         res.render("chineseNew/home/index.html", d);
     }).catch((error) => {
         console.log(error)

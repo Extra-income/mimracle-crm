@@ -35,7 +35,7 @@ router.get("/api/advert/list", function(req, res, next) {
                     title: element.title,
                     url: element.url,
                     type: req.query["type"],
-                    img: element.img
+                    img: "http://admin.gl5888.top" + element.img
                 });
             });
         } else {
