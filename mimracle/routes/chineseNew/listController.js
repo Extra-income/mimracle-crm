@@ -32,19 +32,17 @@ router.get('/chineseNew/list/:category_code', function (req, res, next) {
         });
     });
 
-    let getHotArticleList = new Promise((resolve, reject) => {
+    let getSidebar = new Promise((resolve, reject) => {
         var api = {
-            getHotArticleList: {
-                url: '/api/article/sepcial-list',
-                data: {
-                    api_key: api_key,
-                }
+            getTopCategories: {
+                url: '/common/get-sidebar',
+                data: {}
             }
         };
-
-        global.data(req, api, function (err, resource) {
+    
+        global.data(req, api, function(err, resource) {
             var data = {};
-            global.formatData("获取特别文章列表", data, req, resource);
+            global.formatData("获取侧边栏内容", data, req, resource);
             resolve(data.data);
         });
     });
@@ -66,8 +64,8 @@ router.get('/chineseNew/list/:category_code', function (req, res, next) {
         });
     });
 
-    Promise.all([getArticleList, getHotArticleList, getTopCategories]).then((resolve) => {
-        res.render("chineseNew/list/index.html", { articleList: resolve[0], hotArticle: resolve[1],  memus: resolve[2]});
+    Promise.all([getArticleList, getSidebar, getTopCategories]).then((resolve) => {
+        res.render("chineseNew/list/index.html", { articleList: resolve[0], sidebar: resolve[1],  memus: resolve[2]});
     }).catch((error) => {
         $.logger.error(error);
     });
