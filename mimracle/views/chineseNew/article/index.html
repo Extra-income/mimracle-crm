@@ -1,8 +1,5 @@
-<link rel="stylesheet" href="/static/src/css/chineseNew/index.css">
 {{include '../share/artHeader'}}
-    <!-- 公共头部分 begin -->
-    
-    <div class="container">
+    <!-- 公共头部分 begin -->    <div class="container">
         <!-- 导航 -->
         <div class="nav">
             <!-- <a class="channel_logo" href="http://www.tetimes.com/" target="_blank"> <img src="/static/src/images/chineseNew/logo_channel_275.png" height="48"> </a> -->
@@ -30,25 +27,11 @@
                     <div class="la_xiangguan_news">
                         <h3 class="la_xiangguan_hd"> <strong>相关新闻</strong> </h3>
                         <ul>
-                            <li><a href="http://www.tetimes.com/sports/20191219/29521.html">2019-2020WCBA联赛常规赛新疆女篮主场胜山西女篮</a>
-                                <em>2019-12-19 17:47:20</em>
+                            {{each articleDetail.relatedArticals}}
+                            <li><a href="{{$value.url}}">{{$value.title}}</a>
+                                <em>{{$value.edit_time}}</em>
                             </li>
-                            <li><a href="http://www.tetimes.com/sports/20191219/29507.html">中国女排超级联赛八强战战罢 四强赛悬念多</a>
-                                <em>2019-12-19 17:19:45</em>
-                            </li>
-                            <li><a href="http://www.tetimes.com/sports/20191219/29469.html">淮安市第一届民俗运动会开幕 确定14个项目</a>
-                                <em>2019-12-19 16:15:13</em>
-                            </li>
-                            <li><a href="http://www.tetimes.com/sports/20191219/29359.html">2019世界跆拳道大满贯冠军系列赛在无锡太湖国际博览中心开赛</a>
-                                <em>2019-12-19 09:54:05</em>
-                            </li>
-                            <li><a href="http://www.tetimes.com/sports/20191219/29338.html">连江将添城市体育综合体 占地面积约350亩</a>
-                                <em>2019-12-19 09:14:14</em>
-                            </li>
-                            <li><a href="http://www.tetimes.com/sports/20191218/29202.html">中超观赛人次同比增长12.1% 达到15.99亿人次</a>
-                                <em>2019-12-18 17:16:42</em>
-                            </li>
-
+                            {{/each}}
                         </ul>
                     </div>
 
@@ -60,4 +43,3 @@
         </div>
     </div>
     {{include '../share/baseFooter'}}
-
