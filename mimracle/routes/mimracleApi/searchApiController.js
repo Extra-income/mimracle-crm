@@ -28,14 +28,17 @@ router.get("/api/search", function (req, res, next) {
       let pager = {
         total: apiResult.data.total,
         page_size: apiResult.data.per_page,
-        page_index: apiResult.data.current_page,
+        page_index: apiResult.data.current_page,       
         max_page_no: apiResult.data.last_page
       };
-      let serachUrl = `/chineseNew/search/${postData.keyword}`;
+      let serachUrl = `/search/${postData.keyword}`;
       pager.list = mimracleHelper.initPagerDetail(pager, serachUrl);
-      
+      //首页和末页
+      pager.first_page = { page_number: 1, url: `/search/${postData.keyword}?page_size=${pager.page}&page_no=1` };
+      pager.last_page = { page_number: apiResult.data.last_page, url: `/search/${postData.keyword}?page_size=${pager.page_size}&page_no=${pager.max_page_no}`};
+
+
       result.data.pager = pager;
-      console.log(result);
         
       apiResult.data.data.forEach(element => {
         result.data.article_list.push({

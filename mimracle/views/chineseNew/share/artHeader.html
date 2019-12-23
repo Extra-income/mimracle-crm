@@ -20,7 +20,7 @@
                     <li>
                         {{each memus as memu i}}
                         <!-- <a href='http://www.tetimes.com/society/'>社会<span><em><i></i></em></span></a><strong></strong> -->
-                        <a data-id="{{memu.category_id}}" href="./list.html" title="链接说明">{{memu.name}}</a>
+                        <a data-id="{{memu.category_id}}" href="/list/{{memu.category_id}}" title="链接说明">{{memu.name}}</a>
                         {{/each}}
                     </li>
                 </ul>

@@ -117,4 +117,29 @@ router.get("/api/category/menu", function(req, res, next) {
     });
 });
 
+router.get("/api/category/detail/:category_id", function(req, res, next) {
+    let opt = mimracleHelper.buildOpt("/api/Apilist/get_cate_info", {cateid: req.param.category_id}, req);
+    if (opt == null) {
+        res.json(mimracleHelper.notExistsApiKeyResult());
+        return;
+    }
+
+    request.post(opt, (err, response, body) => {
+        let apiResult = JSON.parse(body);
+        let result = mimracleHelper.toMimracleResult(apiResult);
+        if (apiResult.code == 200 && apiResult.data != null) {
+            result.data = {
+                current: {
+                    category_id: apiResult.data.now_cate.cateid,
+                    name: apiResult.data.now_cate.name,
+                    icon: apiResult.data.now_cate.icon
+                }
+            };
+        } else {
+            result = mimracleHelper.getFailResult(apiResult.code, apiResult.msg);
+        }
+        res.json(result);
+    });
+});
+
 module.exports = router;

@@ -75,8 +75,31 @@ router.get('/chineseNew/search/:keyword', function (req, res, next) {
         });
     });
 
-    Promise.all([getArticleList, getHotArticleList, getTopCategories, getCustomSetting]).then((resolve) => {
-        res.render("chineseNew/search/index.html", { articleList: resolve[0], hotArticle: resolve[1],  memus: resolve[2], customSetting: resolve[3]});
+    let getSidebar = new Promise((resolve, reject) => {
+        var api = {
+            getTopCategories: {
+                url: '/common/get-sidebar',
+                data: {}
+            }
+        };
+    
+        global.data(req, api, function(err, resource) {
+            var data = {};
+            global.formatData("获取侧边栏内容", data, req, resource);
+            resolve(data.data);
+        });
+    });
+
+    Promise.all([getArticleList, getHotArticleList, getTopCategories, getCustomSetting, getSidebar]).then((resolve) => {
+        console.log("pager", resolve[0].pager);
+        res.render("chineseNew/search/index.html", { 
+             articleList: resolve[0].articleList,
+             pager: resolve[0].pager,
+             hotArticle: resolve[1],  
+             memus: resolve[2], 
+             customSetting: resolve[3], 
+             sidebar: resolve[4]
+            });
     }).catch((error) => {
         $.logger.error(error);
     });
