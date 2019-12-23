@@ -64,8 +64,25 @@ router.get('/chineseNew/list/:category_code', function (req, res, next) {
         });
     });
 
-    Promise.all([getArticleList, getSidebar, getTopCategories]).then((resolve) => {
-        res.render("chineseNew/list/index.html", { articleList: resolve[0], sidebar: resolve[1],  memus: resolve[2]});
+    let getCustomSetting = new Promise((resolve, reject) => {
+        var api = {
+          getCustomSetting: {
+                url: '/api/custom/company-setting',
+                data: {
+                    api_key: api_key
+                }
+            }
+        };
+    
+        global.data(req, api, function(err, resource) {
+            var data = {};
+            global.formatData("获取底部设置", data, req, resource);
+            resolve(data.data);
+        });
+    });
+
+    Promise.all([getArticleList, getSidebar, getTopCategories, getCustomSetting]).then((resolve) => {
+        res.render("chineseNew/list/index.html", { articleList: resolve[0], sidebar: resolve[1],  memus: resolve[2], customSetting: resolve[3]});
     }).catch((error) => {
         $.logger.error(error);
     });

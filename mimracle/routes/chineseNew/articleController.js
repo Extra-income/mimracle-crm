@@ -89,12 +89,28 @@ router.get('/chineseNew/article/:article_id', function(req, res, next) {
         });
     });
 
-    Promise.all([getArticle, getAdversts, getTopCategories, getSidebar]).then((result) => {
+    let getCustomSetting = new Promise((resolve, reject) => {
+        var api = {
+          getCustomSetting: {
+                url: '/api/custom/company-setting',
+                data: {}
+            }
+        };
+    
+        global.data(req, api, function(err, resource) {
+            var data = {};
+            global.formatData("获取底部设置", data, req, resource);
+            resolve(data.data);
+        });
+    });
+
+    Promise.all([getArticle, getAdversts, getTopCategories, getSidebar, getCustomSetting]).then((result) => {
         let d = {
             articleDetail: result[0],
             adversts: result[1],
             memus: result[2],
-            sidebar: result[3]
+            sidebar: result[3],
+            customSetting: result[4]
         };
         console.log("result", d);
         res.render("chineseNew/article/index.html",d);

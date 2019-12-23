@@ -6,7 +6,6 @@ const $ = require("../../my_modules/util");
 
 router.get('/chineseNew/search/:keyword', function (req, res, next) {
 
-    let api_key = req.headers["micracle-crm"];
     let keyword = req.params.keyword;
     let page_size = req.query["page_size"] || 20;
     let page_no = req.query["page_no"] || 1;
@@ -17,7 +16,6 @@ router.get('/chineseNew/search/:keyword', function (req, res, next) {
             getArticleList: {
                 url: '/api/search',
                 data: {
-                    api_key: api_key,
                     keyword: keyword,
                     page_size: page_size,
                     page_no: page_no
@@ -36,9 +34,7 @@ router.get('/chineseNew/search/:keyword', function (req, res, next) {
         var api = {
             getHotArticleList: {
                 url: '/api/article/sepcial-list',
-                data: {
-                    api_key: api_key,
-                }
+                data: {}
             }
         };
 
@@ -53,9 +49,7 @@ router.get('/chineseNew/search/:keyword', function (req, res, next) {
         var api = {
             getTopCategories: {
                 url: '/api/category/top-categories',
-                data: {
-                    api_key: api_key
-                }
+                data: {}
             }
         };
     
@@ -66,8 +60,23 @@ router.get('/chineseNew/search/:keyword', function (req, res, next) {
         });
     });
 
-    Promise.all([getArticleList, getHotArticleList, getTopCategories]).then((resolve) => {
-        res.render("chineseNew/search/index.html", { articleList: resolve[0], hotArticle: resolve[1],  memus: resolve[2]});
+    let getCustomSetting = new Promise((resolve, reject) => {
+        var api = {
+          getCustomSetting: {
+                url: '/api/custom/company-setting',
+                data: {}
+            }
+        };
+    
+        global.data(req, api, function(err, resource) {
+            var data = {};
+            global.formatData("获取底部设置", data, req, resource);
+            resolve(data.data);
+        });
+    });
+
+    Promise.all([getArticleList, getHotArticleList, getTopCategories, getCustomSetting]).then((resolve) => {
+        res.render("chineseNew/search/index.html", { articleList: resolve[0], hotArticle: resolve[1],  memus: resolve[2], customSetting: resolve[3]});
     }).catch((error) => {
         $.logger.error(error);
     });
