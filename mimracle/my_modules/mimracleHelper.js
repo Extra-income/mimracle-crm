@@ -131,19 +131,15 @@ _fn.prototype.initPagerDetail = function(pager, serachUrl) {
     if (pager.total == 0) {
         return [];
     }
-    let minIndex = pager.page_size;
-    let maxIndex = pager.page_size;
+    let minIndex = 1;  // 1
+    let maxIndex = pager.max_page_no;  // 14
     if (pager.max_page_no > 10) {
-        let pageCount = 10;
-        while (pageCount > 0) {
-            if (minIndex - 1 > 0) {
-                minIndex--;
-                pageCount--;
-            }
-            if (maxIndex + 1 < pager.max_page_no) {
-                maxIndex++;
-                pageCount--;
-            }
+        let pageCount = 5;
+        if (pager.page_index - pageCount > minIndex) {
+            minIndex = pager.page_index - pageCount;
+        }
+        if (pager.page_index + pageCount < maxIndex) {
+            maxIndex = pager.page_index + pageCount;
         }
     }
     for (let index = minIndex; index <= maxIndex; index++) {

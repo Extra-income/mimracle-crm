@@ -27,19 +27,16 @@ router.get("/api/search", function (req, res, next) {
 
       let pager = {
         total: apiResult.data.total,
-        page_size: postData.row,
+        page_size: apiResult.data.per_page,
         page_index: apiResult.data.current_page,
         max_page_no: apiResult.data.last_page
       };
       let serachUrl = `/chineseNew/search/${postData.keyword}`;
-      result.pager = mimracleHelper.initPagerDetail(pager, serachUrl);
-      console.log(result.pager);
-
-      result.data.total_page = apiResult.data.total;  
-      result.data.current_index = apiResult.data.current_page; //当前页
+      pager.list = mimracleHelper.initPagerDetail(pager, serachUrl);
       
-      
-      
+      result.data.pager = pager;
+      console.log(result);
+        
       apiResult.data.data.forEach(element => {
         result.data.article_list.push({
           article_id: element.articleid,
