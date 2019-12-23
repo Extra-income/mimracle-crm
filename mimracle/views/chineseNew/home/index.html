@@ -8,13 +8,13 @@
         <div class="wrapPic">
             <!-- 内容部分 begin-->
             <div class="wrapCon">
-                <div class="ad">
+                <div class="Headlines">
                     {{each specialList.heads}}
                     {{if $index == 0}}
-                    <h1><p><a href="{{$value.url}}" target="_blank">[头条，未完成样式]{{$value.title}}</a></p></h1>
+                    <h1><p><a href="{{$value.url}}" target="_blank">{{$value.title}}</a></p></h1>
                     {{else}}
                     {{if $index < 4}}
-                    <span><a href="{{$value.url}}" target="_blank">[{{$value.title}}]</a></span>
+                    <span class="headline-item"><a href="{{$value.url}}" target="_blank">[{{$value.title}}]</a></span>
                     {{/if}}
                     {{/if}}
                     {{/each}}
@@ -926,7 +926,7 @@
                             {{/if}}
                             {{/each}}  
                             
-                            <ul class="speColumnList"></ul>
+                            <ul class="speColumnList">
                             {{each houseProperty}}
                             {{if $index > 0}}
                             <li> <a href="{{$value.url}}" target="_blank">{{$value.title}}</a> </li>
@@ -951,8 +951,8 @@
 
                 <!-- 第七部分-图说财经 begin-->
                 <div class="conThr clear">
-                    <div class="indexBTitle"> <strong>图说财经[样式需要调整]<i></i></strong> <a href="/list/sports" target="_blank">更多</a> <span class="udline"></span> </div>
-                    <div class="centerThr">
+                    <div class="indexBTitle"> <strong>图说财经<i></i></strong> <a href="/category/sports" target="_blank">更多</a> <span class="udline"></span> </div>
+                    <div>
                         <ul class="ThrPic clear">
                             {{each financial}}
                             <li>

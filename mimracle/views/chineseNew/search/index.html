@@ -1,12 +1,5 @@
 {{include '../share/artHeader'}}
 <div class="container">
-    <!-- 导航 -->
-    <div class="nav">
-        <a class="channel_logo" href="/" target="_blank"> <img
-                src="/static/src/images/chineseNew/logo_channel_275.png" height="48"> </a>
-        <div class="nav_left"><a href='/'>特时代</a> > <a href='http://www.tetimes.com/qiye/'>企业</a>
-            > </div>
-    </div>
     <!-- /end 导航 -->
     <div class="con">
         <div class="con_left">
@@ -16,14 +9,14 @@
 
                 <!-- 相关新闻 -->
                 <div class="la_xiangguan_news">
-                    <h3 class="la_xiangguan_hd"> <strong>查询结果</strong> </h3>
+                    <h3 class="la_xiangguan_hd"> <strong>搜索结果</strong> </h3>
                     <ul>
                         {{each articleList.article_list as item }}
                         <li> <a href="{{item.url}}">{{item.title}}</a><em>{{item.edit_time}}</em> </li>
                         {{/each}}
                     </ul>
                 </div>
-                <div class="page" id="pages">
+                <!-- <div class="page" id="pages">
                     <ul>
                         <li>首页</li>
                         <li class="thisclass">1</li>
@@ -42,7 +35,7 @@
                         <li><span class="pageinfo">共 <strong>93</strong>页<strong>2776</strong>条</span></li>
 
                     </ul>
-                </div>
+                </div> -->
             </div>
 
         </div>

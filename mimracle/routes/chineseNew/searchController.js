@@ -60,8 +60,23 @@ router.get('/chineseNew/search/:keyword', function (req, res, next) {
         });
     });
 
-    Promise.all([getArticleList, getHotArticleList, getTopCategories]).then((resolve) => {
-        res.render("chineseNew/search/index.html", { articleList: resolve[0], hotArticle: resolve[1],  memus: resolve[2]});
+    let getCustomSetting = new Promise((resolve, reject) => {
+        var api = {
+          getCustomSetting: {
+                url: '/api/custom/company-setting',
+                data: {}
+            }
+        };
+    
+        global.data(req, api, function(err, resource) {
+            var data = {};
+            global.formatData("获取底部设置", data, req, resource);
+            resolve(data.data);
+        });
+    });
+
+    Promise.all([getArticleList, getHotArticleList, getTopCategories, getCustomSetting]).then((resolve) => {
+        res.render("chineseNew/search/index.html", { articleList: resolve[0], hotArticle: resolve[1],  memus: resolve[2], customSetting: resolve[3]});
     }).catch((error) => {
         $.logger.error(error);
     });

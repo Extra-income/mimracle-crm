@@ -79,6 +79,21 @@ html{ overflow-x:hidden;overflow-y:auto;}
 .wrapPic { background:#fff; width:1230px; margin:0 auto;} */
 
 /*********** 内容部分 ************/
+.Headlines{
+	height: 100px;
+	text-align: center;
+}
+.Headlines h1 p a{
+	font-size: 32px;
+	color: #cb0101;
+	line-height: 70px;
+}
+.Headlines .headline-item a{
+	font-size: 14px;
+	color: #000;
+	padding-left: 10px;
+	line-height: 20px;
+}
 .wrapCon { width:1200px; margin:0 auto; background:#fff;}
 .ad { padding:15px 0;}
 .adTxt { padding-top:20px;}
@@ -164,7 +179,7 @@ html{ overflow-x:hidden;overflow-y:auto;}
 /*********** 第二部分 ************/
 .conSec { /*height:640px; */padding:24px 0 18px 0; /*overflow:hidden;*/}
 
-.leftSec { width:354px; height:640px; border-right:1px solid #e6e6e6; float:left;}
+.leftSec { width:354px; height:900px; border-right:1px solid #e6e6e6; float:left;}
 .hqDayComment {}
 .commentTab { width:330px; border-bottom:1px solid #e6e6e6;}
 .commentDay { width:320px; padding-left:10px; height:40px; line-height:40px; background:#cc0001;}
