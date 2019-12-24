@@ -249,7 +249,7 @@ function convertArticle(dto) {
         keyword: dto.keyword,
         from: dto.isfrom,
         img: dto.icon,
-        edit_time: new Date(dto.edit_time * 1000),
+        edit_time: mimracleHelper.getDefaultDateFormat(new Date(dto.edit_time * 1000)),
         url: mimracleHelper.getArticlePageUrl(dto.articleid)
     };
     return o;
