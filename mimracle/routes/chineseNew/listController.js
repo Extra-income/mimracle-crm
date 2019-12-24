@@ -82,16 +82,33 @@ router.get('/chineseNew/list/:category_code', function (req, res, next) {
         });
     });
 
-    // let getCurrentCategory = new Promise((resolve, reject) => {
-    //     var api = {
-    //         getCurrentCategory: {
-    //             url: "/api/category/detail/,
-    //         }
-    //     };
-    // });
+    let getCurrentCategory = new Promise((resolve, reject) => {
+        let category_key = mimracleHelper.getCatetoryKey(req.params.category_code);
+        if (typeof category_key === "undefined" || category_key === "") {
+            category_key = req.params.category_code;  // 传入的不是编码而是id
+        }
+        console.log("category_key", category_key);
+        var api = {
+            getCurrentCategory: {
+                url: `/api/category/detail/${category_key}`,
+            }
+        };
+        global.data(req, api, function(err, resource) {
+            var data = {};
+            global.formatData("获取当前导航信息", data, req, resource);
+            resolve(data.data);
+        });
+    });
 
-    Promise.all([getArticleList, getSidebar, getTopCategories, getCustomSetting]).then((resolve) => {
-        res.render("chineseNew/list/index.html", { articleList: resolve[0], sidebar: resolve[1],  memus: resolve[2], customSetting: resolve[3]});
+    Promise.all([getArticleList, getSidebar, getTopCategories, getCustomSetting, getCurrentCategory]).then((resolve) => {
+        console.log(resolve[4]);
+        res.render("chineseNew/list/index.html", { 
+            articleList: resolve[0], 
+            sidebar: resolve[1], 
+            memus: resolve[2], 
+            customSetting: resolve[3],
+            currentCategory: resolve[4]
+        });
     }).catch((error) => {
         $.logger.error(error);
     });

@@ -21,11 +21,7 @@ router.get("/api/category/top-categories", function(req, res, next) {
         if (apiResult.code == 200 && apiResult.data != null && apiResult.data.length > 0) {
             result.data = [];
             apiResult.data.forEach(element => {
-                result.data.push({
-                    category_id: element.cateid,
-                    name: element.name,
-                    icon: element.icon
-                });
+                result.data.push(convertToCategory(element));
             });
         } else {
             result = mimracleHelper.getFailResult(apiResult.code, apiResult.msg);
@@ -57,21 +53,11 @@ router.get("/api/category/sub-categories", function(req, res, next) {
 
         if (apiResult.code == 200 && apiResult.data != null && apiResult.data.parent != null) {
             result.data = {
-                parent: {
-                    category_id: apiResult.data.parent.cateid,
-                    name: apiResult.data.parent.name,
-                    icon: apiResult.data.parent.icon,
-                    parent_id: apiResult.data.parent.prid
-                },
+                parent: convertToCategory(apiResult.data.parent),
                 list: []
             };
             apiResult.data.son.forEach(element => {
-                result.data.list.push({
-                    category_id: element.cateid,
-                    name: element.name,
-                    icon: element.icon,
-                    parent_id: element.prid
-                });
+                result.data.list.push(convertToCategory(element));
             });
         } else {
             result = mimracleHelper.getFailResult(apiResult.code, apiResult.msg);
@@ -118,7 +104,7 @@ router.get("/api/category/menu", function(req, res, next) {
 });
 
 router.get("/api/category/detail/:category_id", function(req, res, next) {
-    let opt = mimracleHelper.buildOpt("/api/Apilist/get_cate_info", {cateid: req.param.category_id}, req);
+    let opt = mimracleHelper.buildOpt("/api/Apilist/get_cate_info", {cateid: req.params.category_id}, req);
     if (opt == null) {
         res.json(mimracleHelper.notExistsApiKeyResult());
         return;
@@ -129,11 +115,7 @@ router.get("/api/category/detail/:category_id", function(req, res, next) {
         let result = mimracleHelper.toMimracleResult(apiResult);
         if (apiResult.code == 200 && apiResult.data != null) {
             result.data = {
-                current: {
-                    category_id: apiResult.data.now_cate.cateid,
-                    name: apiResult.data.now_cate.name,
-                    icon: apiResult.data.now_cate.icon
-                }
+                current: convertToCategory(apiResult.data.now_cate)
             };
         } else {
             result = mimracleHelper.getFailResult(apiResult.code, apiResult.msg);
@@ -141,5 +123,15 @@ router.get("/api/category/detail/:category_id", function(req, res, next) {
         res.json(result);
     });
 });
+
+function convertToCategory(dto) {
+    return {
+        category_id: dto.cateid,
+        name: dto.name,
+        icon: dto.icon,
+        parent_id: dto.prid
+    };
+}
+
 
 module.exports = router;

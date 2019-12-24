@@ -125,8 +125,6 @@ _fn.prototype.getArticlePageUrl = function(article_id) {
  * 生成页码
  */
 _fn.prototype.initPagerDetail = function(pager, serachUrl) {
-    console.log("pager", pager);
-    console.log("searchUrl", serachUrl);
     let pageNumberArr = [];
     if (pager.total == 0) {
         return [];
