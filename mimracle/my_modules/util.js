@@ -1,6 +1,8 @@
-var logger = require('log4js');
-var infoLogger = logger.getLogger("normal");
-var errorLogger = logger.getLogger("error");
+var log4js = require('log4js');
+const log4jsConfig = require('./log4js.config.json');
+log4js.configure(log4jsConfig);
+var infoLogger = log4js.getLogger("normal");
+var errorLogger = log4js.getLogger("error");
 var crypto = require('crypto');
 var typeMap = {
     "[object Undefined]":"undefined",

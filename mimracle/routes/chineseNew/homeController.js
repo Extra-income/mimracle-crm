@@ -21,7 +21,6 @@ router.get('/chineseNew/', function(req, res, next) {
         global.data(req, api, function(err, resource) {
             var data = {};
             global.formatData("获取顶级导航栏", data, req, resource);
-            _logger.debug("getMenus", data.data);
             resolve(data.data);
         });
     });
