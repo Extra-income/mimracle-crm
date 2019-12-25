@@ -19,7 +19,6 @@ router.get('/chineseNew/article/:article_id', function(req, res, next) {
         global.data(req, api, function(err, resource) {
             var data = {};
             global.formatData("获取文章详情", data, req, resource);
-            console.log(data.data);
             resolve(data.data);
         });
     }).then(function (input) {
@@ -112,7 +111,6 @@ router.get('/chineseNew/article/:article_id', function(req, res, next) {
             sidebar: result[3],
             customSetting: result[4]
         };
-        console.log("result", d);
         res.render("chineseNew/article/index.html",d);
         
 

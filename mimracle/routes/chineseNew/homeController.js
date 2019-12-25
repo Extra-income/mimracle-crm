@@ -186,7 +186,6 @@ router.get('/chineseNew/', function(req, res, next) {
             publicWelfare: result[5].publicWelfare,
             financial: result[6].financial
         };
-        console.log("index publicWelfare", d.homeAdverst.top);
         res.render("chineseNew/home/index.html", d);
     }).catch((error) => {
         console.log(error)

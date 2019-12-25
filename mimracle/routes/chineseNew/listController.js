@@ -87,7 +87,6 @@ router.get('/chineseNew/list/:category_code', function (req, res, next) {
         if (typeof category_key === "undefined" || category_key === "") {
             category_key = req.params.category_code;  // 传入的不是编码而是id
         }
-        console.log("category_key", category_key);
         var api = {
             getCurrentCategory: {
                 url: `/api/category/detail/${category_key}`,
@@ -101,7 +100,6 @@ router.get('/chineseNew/list/:category_code', function (req, res, next) {
     });
 
     Promise.all([getArticleList, getSidebar, getTopCategories, getCustomSetting, getCurrentCategory]).then((resolve) => {
-        console.log(resolve[4]);
         res.render("chineseNew/list/index.html", { 
             articleList: resolve[0], 
             sidebar: resolve[1], 

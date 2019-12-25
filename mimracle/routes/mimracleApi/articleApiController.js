@@ -20,7 +20,6 @@ router.get("/api/article/list", function(req, res, next) {
         postData.cateid = req.query["category_id"];
     }
     let opt = mimracleHelper.buildOpt("/api/Apilist/cates_article", postData, req);
-    console.log("opt", opt);
     if (opt == null) {
         res.json(mimracleHelper.notExistsApiKeyResult());
         return;
@@ -192,7 +191,6 @@ router.get("/api/article/search", function(req, res, next) {
             apiResult.data.data.forEach(element => {
                 result.data.push(convertArticle(element));
             });
-            console.log("apiresult.data", apiResult.data);
             let pager = {
                 total: apiResult.data.total,
                 page_size: postData.row,
@@ -201,7 +199,6 @@ router.get("/api/article/search", function(req, res, next) {
             };
             let serachUrl = `/chineseNew/search/${postData.keyword}`;
             result.pager = mimracleHelper.initPagerDetail(pager, serachUrl);
-            console.log(result.pager);
         } else {
             result = mimracleHelper.getFailResult(apiResult.code, apiResult.msg);
         }
@@ -219,7 +216,6 @@ router.get("/api/:category_code/article", function(req, res, next) {
         page: req.query["page_no"] || 1
     };
     let opt = mimracleHelper.buildOpt("/api/Apilist/cates_article", postData, req);
-    console.log("opt", opt);
     if (opt == null) {
         res.json(mimracleHelper.notExistsApiKeyResult());
         return;
