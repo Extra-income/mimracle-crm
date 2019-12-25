@@ -175,7 +175,31 @@ html{ overflow-x:hidden;overflow-y:auto;}
 
 .newsMarkRed a { color:#cb0000!important;}
 .newsMarkRed a:hover,.newsMarkRed a:visited { color:#cb0000;} 
+/*********** 新闻部分 ************/
+.conNews { /*height:640px; */padding:24px 0 18px 0; /*overflow:hidden;*/ display: block;}
+.conNews a { color:#575757!important;}
+.conNews a:hover,.newsMarkRed a:visited { color:#cb0000;} 
+.newsCol-1 { width: 390px; float: left; position: relative;}
+.hotnews-wrapper { width: 390px; float: left; }
+.hotnews-wrapper .hd{width:390px;height:50px;   border-top-width: 2px;  border-top-style: solid; border-top-color: #CC0001;}
+.hotnews-wrapper .hd h3{width:390px;height:50px;line-height:50px;font-size:20px}
+.hotnews-wrapper .hd h3 a{font-size:20px}
+.hotnews-wrapper .bd{width:390px;float:left}
+.hotnews-wrapper .bd .h1,.hotnews .bd .h2,.hotnews .bd .h3{width:390px;float:left;border-bottom:1px dotted #ccc;position:relative;padding:10px 0 2px; font-size: 16px}
+.hotnews-wrapper .bd .pic{width:140px;padding:2px 0 0;float:left}
+.hotnews-wrapper .bd .pic a{width:140px;height:125px;display:block;float:left;overflow:hidden}
+.hotnews-wrapper .bd .pic .p-pic{width:140px;height:93px;display:block;float:left;overflow:hidden}
+.hotnews-wrapper .bd .pic img{width:140px;height:93px;overflow-x:hidden;overflow-y:hidden;transition-delay:0s;transition-duration:1s;transition-property:all;transition-timing-function:ease;-moz-transition-delay:0s;-moz-transition-duration:1s;-moz-transition-property:all;-moz-transition-timing-function:ease;-webkit-transition-delay:0s;-webkit-transition-duration:1s;-webkit-transition-property:all;-webkit-transition-timing-function:ease;-o-transition-delay:0s;-o-transition-duration:1s;-o-transition-property:all;-o-transition-timing-function:ease}
+.hotnews-wrapper .bd .pic a:hover img{transform:scale(1.2,1.2);-ms-transform:scale(1.2,1.2);-moz-transform:scale(1.2,1.2);-webkit-transform:scale(1.2,1.2);-o-transform:scale(1.2,1.2)}
+.hotnews-wrapper .bd .pic p{width:140px;height:32px;line-height:32px;text-align:center;overflow:hidden;display:block;float:left}
+.hotnews-wrapper .bd .text{width:240px;float:right}
+.hotnews-wrapper .bd .text li{float:left}
+.hotnews-wrapper .bd .text li a{width:240px;height:24px;line-height:24px;float:left;overflow:hidden}
 
+
+
+.newsCol-2 { width: 390px; float: left; position: relative; margin-left: 15px;}
+.newsCol-3 { width: 390px; float: right; position: relative;}
 /*********** 第二部分 ************/
 .conSec { /*height:640px; */padding:24px 0 18px 0; /*overflow:hidden;*/}
 

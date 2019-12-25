@@ -11,7 +11,9 @@
                 <div class="Headlines">
                     {{each specialList.heads}}
                     {{if $index == 0}}
-                    <h1><p><a href="{{$value.url}}" target="_blank">{{$value.title}}</a></p></h1>
+                    <h1>
+                        <p><a href="{{$value.url}}" target="_blank">{{$value.title}}</a></p>
+                    </h1>
                     {{else}}
                     {{if $index < 4}}
                     <span class="headline-item"><a href="{{$value.url}}" target="_blank">[{{$value.title}}]</a></span>
@@ -21,16 +23,17 @@
                 </div>
 
                 <div class="ad">
-                    <a href="{{homeAdverst.top.url}}"><img style="border:0px;width:1200;height:120;" src="{{homeAdverst.top.img}}"></a>
+                    <a href="{{homeAdverst.top.url}}"><img style="border:0px;width:1200;height:120;"
+                            src="{{homeAdverst.top.img}}"></a>
                     <!-- <img style="border:0px;width:1200;height:120;" src="/static/src/images/chineseNew/9c196517-2189-48e8-884b-f9b04b645dd7.jpg"> -->
                 </div>
 
                 <!-- 第一部分 begin-->
                 <div class="conFir">
-                    
+
                     <!-- 左侧 -->
                     <div class="leftFir">
-                      
+
                         <div id="demo" class="carousel slide" data-ride="carousel">
                             <!-- 指示符 -->
                             <ul class="carousel-indicators banboxzhishi">
@@ -42,18 +45,18 @@
                             <div class="banbox carousel-inner ">
 
                                 <!-- 轮播图片 -->
-                                {{each specialList.imgs as item i}} 
-                                {{if i< 4}} 
-                                    <div class="carousel-item {{if i == 0}} active {{/if}}">
-                                        <img src="{{item.img}}" alt="图片">
-                                        <div class="carousel-caption banboxtitle">
-                                            <a href="/article/{{item.article_id}}">{{item.title}}</a>
-                                        </div>
+                                {{each specialList.imgs as item i}}
+                                {{if i< 4}}
+                                <div class="carousel-item {{if i == 0}} active {{/if}}">
+                                    <img src="{{item.img}}" alt="图片">
+                                    <div class="carousel-caption banboxtitle">
+                                        <a href="/article/{{item.article_id}}">{{item.title}}</a>
                                     </div>
-                                {{/if}} 
+                                </div>
+                                {{/if}}
                                 {{/each}}
                             </div>
-                                <!-- <div class="carousel-item active ">
+                            <!-- <div class="carousel-item active ">
                                     <img src="/static/src/images/chineseNew/8_12191hk51430.jpg"> 
                                     <div class="carousel-caption banboxtitle">
                                         <a href="/static/src/images/chineseNew/19_1220105333vm.gif">测试1</a>
@@ -78,9 +81,9 @@
                                     </div>
                                 </div>
                             </div> -->
-                            
-                            
-                            
+
+
+
                             <!-- 左右切换按钮 -->
                             <a class="carousel-control-prev" href="#demo" data-slide="prev" title="链接说明">
                                 <span class="carousel-control-prev-icon"></span>
@@ -129,27 +132,251 @@
 
                 <!-- 第二部分 begin-->
                 <div class="ad">
-                    <a href="{{homeAdverst.second.url}}"><img style="border:0px;width:1200;height:120;" src="{{homeAdverst.second.img}}"></a>
+                    <a href="{{homeAdverst.second.url}}"><img style="border:0px;width:1200;height:120;"
+                            src="{{homeAdverst.second.img}}"></a>
                     <!-- <img style="border:0px;width:1200;height:120;" src="/static/src/images/chineseNew/9c196517-2189-48e8-884b-f9b04b645dd7.jpg"> -->
+                </div>
+                <div class="conNews clear">
+                    <div class="newsCol-1">
+                        <div class="hotnews-wrapper">
+                            <div class="hd">
+                                <h3>
+                                    <a href="">新闻中心</a>
+                                </h3>
+                            </div>
+                            <div class="bd">
+                                <!-- test -->
+                                <div class="h1">
+                                    <div class="pic"> <a href="{{specialList.hots[0].url}}"
+                                            title="{{specialList.hots[0].title}}" target="_blank">
+                                            <div class="p-pic"><img
+                                                    src="{{specialList.hots[0].img}}"
+                                                    alt="{{specialList.hots[0].title}}"></div>
+                                            <p>{{specialList.hots[0].title}}</p>
+                                        </a> </div>
+                                    <div class="text">
+                                        <ul>
+                                            {{each specialList.hots as item}}
+                                            {{if $index <= 5 && $index > 0}}
+                                            <li><a href="{{item.url}}"
+                                                    title="{{item.title}}" target="_blank">{{item.title}}</a>
+                                            </li>
+                                            {{/if}}
+                                            {{/each}}
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="h1">
+                                    <div class="pic"> <a href="{{specialList.hots[0].url}}"
+                                            title="{{specialList.hots[0].title}}" target="_blank">
+                                            <div class="p-pic"><img
+                                                    src="{{specialList.hots[0].img}}"
+                                                    alt="{{specialList.hots[0].title}}"></div>
+                                            <p>{{specialList.hots[0].title}}</p>
+                                        </a> </div>
+                                    <div class="text">
+                                        <ul>
+                                            {{each specialList.hots as item}}
+                                            {{if $index <= 5 && $index > 0}}
+                                            <li><a href="{{item.url}}"
+                                                    title="{{item.title}}" target="_blank">{{item.title}}</a>
+                                            </li>
+                                            {{/if}}
+                                            {{/each}}
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="h1">
+                                    <div class="pic"> <a href="{{specialList.hots[0].url}}"
+                                            title="{{specialList.hots[0].title}}" target="_blank">
+                                            <div class="p-pic"><img
+                                                    src="{{specialList.hots[0].img}}"
+                                                    alt="{{specialList.hots[0].title}}"></div>
+                                            <p>{{specialList.hots[0].title}}</p>
+                                        </a> </div>
+                                    <div class="text">
+                                        <ul>
+                                            {{each specialList.hots as item}}
+                                            {{if $index <= 5 && $index > 0}}
+                                            <li><a href="{{item.url}}"
+                                                    title="{{item.title}}" target="_blank">{{item.title}}</a>
+                                            </li>
+                                            {{/if}}
+                                            {{/each}}
+                                        </ul>
+                                    </div>
+                                </div>
+                                <!-- test -->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="newsCol-2">
+                        <div class="hotnews-wrapper">
+                            <div class="hd">
+                                <h3>
+                                    <a href="">新闻中心</a>
+                                </h3>
+                            </div>
+                            <div class="bd">
+                                <!-- test -->
+                                <div class="h1">
+                                    <div class="pic"> <a href="{{specialList.hots[0].url}}"
+                                            title="{{specialList.hots[0].title}}" target="_blank">
+                                            <div class="p-pic"><img
+                                                    src="{{specialList.hots[0].img}}"
+                                                    alt="{{specialList.hots[0].title}}"></div>
+                                            <p>{{specialList.hots[0].title}}</p>
+                                        </a> </div>
+                                    <div class="text">
+                                        <ul>
+                                            {{each specialList.hots as item}}
+                                            {{if $index <= 5 && $index > 0}}
+                                            <li><a href="{{item.url}}"
+                                                    title="{{item.title}}" target="_blank">{{item.title}}</a>
+                                            </li>
+                                            {{/if}}
+                                            {{/each}}
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="h1">
+                                    <div class="pic"> <a href="{{specialList.hots[0].url}}"
+                                            title="{{specialList.hots[0].title}}" target="_blank">
+                                            <div class="p-pic"><img
+                                                    src="{{specialList.hots[0].img}}"
+                                                    alt="{{specialList.hots[0].title}}"></div>
+                                            <p>{{specialList.hots[0].title}}</p>
+                                        </a> </div>
+                                    <div class="text">
+                                        <ul>
+                                            {{each specialList.hots as item}}
+                                            {{if $index <= 5 && $index > 0}}
+                                            <li><a href="{{item.url}}"
+                                                    title="{{item.title}}" target="_blank">{{item.title}}</a>
+                                            </li>
+                                            {{/if}}
+                                            {{/each}}
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="h1">
+                                    <div class="pic"> <a href="{{specialList.hots[0].url}}"
+                                            title="{{specialList.hots[0].title}}" target="_blank">
+                                            <div class="p-pic"><img
+                                                    src="{{specialList.hots[0].img}}"
+                                                    alt="{{specialList.hots[0].title}}"></div>
+                                            <p>{{specialList.hots[0].title}}</p>
+                                        </a> </div>
+                                    <div class="text">
+                                        <ul>
+                                            {{each specialList.hots as item}}
+                                            {{if $index <= 5 && $index > 0}}
+                                            <li><a href="{{item.url}}"
+                                                    title="{{item.title}}" target="_blank">{{item.title}}</a>
+                                            </li>
+                                            {{/if}}
+                                            {{/each}}
+                                        </ul>
+                                    </div>
+                                </div>
+                                <!-- test -->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="newsCol-3">
+                        <div class="hotnews-wrapper">
+                            <div class="hd">
+                                <h3>
+                                    <a href="">新闻中心</a>
+                                </h3>
+                            </div>
+                            <div class="bd">
+                                <!-- test -->
+                                <div class="h1">
+                                    <div class="pic"> <a href="{{specialList.hots[0].url}}"
+                                            title="{{specialList.hots[0].title}}" target="_blank">
+                                            <div class="p-pic"><img
+                                                    src="{{specialList.hots[0].img}}"
+                                                    alt="{{specialList.hots[0].title}}"></div>
+                                            <p>{{specialList.hots[0].title}}</p>
+                                        </a> </div>
+                                    <div class="text">
+                                        <ul>
+                                            {{each specialList.hots as item}}
+                                            {{if $index <= 5 && $index > 0}}
+                                            <li><a href="{{item.url}}"
+                                                    title="{{item.title}}" target="_blank">{{item.title}}</a>
+                                            </li>
+                                            {{/if}}
+                                            {{/each}}
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="h1">
+                                    <div class="pic"> <a href="{{specialList.hots[0].url}}"
+                                            title="{{specialList.hots[0].title}}" target="_blank">
+                                            <div class="p-pic"><img
+                                                    src="{{specialList.hots[0].img}}"
+                                                    alt="{{specialList.hots[0].title}}"></div>
+                                            <p>{{specialList.hots[0].title}}</p>
+                                        </a> </div>
+                                    <div class="text">
+                                        <ul>
+                                            {{each specialList.hots as item}}
+                                            {{if $index <= 5 && $index > 0}}
+                                            <li><a href="{{item.url}}"
+                                                    title="{{item.title}}" target="_blank">{{item.title}}</a>
+                                            </li>
+                                            {{/if}}
+                                            {{/each}}
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="h1">
+                                    <div class="pic"> <a href="{{specialList.hots[0].url}}"
+                                            title="{{specialList.hots[0].title}}" target="_blank">
+                                            <div class="p-pic"><img
+                                                    src="{{specialList.hots[0].img}}"
+                                                    alt="{{specialList.hots[0].title}}"></div>
+                                            <p>{{specialList.hots[0].title}}</p>
+                                        </a> </div>
+                                    <div class="text">
+                                        <ul>
+                                            {{each specialList.hots as item}}
+                                            {{if $index <= 5 && $index > 0}}
+                                            <li><a href="{{item.url}}"
+                                                    title="{{item.title}}" target="_blank">{{item.title}}</a>
+                                            </li>
+                                            {{/if}}
+                                            {{/each}}
+                                        </ul>
+                                    </div>
+                                </div>
+                                <!-- test -->
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <div class="conSec clear">
                     <!-- 左侧 begin-->
                     <div class="leftSec">
 
                         <div class="hqDayComment">
-                            <div class="indexTitle"> <strong>科技</strong> <a href="/list/technology" target="_blank">更多</a> </div>
-                            
+                            <div class="indexTitle"> <strong>科技</strong> <a href="/list/technology"
+                                    target="_blank">更多</a> </div>
+
                             <div class="leftThrPic">
                                 <ul class="ThrPic clear">
                                     {{each technology}}
                                     {{if $index >= 4}}
                                     <li>
-                                        <a href="{{$value.url}}" target="_blank"><img src="{{$value.img}}" alt="{{$value.title}}"></a>
+                                        <a href="{{$value.url}}" target="_blank"><img src="{{$value.img}}"
+                                                alt="{{$value.title}}"></a>
                                         <p><a href="{{$value.url}}" target="_blank">{{$value.title}}</a></p>
                                     </li>
                                     {{/if}}
-                                    {{/each}} 
-                                    
+                                    {{/each}}
+
                                     <!-- <li>
                                         <a href="http://www.tetimes.com/world/20191209/26547.html" target="_blank"><img src="/static/src/images/chineseNew/8_1209142fn128.jpg" alt="北京时间12月9日11时37分意大利佛罗伦萨北部发生"></a>
                                         <p><a href="http://www.tetimes.com/world/20191209/26547.html" target="_blank">北京时间12月9日11时37分意大利佛罗伦萨北部发生</a></p>
@@ -158,7 +385,7 @@
                                         <a href="http://www.tetimes.com/world/20191209/26547.html" target="_blank"><img src="/static/src/images/chineseNew/8_1209142fn128.jpg" alt="北京时间12月9日11时37分意大利佛罗伦萨北部发生"></a>
                                         <p><a href="http://www.tetimes.com/world/20191209/26547.html" target="_blank">北京时间12月9日11时37分意大利佛罗伦萨北部发生</a></p>
                                     </li> -->
-    
+
                                 </ul>
                             </div>
                             <div class="commentTab">
@@ -169,7 +396,7 @@
                                             {{if $index < 4}}
                                             <dd><a href="{{$value.url}}">{{$value.title}}</a></dd>
                                             {{/if}}
-                                            {{/each}} 
+                                            {{/each}}
                                             <!-- <dt><a href="http://www.tetimes.com/tech/20191220/29606.html">安路科技全线FPGA产品亮相深圳电子展，登榜“2019硬核</a></dt>
 
                                             <dd><a href="http://www.tetimes.com/tech/20191220/29608.html">A.O.史密斯甲醛净化器荣膺8星认证 除醛滤芯升级产品震</a></dd>
@@ -186,18 +413,20 @@
 
 
                         <div class="overseaChina">
-                            <div class="indexTitle"> <strong>教育[样式错乱，需调整]</strong> <a href="/list/education" target="_blank">更多</a> <span class="udline3"></span> </div>
+                            <div class="indexTitle"> <strong>教育[样式错乱，需调整]</strong> <a href="/list/education"
+                                    target="_blank">更多</a> <span class="udline3"></span> </div>
                             <div class="overseaCNews">
                                 <ul class="ThrPic clear">
                                     {{each technology}}
                                     {{if $index >= 4}}
                                     <li>
-                                        <a href="{{$value.url}}" target="_blank"><img src="{{$value.img}}" alt="{{$value.title}}"></a>
+                                        <a href="{{$value.url}}" target="_blank"><img src="{{$value.img}}"
+                                                alt="{{$value.title}}"></a>
                                         <p><a href="{{$value.url}}" target="_blank">{{$value.title}}</a></p>
                                     </li>
                                     {{/if}}
-                                    {{/each}} 
-                                    
+                                    {{/each}}
+
                                     <!-- <li>
                                         <a href="http://www.tetimes.com/world/20191209/26547.html" target="_blank"><img src="/static/src/images/chineseNew/8_1209142fn128.jpg" alt="北京时间12月9日11时37分意大利佛罗伦萨北部发生"></a>
                                         <p><a href="http://www.tetimes.com/world/20191209/26547.html" target="_blank">北京时间12月9日11时37分意大利佛罗伦萨北部发生</a></p>
@@ -206,13 +435,15 @@
                                         <a href="http://www.tetimes.com/world/20191209/26547.html" target="_blank"><img src="/static/src/images/chineseNew/8_1209142fn128.jpg" alt="北京时间12月9日11时37分意大利佛罗伦萨北部发生"></a>
                                         <p><a href="http://www.tetimes.com/world/20191209/26547.html" target="_blank">北京时间12月9日11时37分意大利佛罗伦萨北部发生</a></p>
                                     </li> -->
-    
+
                                 </ul>
                                 {{each education}}
                                 {{if $index == 0}}
-                                <h4><a href="{{$value.url}}" se_prerender_url="complete" target="_blank">{{$value.title}}</a></h4>
+                                <h4><a href="{{$value.url}}" se_prerender_url="complete"
+                                        target="_blank">{{$value.title}}</a></h4>
                                 {{else}}
-                                <p><a href="{{$value.url}}" se_prerender_url="complete" target="_blank">{{$value.title}}</a></p>
+                                <p><a href="{{$value.url}}" se_prerender_url="complete"
+                                        target="_blank">{{$value.title}}</a></p>
                                 {{/if}}
                                 {{/each}}
                                 <!-- <h4><a href="http://www.tetimes.com/edu/20191219/29517.html" se_prerender_url="complete" target="_blank">2020全国硕士研究生考试周六开考 今年安庆市参考人数</a></h4>
@@ -239,11 +470,12 @@
                                 {{each car}}
                                 {{if $index >= 4}}
                                 <li>
-                                    <a href="{{$value.url}}" target="_blank"><img src="{{$value.img}}" alt="{{$value.title}}"></a>
+                                    <a href="{{$value.url}}" target="_blank"><img src="{{$value.img}}"
+                                            alt="{{$value.title}}"></a>
                                     <p><a href="{{$value.url}}" target="_blank">{{$value.title}}</a></p>
                                 </li>
                                 {{/if}}
-                                {{/each}}                            
+                                {{/each}}
                             </ul>
 
                             <div class="commentTab">
@@ -254,7 +486,7 @@
                                             {{if $index < 4}}
                                             <dd><a href="{{$value.url}}">{{$value.title}}</a></dd>
                                             {{/if}}
-                                            {{/each}} 
+                                            {{/each}}
                                         </dl>
                                     </li>
                                 </ul>
@@ -303,11 +535,12 @@
                                 {{each social}}
                                 {{if $index < 2}}
                                 <li>
-                                    <a href="{{$value.url}}" target="_blank"><img src="{{$value.img}}" alt="{{$value.title}}"></a>
+                                    <a href="{{$value.url}}" target="_blank"><img src="{{$value.img}}"
+                                            alt="{{$value.title}}"></a>
                                     <p><a href="{{$value.url}}" target="_blank">{{$value.title}}</a></p>
                                 </li>
                                 {{/if}}
-                                {{/each}}                            
+                                {{/each}}
                             </ul>
 
                             <!-- <div class="commentTab">
@@ -327,10 +560,10 @@
                             <div class="secNewsList">
                                 {{each social}}
                                 <p><a href="{{$value.url}}" target="_blank">{{$value.title}}</a></p>
-                                {{/each}}   
+                                {{/each}}
                             </div>
 
-<!-- 
+                            <!-- 
                             <div class="secNewsList">
                                 <p><a href="http://www.tetimes.com/society/20191220/29603.html" target="_blank">青海省“三区两州”首批339项电网工程即将收尾</a></p>
                                 <p><a href="http://www.tetimes.com/society/20191220/29582.html" target="_blank">北京王府井步行街北延今日开街 打造时尚运动潮流聚集</a></p>
@@ -362,7 +595,8 @@
 
                 <!-- 第三部分-新闻 begin-->
                 <div class="ad">
-                    <a href="{{homeAdverst.third.url}}"><img style="border:0px;width:1200;height:120;" src="{{homeAdverst.third.img}}"></a>
+                    <a href="{{homeAdverst.third.url}}"><img style="border:0px;width:1200;height:120;"
+                            src="{{homeAdverst.third.img}}"></a>
                 </div>
                 <div class="conThr clear">
                     <div class="indexBTitle"> <strong>娱乐</strong> <span></span> </div>
@@ -375,8 +609,10 @@
                                     <!--展示图片开始-->
                                     {{each entertainment}}
                                     <li>
-                                        <a href="{{$value.url}}" title="{{$value.title}}" target="_blank"> <img src="/static/src/images/chineseNew/4_12191942439503.jpg"> </a>
-                                        <div class="imgTitle"><a href="{{$value.url}}" target="_blank" title="{{$value.title}}">{{$value.title}}</a></div>
+                                        <a href="{{$value.url}}" title="{{$value.title}}" target="_blank"> <img
+                                                src="/static/src/images/chineseNew/4_12191942439503.jpg"> </a>
+                                        <div class="imgTitle"><a href="{{$value.url}}" target="_blank"
+                                                title="{{$value.title}}">{{$value.title}}</a></div>
                                         <div class="showPage"></div>
                                     </li>
                                     {{/each}}
@@ -399,9 +635,12 @@
 
                                     <!--展示图片结束-->
                                 </ul>
-                                <div class="foucs"><span class=""></span><span class="f"></span><span class=""></span><span class=""></span><span class=""></span></div>
-                                <div class="rBtn foucsButton"> <span></span> <img src="/static/src/images/chineseNew/20180920070347202.jpg"> </div>
-                                <div class="lBtn foucsButton"> <span></span> <img src="/static/src/images/chineseNew/20180920094845839.jpg"> </div>
+                                <div class="foucs"><span class=""></span><span class="f"></span><span
+                                        class=""></span><span class=""></span><span class=""></span></div>
+                                <div class="rBtn foucsButton"> <span></span> <img
+                                        src="/static/src/images/chineseNew/20180920070347202.jpg"> </div>
+                                <div class="lBtn foucsButton"> <span></span> <img
+                                        src="/static/src/images/chineseNew/20180920094845839.jpg"> </div>
                             </div>
                             <!-- 焦点图 end -->
                         </div>
@@ -410,7 +649,8 @@
                                 {{each film}}
                                 {{if $index > 4}}
                                 <li>
-                                    <a href="{{$value.url}}" target="_blank"><img src="{{$value.img}}" alt="{{$value.title}}"></a>
+                                    <a href="{{$value.url}}" target="_blank"><img src="{{$value.img}}"
+                                            alt="{{$value.title}}"></a>
                                     <p><a href="{{$value.url}}" target="_blank">{{$value.title}}</a></p>
                                 </li>
                                 {{/if}}
@@ -470,7 +710,8 @@
                     <!-- 右侧 begin-->
                     <div class="rightThr">
                         <div class="speColumn">
-                            <div class="indexTitle"> <strong>财经</strong> <a href="/list/economic" target="_blank">更多</a> <span class="udline1"></span> </div>
+                            <div class="indexTitle"> <strong>财经</strong> <a href="/list/economic" target="_blank">更多</a>
+                                <span class="udline1"></span> </div>
                             <ul class="speColumnList">
                                 {{each economic}}
                                 <li> <a href="{{$value.url}}" target="_blank">{{$value.title}}</a> </li>
@@ -493,7 +734,8 @@
                 </div>
 
                 <div class="conThr clear">
-                    <div class="indexBTitle"> <strong>旅游</strong> <a href="/list/travel" target="_blank">更多</a> <span></span> </div>
+                    <div class="indexBTitle"> <strong>旅游</strong> <a href="/list/travel" target="_blank">更多</a>
+                        <span></span> </div>
                     <!-- 左侧 begin-->
                     <div class="leftThr">
                         <div class="leftThrFocus">
@@ -504,9 +746,10 @@
                                     {{each travel}}
                                     {{if $index >= 10 && $index < 15}}
                                     <li>
-                                        <a href="{{$value.url}}" title="{{$value.tite}}" target="_blank"> <img src="{{$value.img}}"> </a>
+                                        <a href="{{$value.url}}" title="{{$value.tite}}" target="_blank"> <img
+                                                src="{{$value.img}}"> </a>
                                         <div class="imgTitle"><a href="{{$value.url}}" target="_blank" title="{{$value.title}}</a></div>
-                                        <div class="showPage"></div>
+                                        <div class=" showPage"></div>
                                     </li>
                                     {{/if}}
                                     {{/each}}
@@ -538,9 +781,12 @@
 
                                     <!--展示图片结束-->
                                 </ul>
-                                <div class="foucs"><span class=""></span><span class="f"></span><span class=""></span></div>
-                                <div class="rBtn foucsButton"> <span></span> <img src="/static/src/images/chineseNew/20180910053605710.jpg"> </div>
-                                <div class="lBtn foucsButton"> <span></span> <img src="/static/src/images/chineseNew/20180921091914111.jpg"></div>
+                                <div class="foucs"><span class=""></span><span class="f"></span><span class=""></span>
+                                </div>
+                                <div class="rBtn foucsButton"> <span></span> <img
+                                        src="/static/src/images/chineseNew/20180910053605710.jpg"> </div>
+                                <div class="lBtn foucsButton"> <span></span> <img
+                                        src="/static/src/images/chineseNew/20180921091914111.jpg"></div>
                             </div>
                             <!-- 焦点图 end -->
                         </div>
@@ -572,7 +818,7 @@
                     <div class="centerThr">
                         <dl class="thrNewsList">
                             {{each travel}}
-                            {{if $index < 5 && $index % 5 == 0}}                           
+                            {{if $index < 5 && $index % 5 == 0}}
                             <dt> <a href="{{$value.url}}" target="_blank">{{$value.title}}</a> </dt>
                             {{else}}
                             {{if $index < 5}}
@@ -590,7 +836,7 @@
                         </dl>
                         <dl class="thrNewsList newsDis">
                             {{each travel}}
-                            {{if $index >= 5 && index < 10 && $index % 5 == 0}}                           
+                            {{if $index >= 5 && index < 10 && $index % 5 == 0}}
                             <dt> <a href="{{$value.url}}" target="_blank">{{$value.title}}</a> </dt>
                             {{else}}
                             {{if $index >= 5 && index < 10}}
@@ -612,7 +858,8 @@
                     <!-- 右侧 begin-->
                     <div class="rightThr">
                         <div class="speColumn">
-                            <div class="indexTitle"> <strong>文化</strong> <a href="/list/culture" target="_blank">更多</a> . <a href="/list/culture" target="_blank">文娱</a> <span class="udline1"></span> </div>
+                            <div class="indexTitle"> <strong>文化</strong> <a href="/list/culture" target="_blank">更多</a>
+                                . <a href="/list/culture" target="_blank">文娱</a> <span class="udline1"></span> </div>
                             <ul class="speColumnList">
                                 {{each culture}}
                                 <li> <a href="{{$value.url}}" target="_blank">{{$value.title}}</a> </li>
@@ -637,7 +884,8 @@
 
 
                 <div class="ad">
-                    <a href="{{homeAdverst.fourth.url}}"><img style="border:0px;width:1200;height:120;" src="{{homeAdverst.fourth.img}}"></a>
+                    <a href="{{homeAdverst.fourth.url}}"><img style="border:0px;width:1200;height:120;"
+                            src="{{homeAdverst.fourth.img}}"></a>
                 </div>
                 <div class="conThr clear">
                     <div class="indexBTitle">
@@ -653,8 +901,10 @@
                                     {{each international}}
                                     {{if $index >= 10 && $index < 15}}
                                     <li>
-                                        <a href="{{$value.url}}" title="{{$value.title}}" target="_blank"> <img src="{{$value.img}}"> </a>
-                                        <div class="imgTitle"><a href="{{$value.url}}" target="_blank" title="{{$value.title}}">{{$value.title}}</a></div>
+                                        <a href="{{$value.url}}" title="{{$value.title}}" target="_blank"> <img
+                                                src="{{$value.img}}"> </a>
+                                        <div class="imgTitle"><a href="{{$value.url}}" target="_blank"
+                                                title="{{$value.title}}">{{$value.title}}</a></div>
                                         <div class="showPage"></div>
                                     </li>
                                     {{/if}}
@@ -687,9 +937,12 @@
 
                                     <!--展示图片结束-->
                                 </ul>
-                                <div class="foucs"><span class=""></span><span class="f"></span><span class=""></span><span class=""></span><span class=""></span></div>
-                                <div class="rBtn foucsButton"> <span></span> <img src="/static/src/images/chineseNew/20180921083806402.jpg"> </div>
-                                <div class="lBtn foucsButton"> <span></span> <img src="/static/src/images/chineseNew/20180921083706881.jpg"> </div>
+                                <div class="foucs"><span class=""></span><span class="f"></span><span
+                                        class=""></span><span class=""></span><span class=""></span></div>
+                                <div class="rBtn foucsButton"> <span></span> <img
+                                        src="/static/src/images/chineseNew/20180921083806402.jpg"> </div>
+                                <div class="lBtn foucsButton"> <span></span> <img
+                                        src="/static/src/images/chineseNew/20180921083706881.jpg"> </div>
                             </div>
                             <!-- 焦点图 end -->
                         </div>
@@ -698,7 +951,8 @@
                                 {{each international}}
                                 {{if $index >= 15}}
                                 <li>
-                                    <a href="{{$value.url}}" target="_blank"><img src="{{$value.img}}" alt="{{$value.title}}"></a>
+                                    <a href="{{$value.url}}" target="_blank"><img src="{{$value.img}}"
+                                            alt="{{$value.title}}"></a>
                                     <p><a href="{{$value.url}}" target="_blank">{{$value.title}}</a></p>
                                 </li>
                                 {{/if}}
@@ -761,7 +1015,8 @@
                     <!-- 右侧 begin-->
                     <div class="rightThr">
                         <div class="speColumn">
-                            <div class="indexTitle"> <strong>商业</strong> <a href="/list/commerce" target="_blank">更多</a> <span class="udline2"></span> </div>
+                            <div class="indexTitle"> <strong>商业</strong> <a href="/list/commerce" target="_blank">更多</a>
+                                <span class="udline2"></span> </div>
                             <ul class="speColumnList">
                                 {{each commerce}}
                                 <li> <a href="{{$value.url}}" target="_blank">{{$value.title}}</a> </li>
@@ -776,7 +1031,8 @@
                         </div>
                         <div class="speColumnDis"></div>
                         <div class="speColumn">
-                            <div class="indexTitle"> <strong>生活</strong> <a href="/list/life" target="_blank">更多</a> <span class="udline2"></span> </div>
+                            <div class="indexTitle"> <strong>生活</strong> <a href="/list/life" target="_blank">更多</a>
+                                <span class="udline2"></span> </div>
                             <ul class="speColumnList">
                                 {{each life}}
                                 <li> <a href="{{$value.url}}" target="_blank">{{$value.title}}</a> </li>
@@ -796,10 +1052,12 @@
 
                 <!-- 第六部分-体育旅游 begin-->
                 <div class="ad">
-                    <a href="{{homeAdverst.fivth.url}}"><img style="border:0px;width:1200;height:120;" src="{{homeAdverst.fivth.img}}"></a>
+                    <a href="{{homeAdverst.fivth.url}}"><img style="border:0px;width:1200;height:120;"
+                            src="{{homeAdverst.fivth.img}}"></a>
                 </div>
                 <div class="conThr clear">
-                    <div class="indexBTitle"> <strong>体育<i></i></strong> <a href="/list/sports" target="_blank">更多</a> <span class="udline"></span> </div>
+                    <div class="indexBTitle"> <strong>体育<i></i></strong> <a href="/list/sports" target="_blank">更多</a>
+                        <span class="udline"></span> </div>
                     <!-- 左侧 begin-->
                     <div class="leftThr">
                         <div class="leftThrFocus">
@@ -810,8 +1068,10 @@
                                     {{each sports}}
                                     {{if $index >= 10 && $index < 15}}
                                     <li>
-                                        <a href="{{$value.url}}" title="{{$value.title}}" target="_blank"> <img src="{{$value.img}}"> </a>
-                                        <div class="imgTitle"><a href="{{$value.url}}" target="_blank" title="{{$value.title}}">{{$value.title}}</a></div>
+                                        <a href="{{$value.url}}" title="{{$value.title}}" target="_blank"> <img
+                                                src="{{$value.img}}"> </a>
+                                        <div class="imgTitle"><a href="{{$value.url}}" target="_blank"
+                                                title="{{$value.title}}">{{$value.title}}</a></div>
                                         <div class="showPage"></div>
                                     </li>
                                     {{/if}}
@@ -844,9 +1104,12 @@
 
                                     <!--展示图片结束-->
                                 </ul>
-                                <div class="foucs"><span class=""></span><span class="f"></span><span class=""></span><span class=""></span></div>
-                                <div class="rBtn foucsButton"> <span></span> <img src="/static/src/images/chineseNew/20180921083819103.jpg"> </div>
-                                <div class="lBtn foucsButton"> <span></span> <img src="/static/src/images/chineseNew/20180921083515654.jpg"> </div>
+                                <div class="foucs"><span class=""></span><span class="f"></span><span
+                                        class=""></span><span class=""></span></div>
+                                <div class="rBtn foucsButton"> <span></span> <img
+                                        src="/static/src/images/chineseNew/20180921083819103.jpg"> </div>
+                                <div class="lBtn foucsButton"> <span></span> <img
+                                        src="/static/src/images/chineseNew/20180921083515654.jpg"> </div>
                             </div>
                             <!-- 焦点图 end -->
                         </div>
@@ -855,7 +1118,8 @@
                                 {{each sports}}
                                 {{if $index >= 15}}
                                 <li>
-                                    <a href="{{$value.url}}" target="_blank"><img src="{{$value.img}}" alt="{{$value.title}}"></a>
+                                    <a href="{{$value.url}}" target="_blank"><img src="{{$value.img}}"
+                                            alt="{{$value.title}}"></a>
                                     <p><a href="{{$value.url}}" target="_blank">{{$value.title}}</a></p>
                                 </li>
                                 {{/if}}
@@ -918,22 +1182,24 @@
                     <!-- 右侧 begin-->
                     <div class="rightThr">
                         <div class="speColumn">
-                            <div class="indexTitle"> <strong>房产</strong> <a href="/list/houseProperty" target="_blank">更多</a> </div>
+                            <div class="indexTitle"> <strong>房产</strong> <a href="/list/houseProperty"
+                                    target="_blank">更多</a> </div>
                             {{each houseProperty}}
                             {{if $index == 0}}
-                            <a href="{{$value.url}}" target="_blank"><img src="{{$value.img}}" alt="{{$value.img}}" width="340" height="226"></a>
+                            <a href="{{$value.url}}" target="_blank"><img src="{{$value.img}}" alt="{{$value.img}}"
+                                    width="340" height="226"></a>
                             <div class="hqlx">{{$value.title}}</div>
                             {{/if}}
-                            {{/each}}  
-                            
-                            <ul class="speColumnList">
-                            {{each houseProperty}}
-                            {{if $index > 0}}
-                            <li> <a href="{{$value.url}}" target="_blank">{{$value.title}}</a> </li>
-                            {{/if}}
                             {{/each}}
+
+                            <ul class="speColumnList">
+                                {{each houseProperty}}
+                                {{if $index > 0}}
+                                <li> <a href="{{$value.url}}" target="_blank">{{$value.title}}</a> </li>
+                                {{/if}}
+                                {{/each}}
                             </ul>
-                            
+
                             <!-- <a href="http://www.tetimes.com/house/20191216/28375.html" target="_blank"><img src="/static/src/images/chineseNew/10_121611350u108.png" alt="金地东北探寻城市消费新动能 推动住宅产业升级 " width="340" height="226"></a>
                             <div class="hqlx"> 金地东北探寻城市消费新动能 推动住宅产业升级</div> -->
 
@@ -951,12 +1217,14 @@
 
                 <!-- 第七部分-图说财经 begin-->
                 <div class="conThr clear">
-                    <div class="indexBTitle"> <strong>图说财经<i></i></strong> <a href="/category/sports" target="_blank">更多</a> <span class="udline"></span> </div>
+                    <div class="indexBTitle"> <strong>图说财经<i></i></strong> <a href="/category/sports"
+                            target="_blank">更多</a> <span class="udline"></span> </div>
                     <div>
                         <ul class="ThrPic clear">
                             {{each financial}}
                             <li>
-                                <a href="{{$value.url}}" target="_blank"><img src="{{$value.img}}" alt="{{$value.title}}"></a>
+                                <a href="{{$value.url}}" target="_blank"><img src="{{$value.img}}"
+                                        alt="{{$value.title}}"></a>
                                 <p><a href="{{$value.url}}" target="_blank">{{$value.title}}</a></p>
                             </li>
                             {{/each}}
@@ -964,7 +1232,7 @@
                     </div>
                 </div>
 
-                
+
                 <!-- <div class="footNew">
                         <div class="copyMain"> <span>联系QQ：2437 809 247 电话：1353 059 0469 Copyright © 中国特网www.tetimes.com版权所有 未经授权禁止使用</span>
                             <p> <a href='http://www.xjqnpx.com.cn/' target='_blank'>新疆青年网</a> <a href='http://www.shoujibao.cn/news/sxnews/' target='_blank'>手机报</a> <a href='http://www.iot-online.com/' target='_blank'>物联网在线</a> <a href='http://www.eupeople.com.cn/'
@@ -975,4 +1243,3 @@
         </div>
         {{include '../share/baseFooter'}}
     </div>
-
