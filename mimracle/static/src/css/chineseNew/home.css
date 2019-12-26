@@ -453,3 +453,18 @@ a.spePic:hover span { background-image:url(../images/bgicon.png);background-repe
     float: right;
     margin:17.5px 0;
 }
+
+.toutiao{background:#f6f5f5 url(../../images/chineseNew/tt-bg.gif) 0 0 no-repeat;margin:0 auto}
+
+/* 第7部分图文经说 */
+.area {width: 1200px;	margin: 0 auto;}
+.tsnj{width:1200px;margin:0 auto}
+.tsnj p {margin: 0;}
+.tsnj .bd{float:left;padding:20px 0 0}
+.tsnj .bd li{float:left}
+.tsnj .bd li a{width:220px;height:147px;float:left;position:relative;display:block;margin-left:25px;margin-bottom:25px;overflow:hidden}
+.tsnj .bd li img{width:220px;height:147px;display:block;position:absolute;top:0;left:0;z-index:1;overflow-x:hidden;overflow-y:hidden;transition-delay:0s;transition-duration:1s;transition-property:all;transition-timing-function:ease;-moz-transition-delay:0s;-moz-transition-duration:1s;-moz-transition-property:all;-moz-transition-timing-function:ease;-webkit-transition-delay:0s;-webkit-transition-duration:1s;-webkit-transition-property:all;-webkit-transition-timing-function:ease;-o-transition-delay:0s;-o-transition-duration:1s;-o-transition-property:all;-o-transition-timing-function:ease}
+.tsnj .bd li:hover img{transform:scale(1.2,1.2);-ms-transform:scale(1.2,1.2);-moz-transform:scale(1.2,1.2);-webkit-transform:scale(1.2,1.2);-o-transform:scale(1.2,1.2)}
+.tsnj .bd li p{width:210px;padding:0 5px;height:28px;line-height:28px;overflow:hidden;text-align:center;display:block;position:absolute;bottom:0;left:0;z-index:2;color:#fff;background:rgba(0,0,0,.3);filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#90000000, endColorstr=#90000000)}
+.tsnj .bd .t1 a,.tsnj .bd .t6 a{margin-left:0}
+.tsnj .bd .t10 a,.tsnj .bd .t6 a,.tsnj .bd .t7 a,.tsnj .bd .t8 a,.tsnj .bd .t9 a{margin-bottom:15px}

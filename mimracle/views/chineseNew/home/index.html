@@ -12,7 +12,7 @@
                     {{each specialList.heads}}
                     {{if $index == 0}}
                     <h1>
-                        <p><a href="{{$value.url}}" target="_blank">{{$value.title}}</a></p>
+                        <p class="toutiao"><a href="{{$value.url}}" target="_blank">{{$value.title}}</a></p>
                     </h1>
                     {{else}}
                     {{if $index < 4}}
@@ -21,6 +21,7 @@
                     {{/if}}
                     {{/each}}
                 </div>
+
 
                 <div class="ad">
                     <a href="{{homeAdverst.top.url}}"><img style="border:0px;width:1200;height:120;"
@@ -105,23 +106,6 @@
                             <dd><a href="{{$value.url}}">{{$value.title}}</a></dd>
                             {{/if}}
                             {{/each}}
-                            <!-- <dt><a href="http://www.tetimes.com/wenyu/20191220/29610.html">热门小说x y sy361悦享书驿《重生贵女：抱紧慎王大腿》</a></dt>
-
-                            <dd><a href="http://www.tetimes.com/wenyu/20191220/29609.html">官方全免xingkongzhongwen《重生弃少归来》主角叶子沁/卓</a></dd>
-                            <dd><a href="http://www.tetimes.com/wenyu/20191220/29607.html">正版全免swbd668嵍c《慕少，你老婆又重生了》主角苏梓</a></dd>
-                            <dd><a href="http://www.tetimes.com/tech/20191220/29606.html">安路科技全线FPGA产品亮相深圳电子展，登榜“2019硬核</a></dd>
-                            <dd><a href="http://www.tetimes.com/tech/20191220/29608.html">A.O.史密斯甲醛净化器荣膺8星认证 除醛滤芯升级产品震</a></dd>
-                            <dd><a href="http://www.tetimes.com/wenyu/20191220/29605.html">zsbd688/枕书伴读《慕少，你老婆又重生了》主角苏梓第</a></dd>
-                            <dd><a href="http://www.tetimes.com/wenyu/20191220/29604.html">baiyezw《暗恋成欢，女人休想逃》主角白汐/纪辰凌第2</a></dd>
-                            <dd><a href="http://www.tetimes.com/society/20191220/29603.html">青海省“三区两州”首批339项电网工程即将收尾</a></dd>
-                            <dd><a href="http://www.tetimes.com/wenyu/20191220/29602.html">cctw63正版全本完结精选《暗恋成欢，女人休想逃》主角</a></dd>
-                            <dd><a href="http://www.tetimes.com/wenyu/20191220/29601.html">xiaojbook在线阅读《好想住你隔壁》主角韩经年/夏晚安第</a></dd>
-                            <dd><a href="http://www.tetimes.com/wenyu/20191220/29600.html">ywsh23全文无删减《妖孽奶爸在都市》主角叶辰第43章 刘</a></dd>
-                            <dd><a href="http://www.tetimes.com/wenyu/20191220/29599.html">whwx288正版全集无删减《妖孽奶爸在都市》主角叶辰第</a></dd>
-                            <dd><a href="http://www.tetimes.com/sports/20191220/29598.html">西宁冰球馆冰壶馆28日起开放 招募5000名青少年免费体验</a></dd>
- -->
-
-
                         </dl>
                         <div>
                         </div>
@@ -149,8 +133,7 @@
                                 <div class="h1">
                                     <div class="pic"> <a href="{{specialList.hots[0].url}}"
                                             title="{{specialList.hots[0].title}}" target="_blank">
-                                            <div class="p-pic"><img
-                                                    src="{{specialList.hots[0].img}}"
+                                            <div class="p-pic"><img src="{{specialList.hots[0].img}}"
                                                     alt="{{specialList.hots[0].title}}"></div>
                                             <p>{{specialList.hots[0].title}}</p>
                                         </a> </div>
@@ -158,8 +141,8 @@
                                         <ul>
                                             {{each specialList.hots as item}}
                                             {{if $index <= 5 && $index > 0}}
-                                            <li><a href="{{item.url}}"
-                                                    title="{{item.title}}" target="_blank">{{item.title}}</a>
+                                            <li><a href="{{item.url}}" title="{{item.title}}"
+                                                    target="_blank">{{item.title}}</a>
                                             </li>
                                             {{/if}}
                                             {{/each}}
@@ -169,8 +152,7 @@
                                 <div class="h1">
                                     <div class="pic"> <a href="{{specialList.hots[0].url}}"
                                             title="{{specialList.hots[0].title}}" target="_blank">
-                                            <div class="p-pic"><img
-                                                    src="{{specialList.hots[0].img}}"
+                                            <div class="p-pic"><img src="{{specialList.hots[0].img}}"
                                                     alt="{{specialList.hots[0].title}}"></div>
                                             <p>{{specialList.hots[0].title}}</p>
                                         </a> </div>
@@ -178,8 +160,8 @@
                                         <ul>
                                             {{each specialList.hots as item}}
                                             {{if $index <= 5 && $index > 0}}
-                                            <li><a href="{{item.url}}"
-                                                    title="{{item.title}}" target="_blank">{{item.title}}</a>
+                                            <li><a href="{{item.url}}" title="{{item.title}}"
+                                                    target="_blank">{{item.title}}</a>
                                             </li>
                                             {{/if}}
                                             {{/each}}
@@ -189,8 +171,7 @@
                                 <div class="h1">
                                     <div class="pic"> <a href="{{specialList.hots[0].url}}"
                                             title="{{specialList.hots[0].title}}" target="_blank">
-                                            <div class="p-pic"><img
-                                                    src="{{specialList.hots[0].img}}"
+                                            <div class="p-pic"><img src="{{specialList.hots[0].img}}"
                                                     alt="{{specialList.hots[0].title}}"></div>
                                             <p>{{specialList.hots[0].title}}</p>
                                         </a> </div>
@@ -198,8 +179,8 @@
                                         <ul>
                                             {{each specialList.hots as item}}
                                             {{if $index <= 5 && $index > 0}}
-                                            <li><a href="{{item.url}}"
-                                                    title="{{item.title}}" target="_blank">{{item.title}}</a>
+                                            <li><a href="{{item.url}}" title="{{item.title}}"
+                                                    target="_blank">{{item.title}}</a>
                                             </li>
                                             {{/if}}
                                             {{/each}}
@@ -222,8 +203,7 @@
                                 <div class="h1">
                                     <div class="pic"> <a href="{{specialList.hots[0].url}}"
                                             title="{{specialList.hots[0].title}}" target="_blank">
-                                            <div class="p-pic"><img
-                                                    src="{{specialList.hots[0].img}}"
+                                            <div class="p-pic"><img src="{{specialList.hots[0].img}}"
                                                     alt="{{specialList.hots[0].title}}"></div>
                                             <p>{{specialList.hots[0].title}}</p>
                                         </a> </div>
@@ -231,8 +211,8 @@
                                         <ul>
                                             {{each specialList.hots as item}}
                                             {{if $index <= 5 && $index > 0}}
-                                            <li><a href="{{item.url}}"
-                                                    title="{{item.title}}" target="_blank">{{item.title}}</a>
+                                            <li><a href="{{item.url}}" title="{{item.title}}"
+                                                    target="_blank">{{item.title}}</a>
                                             </li>
                                             {{/if}}
                                             {{/each}}
@@ -242,8 +222,7 @@
                                 <div class="h1">
                                     <div class="pic"> <a href="{{specialList.hots[0].url}}"
                                             title="{{specialList.hots[0].title}}" target="_blank">
-                                            <div class="p-pic"><img
-                                                    src="{{specialList.hots[0].img}}"
+                                            <div class="p-pic"><img src="{{specialList.hots[0].img}}"
                                                     alt="{{specialList.hots[0].title}}"></div>
                                             <p>{{specialList.hots[0].title}}</p>
                                         </a> </div>
@@ -251,8 +230,8 @@
                                         <ul>
                                             {{each specialList.hots as item}}
                                             {{if $index <= 5 && $index > 0}}
-                                            <li><a href="{{item.url}}"
-                                                    title="{{item.title}}" target="_blank">{{item.title}}</a>
+                                            <li><a href="{{item.url}}" title="{{item.title}}"
+                                                    target="_blank">{{item.title}}</a>
                                             </li>
                                             {{/if}}
                                             {{/each}}
@@ -262,8 +241,7 @@
                                 <div class="h1">
                                     <div class="pic"> <a href="{{specialList.hots[0].url}}"
                                             title="{{specialList.hots[0].title}}" target="_blank">
-                                            <div class="p-pic"><img
-                                                    src="{{specialList.hots[0].img}}"
+                                            <div class="p-pic"><img src="{{specialList.hots[0].img}}"
                                                     alt="{{specialList.hots[0].title}}"></div>
                                             <p>{{specialList.hots[0].title}}</p>
                                         </a> </div>
@@ -271,8 +249,8 @@
                                         <ul>
                                             {{each specialList.hots as item}}
                                             {{if $index <= 5 && $index > 0}}
-                                            <li><a href="{{item.url}}"
-                                                    title="{{item.title}}" target="_blank">{{item.title}}</a>
+                                            <li><a href="{{item.url}}" title="{{item.title}}"
+                                                    target="_blank">{{item.title}}</a>
                                             </li>
                                             {{/if}}
                                             {{/each}}
@@ -295,8 +273,7 @@
                                 <div class="h1">
                                     <div class="pic"> <a href="{{specialList.hots[0].url}}"
                                             title="{{specialList.hots[0].title}}" target="_blank">
-                                            <div class="p-pic"><img
-                                                    src="{{specialList.hots[0].img}}"
+                                            <div class="p-pic"><img src="{{specialList.hots[0].img}}"
                                                     alt="{{specialList.hots[0].title}}"></div>
                                             <p>{{specialList.hots[0].title}}</p>
                                         </a> </div>
@@ -304,8 +281,8 @@
                                         <ul>
                                             {{each specialList.hots as item}}
                                             {{if $index <= 5 && $index > 0}}
-                                            <li><a href="{{item.url}}"
-                                                    title="{{item.title}}" target="_blank">{{item.title}}</a>
+                                            <li><a href="{{item.url}}" title="{{item.title}}"
+                                                    target="_blank">{{item.title}}</a>
                                             </li>
                                             {{/if}}
                                             {{/each}}
@@ -315,8 +292,7 @@
                                 <div class="h1">
                                     <div class="pic"> <a href="{{specialList.hots[0].url}}"
                                             title="{{specialList.hots[0].title}}" target="_blank">
-                                            <div class="p-pic"><img
-                                                    src="{{specialList.hots[0].img}}"
+                                            <div class="p-pic"><img src="{{specialList.hots[0].img}}"
                                                     alt="{{specialList.hots[0].title}}"></div>
                                             <p>{{specialList.hots[0].title}}</p>
                                         </a> </div>
@@ -324,8 +300,8 @@
                                         <ul>
                                             {{each specialList.hots as item}}
                                             {{if $index <= 5 && $index > 0}}
-                                            <li><a href="{{item.url}}"
-                                                    title="{{item.title}}" target="_blank">{{item.title}}</a>
+                                            <li><a href="{{item.url}}" title="{{item.title}}"
+                                                    target="_blank">{{item.title}}</a>
                                             </li>
                                             {{/if}}
                                             {{/each}}
@@ -335,8 +311,7 @@
                                 <div class="h1">
                                     <div class="pic"> <a href="{{specialList.hots[0].url}}"
                                             title="{{specialList.hots[0].title}}" target="_blank">
-                                            <div class="p-pic"><img
-                                                    src="{{specialList.hots[0].img}}"
+                                            <div class="p-pic"><img src="{{specialList.hots[0].img}}"
                                                     alt="{{specialList.hots[0].title}}"></div>
                                             <p>{{specialList.hots[0].title}}</p>
                                         </a> </div>
@@ -344,8 +319,8 @@
                                         <ul>
                                             {{each specialList.hots as item}}
                                             {{if $index <= 5 && $index > 0}}
-                                            <li><a href="{{item.url}}"
-                                                    title="{{item.title}}" target="_blank">{{item.title}}</a>
+                                            <li><a href="{{item.url}}" title="{{item.title}}"
+                                                    target="_blank">{{item.title}}</a>
                                             </li>
                                             {{/if}}
                                             {{/each}}
@@ -1232,14 +1207,37 @@
                     </div>
                 </div>
 
+                <!-- 第7部分 -->
+                <div class="area clear">
+                    <div class="tsnj">
+                        <div class="indexBTitle"> <strong>图说财经<i></i></strong> <a href="/category/sports"
+                                target="_blank">更多</a> <span class="udline"></span> </div>
+                        <div>
+                            <div class="bd">
+                                <ul>
+                                    {{each financial as item}}
+                                    {{if $index <= 5}}
+                                    <li class="{{'t' + ($index + 1)}}"> <a href="{{item.url}}" title="{{item.title}}">
+                                            <img src="{{item.img}}" alt="{{item.title}}">
+                                            <div class="text-bg"></div>
+                                            <p>{{item.title}}</p>
+                                        </a>
+                                    </li>
+                                    {{/if}}
+                                    {{/each}}
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
 
-                <!-- <div class="footNew">
+
+                    <!-- <div class="footNew">
                         <div class="copyMain"> <span>联系QQ：2437 809 247 电话：1353 059 0469 Copyright © 中国特网www.tetimes.com版权所有 未经授权禁止使用</span>
                             <p> <a href='http://www.xjqnpx.com.cn/' target='_blank'>新疆青年网</a> <a href='http://www.shoujibao.cn/news/sxnews/' target='_blank'>手机报</a> <a href='http://www.iot-online.com/' target='_blank'>物联网在线</a> <a href='http://www.eupeople.com.cn/'
                                     target='_blank'>人民日报欧洲网</a> </p>
                         </div>
                     </div> -->
+                </div>
             </div>
+            {{include '../share/baseFooter'}}
         </div>
-        {{include '../share/baseFooter'}}
-    </div>
