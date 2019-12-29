@@ -1,15 +1,40 @@
+<div class="fLink">
+    <div class="flinkMain marWidMain">
+        <span><a href="#" target="_blank">友情链接 ： </a></span>
+        <a href="http://baidu.com">每日新闻网</a>
+        <em>/</em>
+        <a href="http://baidu.com">今日看点</a>
+        <em>/</em>
+        <a href="http://baidu.com">淘宝</a>
+        <em>/</em>
+        <a href="http://baidu.com">百度</a>
+        <em>/</em>
+        <a href="http://baidu.com">天猫</a>
+        <em>/</em>
+        <a href="http://baidu.com">中国资讯网</a>
+        <em>/</em>
+    </div>
+</div>
 <div class="footer">
     <div class="nav" style="height: 55px;">
         <ul class="footer-list">
             {{each customSetting as item}}
-            <li id="{{item.page_id}}"><a id="footer-a-wrap" href="/footer/detail/{{item.page_id}}">{{item.title}}</a></li>
+            <li id="{{item.page_id}}"><a id="footer-a-wrap" href="/footer/detail/{{item.page_id}}">{{item.title}}</a>
+            </li>
             {{/each}}
         </ul>
-        <div class="more-nav-show clear" show="false"></div>
     </div>
 </div>
 
 <style>
-#footer-a-wrap{text-decoration:none;color: rgb(230, 230, 230)}
-#footer-a-wrap:hover{color:#fff;text-decoration:underline;font-weight: bold;}
+    #footer-a-wrap {
+        text-decoration: none;
+        color: rgb(230, 230, 230)
+    }
+
+    #footer-a-wrap:hover {
+        color: #fff;
+        text-decoration: underline;
+        font-weight: bold;
+    }
 </style>

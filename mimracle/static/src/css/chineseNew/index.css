@@ -1729,6 +1729,12 @@ body {
 
 /*********** 尾巴 ************/
 .footNew { display:block; width:100%; min-width:1000px; margin:0 auto 0;}
+.fLink { height:40px; text-align:center; color:#f0f0f0; font-size:12px;}
+.fLink a { color:#000; text-decoration:none; font-size:12px; height:40px; line-height:40px; margin:0 10px;}
+.fLink a:hover { color:#820C0C; text-decoration:underline;}
+.flinkMain { width:1000px; margin:0 auto; height:40px; line-height:40px; font-family:Microsoft YaHei,SimSun; position:relative;}
+.fLink .marWid a,.fLink .marWidMain a { margin:0 12px; text-indent:0; display:inline-block; height:25px; line-height:25px; color:#5e5e5e; padding:0;}
+.flinkMain .index-notice { position:absolute; right:26px; top:7px;}
 
 /*********** 导航 ************/
 .navBg { height:38px; border-bottom:1px solid #f7d3d7; position:relative; z-index:1;} 
