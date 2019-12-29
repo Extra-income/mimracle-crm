@@ -1,109 +1,140 @@
-<div class="con_right">
-    <div class="r_b" id="r_b_1">
-        <h2 class="r_hd"><strong>热点内容</strong></h2>
-        <div class="r_bd" id="hqss">
-            <ul class="txt_list_d">
-                {{each sidebar.hots}}
-                <li><a href="{{$value.url}}">{{$value.title}}</a></li>
-                {{/each}}            
-            </ul>
-        </div>
-    </div>
-    <div class="r_b" id="r_b_2">
-        <h2 class="r_hd"><strong>科技</strong><a href="/list/technology" class="more" target="_blank">更多</a></h2>
-        <div class="r_bd" id="hqyj">
-            <ul class="pic_list_142x96">
-                {{each sidebar.technology}}
-                {{if $index < 2}}
-                <li>
-                    <a href="{{$value.url}}" target="_blank">
-                        <div class="ppic"><img src="{{$value.img}}" width="142px" height="92" alt="{{$value.title}}"></div>
-                        <p class="ptxt">{{$value.title}}</p>
-                    </a>
-                </li>
-                {{/if}}
-                {{/each}}
-            </ul>
-            <ul class="txt_list_d">
-                {{each sidebar.technology}}
-                {{if $index >= 2}}
-                <li><a href="{{$value.url}}">{{$value.title}}</a></li>
-                {{/if}}
-                {{/each}}
-            </ul>
-        </div>
-    </div>
-    <div class="r_b" id="r_b_4">
-        <h2 class="r_hd"><strong>社会</strong><a href="/list/social" class="more" target="_blank">更多</a></h2>
-        <div class="r_bd" id="hqcj">
-            <ul class="pic_list_142x96">
-                {{each sidebar.social}}
-                {{if $index < 2}}
-                <li>
-                    <a href="{{$value.url}}" target="_blank">
-                        <div class="ppic"><img src="{{$value.img}}" width="142px" height="92" alt="{{$value.title}}"></div>
-                        <p class="ptxt">{{$value.title}}</p>
-                    </a>
-                </li>
-                {{/if}}
-                {{/each}}
-            </ul>
-            <ul class="txt_list_d">
-                {{each sidebar.social}}
-                {{if $index >= 2}}
-                <li><a href="{{$value.url}}">{{$value.title}}</a></li>
-                {{/if}}
-                {{/each}}
-            </ul>
-        </div>
-    </div>
-    <div class="r_b" id="r_b_5">
-        <h2 class="r_hd"><strong>汽车</strong></h2>
-        <div class="r_bd" id="tyly">
-            <ul class="pic_list_142x96">
-                {{each sidebar.car}}
-                {{if $index < 2}}
-                <li>
-                    <a href="{{$value.url}}" target="_blank">
-                        <div class="ppic"><img src="{{$value.img}}" width="142px" height="92" alt="{{$value.title}}"></div>
-                        <p class="ptxt">{{$value.title}}</p>
-                    </a>
-                </li>
-                {{/if}}
-                {{/each}}
-            </ul>
-            <ul class="txt_list_d">
-                {{each sidebar.car}}
-                {{if $index >= 2}}
-                <li><a href="{{$value.url}}">{{$value.title}}</a></li>
-                {{/if}}
-                {{/each}}
-            </ul>
-        </div>
-    </div>
-    <div class="r_b" id="r_b_6">
-        <h2 class="r_hd"><strong>国际</strong><a href="/list/international" class="more" target="_blank">更多</a></h2>
-        <div class="r_bd" id="artHqsc">
-            <ul class="pic_list_142x96">
-                {{each sidebar.international}}
-                {{if $index < 2}}
-                <li>
-                    <a href="{{$value.url}}" target="_blank">
-                        <div class="ppic"><img src="{{$value.img}}" width="142px" height="92" alt="{{$value.title}}"></div>
-                        <p class="ptxt">{{$value.title}}</p>
-                    </a>
-                </li>
-                {{/if}}
-                {{/each}}
-            </ul>
-            <ul class="txt_list_d">
-                {{each sidebar.international}}
-                {{if $index >= 2}}
-                <li><a href="{{$value.url}}">{{$value.title}}</a></li>
-                {{/if}}
-                {{/each}}
-            </ul>
-        </div>
-    </div>
+<link rel="stylesheet" href="/static/src/css/chineseNew/rightSide.css">
 
+<div class="ord-article">
+    <!-- 今日热点 -->
+    <div class="tody-hot">
+        <div class="indexTitle">
+            <strong>今日热点</strong>
+        </div>
+        <ul class="article-item">
+            {{each sidebar.hots}}
+            <li><a href="{{$value.url}}">{{$value.title}}</a></li>
+            {{/each}}
+        </ul>
+    </div>
+    <!-- 热门图片 -->
+    <div class="img-hot">
+        <div class="indexTitle">
+            <strong>热门图文</strong>
+        </div>
+        <a href="/articleid/284" class="hotImg">
+            <img src="https://himg2.huanqiucdn.cn/attachment2010/2019/1202/20191202050535595.jpg?w=240"
+                alt="今晚8点暂停发稿阿萨法发生放散阀暗室逢灯发生发达啊">
+            <div>今晚8点暂停发稿阿萨法发生放散阀暗室逢灯发生发达啊</div>
+        </a>
+        <a href="/articleid/284" class="hotImg">
+            <img src="https://himg2.huanqiucdn.cn/attachment2010/2019/1202/20191202050535595.jpg?w=240"
+                alt="今晚8点暂停发稿阿萨法发生放散阀暗室逢灯发生发达啊">
+            <div>今晚8点暂停发稿阿萨法发生放散阀暗室逢灯发生发达啊</div>
+        </a>
+        <a href="/articleid/249" class="hotImg">
+            <img src="https://himg2.huanqiucdn.cn/attachment2010/2019/1202/20191202050535595.jpg?w=240"
+                alt="今晚8点暂停发稿阿萨法发生放散阀暗室逢灯发生发达啊">
+            <div>今晚8点暂停发稿阿萨法发生放散阀暗室逢灯发生发达啊</div>
+        </a>
+        <a href="/articleid/248" class="hotImg">
+            <img src="https://himg2.huanqiucdn.cn/attachment2010/2019/1202/20191202050535595.jpg?w=240"
+                alt="今晚8点暂停发稿阿萨法发生放散阀暗室逢灯发生发达啊">
+            <div>今晚8点暂停发稿阿萨法发生放散阀暗室逢灯发生发达啊</div>
+        </a>
+        <div class="clear"></div>
+    </div>
+    <!-- 精彩推荐 -->
+    <div class="tody-hot" style="margin-top: 10px;">
+        <div class="indexTitle">
+            <strong>精彩推荐</strong>
+        </div>
+        <ul class="wonderful-con">
+            <li>
+                <a href="/articleid/92">
+                    <div class="wonderful-img">
+                        <img src="https://himg2.huanqiucdn.cn/attachment2010/2019/1202/20191202050535595.jpg?w=240"
+                            alt="今晚8点暂停发稿阿萨法发生放散阀暗室逢灯发生发达啊">
+                    </div>
+                </a>
+                <div class="wonderful-title-from">
+                    <a href="/articleid/92">
+                        <div class="wonderful-title">
+                            今晚8点暂停发稿阿萨法发生放散阀暗室逢灯发生发达啊 </div>
+                    </a>
+                    <div class="wonderful-from">
+                        <span class="from">互联网</span>
+                        <span class="time">2019-12-03 15:37</span>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <a href="/articleid/91">
+                    <div class="wonderful-img">
+                        <img src="https://himg2.huanqiucdn.cn/attachment2010/2019/1202/20191202050535595.jpg?w=240"
+                            alt="今晚8点暂停发稿阿萨法发生放散阀暗室逢灯发生发达啊">
+                    </div>
+                </a>
+                <div class="wonderful-title-from">
+                    <a href="/articleid/91">
+                        <div class="wonderful-title">
+                            今晚8点暂停发稿阿萨法发生放散阀暗室逢灯发生发达啊 </div>
+                    </a>
+                    <div class="wonderful-from">
+                        <span class="from">互联网</span>
+                        <span class="time">2019-12-03 15:37</span>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <a href="/articleid/90">
+                    <div class="wonderful-img">
+                        <img src="https://himg2.huanqiucdn.cn/attachment2010/2019/1202/20191202050535595.jpg?w=240"
+                            alt="今晚8点暂停发稿阿萨法发生放散阀暗室逢灯发生发达啊">
+                    </div>
+                </a>
+                <div class="wonderful-title-from">
+                    <a href="/articleid/90">
+                        <div class="wonderful-title">
+                            今晚8点暂停发稿阿萨法发生放散阀暗室逢灯发生发达啊 </div>
+                    </a>
+                    <div class="wonderful-from">
+                        <span class="from">互联网</span>
+                        <span class="time">2019-12-03 15:36</span>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <a href="/articleid/89">
+                    <div class="wonderful-img">
+                        <img src="https://himg2.huanqiucdn.cn/attachment2010/2019/1202/20191202050535595.jpg?w=240"
+                            alt="今晚8点暂停发稿阿萨法发生放散阀暗室逢灯发生发达啊">
+                    </div>
+                </a>
+                <div class="wonderful-title-from">
+                    <a href="/articleid/89">
+                        <div class="wonderful-title">
+                            今晚8点暂停发稿阿萨法发生放散阀暗室逢灯发生发达啊 </div>
+                    </a>
+                    <div class="wonderful-from">
+                        <span class="from">互联网</span>
+                        <span class="time">2019-12-03 15:36</span>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <a href="/articleid/88">
+                    <div class="wonderful-img">
+                        <img src="https://himg2.huanqiucdn.cn/attachment2010/2019/1202/20191202050535595.jpg?w=240"
+                            alt="今晚8点暂停发稿阿萨法发生放散阀暗室逢灯发生发达啊">
+                    </div>
+                </a>
+                <div class="wonderful-title-from">
+                    <a href="/articleid/88">
+                        <div class="wonderful-title">
+                            今晚8点暂停发稿阿萨法发生放散阀暗室逢灯发生发达啊 </div>
+                    </a>
+                    <div class="wonderful-from">
+                        <span class="from">互联网</span>
+                        <span class="time">2019-12-03 15:35</span>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
 </div>
