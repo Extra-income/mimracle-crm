@@ -1718,6 +1718,14 @@ body {
     margin-left: 10px;
 }
 
+.disclaimer{
+	width: 100%;
+	padding: 10px;
+	border:solid #666 1px;
+	font-size: 12px;
+	margin:20px 0;
+}
+
 
 /*********** 尾巴 ************/
 .footNew { display:block; width:100%; min-width:1000px; margin:0 auto 0;}

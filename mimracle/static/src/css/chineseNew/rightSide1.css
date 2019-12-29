@@ -1,0 +1,17 @@
+.indexTitle{	width: 100%;}
+.time{margin-left: 20px;}
+.ord-article{	width: 32%;	float: right;}
+.ord-article .tody-hot{	background:#f9f9f9;	padding:10px;	margin-bottom: 10px;}
+.ord-article .tody-hot .indexTitle strong{height:30px;line-height: 30px;color: #90080E;font-size: 16px;}
+.ord-article .tody-hot .article-item li{width: 100%;overflow: hidden;height: 30px;line-height: 30px;list-style:disc inside;font-size: 14px;}
+
+.ord-article .img-hot{background:#f9f9f9;padding:10px;margin-bottom: 10px;}
+.ord-article .img-hot .hotImg{display: block;width: 48%;height: 136px;float: left;text-align: center;margin-right: 2%;margin-bottom: 10px;}
+.ord-article .img-hot .hotImg img{width: 100%;height: 120px;}
+.ord-article .img-hot .hotImg div{width: 100%;height: 16px;font-size: 11px;overflow: hidden;}
+.ord-article .tody-hot .wonderful-con li{padding: 15px 0;border-bottom: 1px solid #E5E5E5;overflow: hidden;position: relative;}
+.ord-article .tody-hot .wonderful-con .wonderful-img{	width: 38%;	height: 88px;	float: left;}
+.ord-article .tody-hot .wonderful-con .wonderful-img img{width: 100%;height: 88px;}
+.ord-article .tody-hot .wonderful-con .wonderful-title-from{width: 60%;height: 88px;float: right;position: relative;}
+.ord-article .tody-hot .wonderful-con .wonderful-title-from .wonderful-from {position: absolute;width: 100%;bottom:0;font-size: 12px;}
+.ord-article .tody-hot .wonderful-con .wonderful-title-from .wonderful-title{font-size: 15px;}
