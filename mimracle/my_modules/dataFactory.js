@@ -94,8 +94,9 @@ var dataFactory = {
         }, function(err, result) {
             for(var ii = 0; ii < result.length; ii++) {
                 if(result[ii].dataType.toLowerCase() == "json"){
-                    if(!result[ii].result.succeed){
-                        result[ii].result.msg && $.logger.debug('dataFactory.js get msg:' + result[ii].result.msg);
+                    if(result[ii].result){
+                        if(!result[ii].result.succeed)
+                            result[ii].result.msg && $.logger.debug('dataFactory.js get msg:' + result[ii].result.msg);
                     }
                     var data = result[ii].result && result[ii].result.data;
                     if($.type(result[ii].result.code) == "undefined" && !data){
