@@ -8,8 +8,6 @@ let _logger = util.logger;
 
 router.get('/chineseNew/', function(req, res, next) {
 
-    //let api_key = req.headers["micracle-crm"];
-
     let getMenus = new Promise((resolve, reject) => {
         var api = {
             getMenus: {
@@ -30,7 +28,7 @@ router.get('/chineseNew/', function(req, res, next) {
             getSepcialList: {
                 url: '/api/article/sepcial-list',
                 data: {
-                    //api_key: api_key
+                    hot_count: 18
                 }
             }
         };
@@ -46,9 +44,7 @@ router.get('/chineseNew/', function(req, res, next) {
         var api = {
             getCustomSetting: {
                 url: "/api/custom/company-setting",
-                data: {
-                    //api_key: api_key
-                }
+                data: {}
             }
         };
 
@@ -63,9 +59,7 @@ router.get('/chineseNew/', function(req, res, next) {
         var api = {
             getHomeAdversts: {
                 url: '/api/advert/list',
-                data: {
-                    //api_key: api_key
-                }
+                data: {}
             }
         };
 
