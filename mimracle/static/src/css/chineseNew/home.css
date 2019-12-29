@@ -236,7 +236,7 @@ html{ overflow-x:hidden;overflow-y:auto;}
 /*********** 第二部分 ************/
 .conSec { /*height:640px; */padding:24px 0 18px 0; /*overflow:hidden;*/}
 
-.leftSec { width:354px; height:900px; border-right:1px solid #e6e6e6; float:left;}
+.leftSec { width:390px; height:900px; border-right:1px solid #e6e6e6; float:left;}
 .hqDayComment {}
 .commentTab { width:330px; border-bottom:1px solid #e6e6e6;}
 .commentDay { width:320px; padding-left:10px; height:40px; line-height:40px; background:#cc0001;}
@@ -279,7 +279,7 @@ html{ overflow-x:hidden;overflow-y:auto;}
 .overseaCNews p strong { color:#af825e; font-weight:normal;}
 .overseaCNews p span { color:#e6e6e6; padding:0 11px;}
 
-.centerSec { width:340px; padding-left:25px; float:left;}
+.centerSec { width:390px; padding-left:25px; float:left;}
 .videoBlock { border-bottom:1px solid #e6e6e6;}
 .videoPic { overflow:hidden;}
 .videoPic ul { margin-left:-4px;}
@@ -303,7 +303,7 @@ html{ overflow-x:hidden;overflow-y:auto;}
 .topicNews li a { color:#4c4c56;}
 .topicNews li a:hover { color:#cb0000;}
 
-.rightSec { width:440px; float:right;}
+.rightSec { width:390px; float:right;}
 .secNewsList { padding-bottom:14px;}
 .secNewsList p { height:38px; line-height:38px; font-size:16px; overflow:hidden; padding-left:15px; background-image:url(../images/bgicon.png);background-repeat:no-repeat; background-position:0 -99px;}
 .secNewsList p a { color:#585856;}
