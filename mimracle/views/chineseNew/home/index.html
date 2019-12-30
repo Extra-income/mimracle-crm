@@ -391,8 +391,8 @@
                                 </ul>
                                 {{each education}}
                                 {{if $index == 0}}
-                                <h4><a href="{{$value.url}}" se_prerender_url="complete"
-                                        target="_blank">{{$value.title}}</a></h4>
+                                <p><a href="{{$value.url}}" se_prerender_url="complete"
+                                        target="_blank">{{$value.title}}</a></p>
                                 {{else}}
                                 <p><a href="{{$value.url}}" se_prerender_url="complete"
                                         target="_blank">{{$value.title}}</a></p>
@@ -1012,18 +1012,20 @@
                             target="_blank">更多</a> <span class="udline"></span> </div>
                     <div>
                         <div class="bd news_slides">
-                            <ul>
-                                {{each financial as item}}
-                                {{if $index <= 5}}
-                                <li class="{{'t' + ($index + 1)}}"> <a href="{{item.url}}" title="{{item.title}}">
-                                        <img src="{{item.img}}" alt="{{item.title}}">
-                                        <div class="text-bg"></div>
-                                        <p>{{item.title}}</p>
-                                    </a>
-                                </li>
-                                {{/if}}
-                                {{/each}}
-                            </ul>
+                            <div class="swap_side">
+                                <ul class="swap_ul">
+                                    {{each financial as item}}
+                                    {{if $index <= 7}}
+                                    <li class="{{'li_' + ($index + 1)}}"> <a href="{{item.url}}" title="{{item.title}}">
+                                            <img src="{{item.img}}" alt="{{item.title}}">
+                                            <div class="text-bg"></div>
+                                            <p>{{item.title}}</p>
+                                        </a>
+                                    </li>
+                                    {{/if}}
+                                    {{/each}}
+                                </ul>
+                            </div>
                             <div class="but_left"><img src="/static/src/images/chineseNew/qianxleft.png" /></div>
                             <div class="but_right"><img src="/static/src/images/chineseNew/qianxr.png" /></div>
                         </div>
@@ -1033,3 +1035,4 @@
         </div>
         {{include '../share/baseFooter'}}
     </div>
+    

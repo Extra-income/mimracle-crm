@@ -147,7 +147,7 @@ router.get('/chineseNew/', function(req, res, next) {
         return getArticlesByCategory(req, "houseProperty", 5, 1, input);
     }).then(function(input) {
         // 获取金融文章
-        return getArticlesByCategory(req, "financial", 5, 1, input);
+        return getArticlesByCategory(req, "financial", 7, 1, input);
     }).then(function(input) {
         return refactorObjProp(input);
     });

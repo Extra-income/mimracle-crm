@@ -105,6 +105,19 @@ html{ overflow-x:hidden;overflow-y:auto;}
 
 .news_slides{
 	position:relative;
+	width:1200px;
+	height: 150px;
+}
+.swap_side{
+	overflow: hidden;
+	width:1200px;
+	position: relative;
+	height: 150px;
+}
+.news_slides ul{
+	width:1700px;
+	height: 150px;
+	position: absolute;
 }
 .news_slides .but_left{
 	position: absolute;
@@ -328,7 +341,7 @@ html{ overflow-x:hidden;overflow-y:auto;}
 .ThrPic li { width:168px; float:left; margin-left:4px; display:inline;}
 .ThrPic img { width:168px; height:112px; overflow:hidden; border-radius:2px; -webkit-transition:all .4s ease-in; -moz-transition:all .4s ease-in; -o-transition:all .4s ease-in; transition: all .4s ease-in;}
 .ThrPic p { padding:6px 10px 0 0; height:20px; line-height:20px; font-size:14px; overflow:hidden;} 
-.ThrPic p a { color:#575755;}
+.ThrPic p a { color:#575755;width: 160px; display: inline-block;}
 .ThrPic p a:hover { color:#cb0000;}
 
 .centerThr { width:426px; padding-left:40px; float:left;}
@@ -443,8 +456,8 @@ a.spePic:hover span { background-image:url(../images/bgicon.png);background-repe
 	bottom: 0px;
 	color: #000;
 	z-index: 999;
-	left: 0;
-	right: 0;
+	left: 0 !important;
+	/* right: 0; */
 	width: 100%;
 	overflow:hidden;
 }
@@ -454,6 +467,11 @@ a.spePic:hover span { background-image:url(../images/bgicon.png);background-repe
 	font-size: 14px;
 	overflow:hidden;
 	height:20px;
+	color: #fff !important;
+}
+.banboxtitle a:hover{
+	text-decoration: none;
+
 }
 .banboxzhishi{
 	bottom: 30px;
@@ -509,4 +527,5 @@ a.spePic:hover span { background-image:url(../images/bgicon.png);background-repe
 .tsnj .bd li:hover img{transform:scale(1.2,1.2);-ms-transform:scale(1.2,1.2);-moz-transform:scale(1.2,1.2);-webkit-transform:scale(1.2,1.2);-o-transform:scale(1.2,1.2)}
 .tsnj .bd li p{width:210px;padding:0 5px;height:28px;line-height:28px;overflow:hidden;text-align:center;display:block;position:absolute;bottom:0;left:0;z-index:2;color:#fff;background:rgba(0,0,0,.3);filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#90000000, endColorstr=#90000000)}
 .tsnj .bd .t1 a,.tsnj .bd .t6 a{margin-left:0}
+.tsnj .bd .li_1 a,.tsnj .bd .t6 a{margin-left:0}
 .tsnj .bd .t10 a,.tsnj .bd .t6 a,.tsnj .bd .t7 a,.tsnj .bd .t8 a,.tsnj .bd .t9 a{margin-bottom:15px}
