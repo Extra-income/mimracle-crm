@@ -270,9 +270,7 @@ html{ overflow-x:hidden;overflow-y:auto;}
 .commentDetail dd a { color:#585856;}
 .commentDetail dd a:hover { color:#cb0000;}
 .commentDetail dd a:visited { color: #a7a7a5; }
-.overseaChina { padding-top:33px;}
 .overseaCNews {}
-.overseaCNews { padding:12px 0;}
 .overseaCNews h4 { height:28px; line-height:28px; font-size:16px; overflow:hidden; padding:0 24px 0 26px; background-image:url(../images/bgicon.png);background-repeat:no-repeat; background-position:0 -184px;}
 .overseaCNews h4 a { color:#585856;}
 .overseaCNews h4 a:hover { color:#cb0000;}

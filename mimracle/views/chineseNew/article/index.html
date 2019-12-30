@@ -24,9 +24,11 @@
                         <h3 class="la_xiangguan_hd"> <strong>相关新闻</strong> </h3>
                         <ul>
                             {{each articleDetail.relatedArticals}}
+                            {{if $index < 5}}
                             <li><a href="{{$value.url}}">{{$value.title}}</a>
                                 <em>{{$value.edit_time}}</em>
                             </li>
+                            {{/if}}
                             {{/each}}
                         </ul>
                     </div>

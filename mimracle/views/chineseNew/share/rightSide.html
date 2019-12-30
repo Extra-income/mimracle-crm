@@ -8,7 +8,9 @@
         </div>
         <ul class="article-item">
             {{each sidebar.hots}}
+            {{if $index < 4}}
             <li><a href="{{$value.url}}">{{$value.title}}</a></li>
+            {{/if}}
             {{/each}}
         </ul>
     </div>
