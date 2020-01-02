@@ -13,7 +13,7 @@ var global = {
     _config: {
         // id: "dev",
         // pc_domain: "http://localhost:3000",
-        // cssDomain: 'http://localhost:3000',
+        cssDomain: 'http://localhost:3000',
         // jsDomain: 'http://localhost:3000'
     },
     _exclude: [
